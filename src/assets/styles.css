@@ -1,0 +1,118 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;400&display=swap');
+
+html,
+body {
+    height: 100%;
+    font-family: 'Cabin', sans-serif;
+}
+
+body {
+    background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: auto; */
+
+
+
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin: 10px;
+
+
+}
+
+
+.block-1 {
+    grid-row: span 60 / auto;
+    background: rgba(0, 0, 0, 0.466);
+}
+
+.block-2 {
+    grid-row: span 30 / auto;
+    background: rgba(0, 0, 0, 0.466);
+
+}
+
+.block-3 {
+    grid-row: span 15 / auto;
+    background: rgba(0, 0, 0, 0.466);
+}
+
+
+.block-4 {
+    grid-row: span 15 / auto;
+    background: rgba(0, 0, 0, 0.466);
+
+}
+
+.block-5 {
+    grid-row: span 60 / auto;
+    background: rgba(0, 0, 0, 0.466);
+
+}
+
+.block-6 {
+    grid-column: span 2 / auto;
+    grid-row: span 60 / auto;
+    background: rgba(0, 0, 0, 0.466);
+
+}
+/* 
+
+div:hover:after {
+    background:rgba(255, 0, 0, 0.5);
+   
+} 
+
+ */
+
+
+
+
+
+/* option 2 */
+
+/* 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.span-col-2 {
+    grid-column: span 2 / auto;
+}
+
+.span-row-12 {
+    grid-row: span 12 / auto;
+}
+
+.span-row-2 {
+    grid-row: span 2 / auto;
+}
+
+.span-row-25 {
+    grid-row: span 25 / auto;
+}
+
+.span-row-30 {
+    grid-row: span 30 / auto;
+} */
+
+
+/* .block-1-img{
+    
+
+} */
