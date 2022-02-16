@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;400&display=swap');
+
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;400&display=swap');
+
 
 html,
 body {
@@ -13,6 +15,7 @@ body {
 }
 
 body {
+    /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
     background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,52 +25,58 @@ body {
 
 }
 
-
+@media (min-width: 1280px) {
+   
+   
+  
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
-    margin: 10px;
-
+    
 
 }
 
 
 .block-1 {
-    grid-row: span 60 / auto;
+    grid-row: span 80 / auto;
     background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .block-2 {
     grid-row: span 30 / auto;
     background: rgba(0, 0, 0, 0.466);
-
+    margin-top: 10px;
 }
 
 .block-3 {
     grid-row: span 15 / auto;
     background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
 }
 
 
 .block-4 {
     grid-row: span 15 / auto;
     background: rgba(0, 0, 0, 0.466);
-
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .block-5 {
-    grid-row: span 60 / auto;
+    grid-row: span 90 / auto;
     background: rgba(0, 0, 0, 0.466);
-
+    margin-left: 10px;
 }
 
 .block-6 {
     grid-column: span 2 / auto;
-    grid-row: span 60 / auto;
+    grid-row: span 70 / auto;
     background: rgba(0, 0, 0, 0.466);
-
+    margin-right: 10px;
 }
 /* 
 
@@ -112,7 +121,169 @@ div:hover:after {
 } */
 
 
+
 /* .block-1-img{
     
 
 } */
+
+ 
+
+/* Responsive media/order layout */
+
+
+
+
+}
+
+
+@media (max-width: 800px) {
+
+    html,
+    body {
+        height: 100%;
+        font-family: 'Cabin', sans-serif;
+    }
+    
+    body {
+        /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
+        background-image: url(/src/assets/fondodiap1.PNG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: auto; */
+    
+    }
+    
+    .grid {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 6px;
+        
+    
+    }
+    
+    .block-1 {
+        grid-row: span 70 / auto;
+        grid-column: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .block-2 {
+        grid-row: span 20 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+    }
+    
+    .block-3 {
+        grid-row: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+    
+    
+    .block-4 {
+        grid-row: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    
+    .block-5 {
+        grid-row: span 60 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-left: 10px;
+    }
+    
+    .block-6 {
+        grid-column: span 10 / auto;
+        grid-row: span 60 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+  }
+
+  /* Ipad responsive */
+
+  @media (max-width: 1279px) {
+
+    html,
+    body {
+        height: 100%;
+        font-family: 'Cabin', sans-serif;
+    }
+    
+    body {
+        /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
+        background-image: url(/src/assets/fondodiap1.PNG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: auto; */
+    
+    }
+    
+    .grid {
+        display: flex;
+        /* grid-template-columns: repeat(1, 1fr); */
+        grid-gap: 6px;
+     
+    
+    }
+    
+.col2-container{
+    flex-direction: column;
+    
+}
+.col1-container{
+    flex-direction: column;
+   
+}
+
+
+    .block-1 {
+        flex-direction: row;
+        grid-row: span 60 / auto;
+        grid-column: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .block-2 {
+        grid-row: span 20 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+    }
+    
+    .block-3 {
+        grid-row: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+    
+    
+    .block-4 {
+        grid-row: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    
+    .block-5 {
+        grid-row: span 90 / auto;
+        grid-column: span 90 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-left: 10px;
+        margin-top: 10px;
+        
+    }
+    
+    .block-6 {
+        grid-column: span 10 / auto;
+        grid-row: span 60 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+  }
