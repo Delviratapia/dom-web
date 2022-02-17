@@ -25,60 +25,62 @@ body {
 
 }
 
+/* Laptop responsive */
+
 @media (min-width: 1280px) {
-   
-   
-  
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    
-
-}
 
 
-.block-1 {
-    grid-row: span 80 / auto;
-    background: rgba(0, 0, 0, 0.466);
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.block-2 {
-    grid-row: span 30 / auto;
-    background: rgba(0, 0, 0, 0.466);
-    margin-top: 10px;
-}
-
-.block-3 {
-    grid-row: span 15 / auto;
-    background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-}
 
 
-.block-4 {
-    grid-row: span 15 / auto;
-    background: rgba(0, 0, 0, 0.466);
-    margin-top: 10px;
-    margin-right: 10px;
-}
+    .grid { 
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
 
-.block-5 {
-    grid-row: span 90 / auto;
-    background: rgba(0, 0, 0, 0.466);
-    margin-left: 10px;
-}
 
-.block-6 {
-    grid-column: span 2 / auto;
-    grid-row: span 70 / auto;
-    background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-}
-/* 
+    }
+
+
+    .block-1 {
+        grid-row: span 80 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .block-2 {
+        grid-row: span 30 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+    }
+
+    .block-3 {
+        grid-row: span 15 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+
+
+    .block-4 {
+        grid-row: span 15 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .block-5 {
+        grid-row: span 90 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-left: 10px;
+    }
+
+    .block-6 {
+        grid-column: span 2 / auto;
+        grid-row: span 70 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+
+    /* 
 
 div:hover:after {
     background:rgba(255, 0, 0, 0.5);
@@ -87,55 +89,93 @@ div:hover:after {
 
  */
 
-
-
-
-
-/* option 2 */
-
-/* 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
 }
 
-.span-col-2 {
-    grid-column: span 2 / auto;
+
+
+/* Ipad responsive */
+
+@media screen and (max-width: 1279px) and (min-width: 800px){
+
+    html,
+    body {
+        height: 100%;
+        font-family: 'Cabin', sans-serif;
+    }
+
+    body {
+        /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
+        background-image: url(/src/assets/fondodiap1.PNG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: auto; */
+
+    }
+
+    .grid {
+        grid-gap: 6px;
+
+
+    }
+
+
+
+    .block-1 {
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-left: 10px;
+        grid-column: 1;
+        grid-row: 1 / 4;
+    }
+
+    .block-2 {
+        grid-row: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+        grid-column: 2;
+        grid-row: 3 / 4;
+    }
+
+    .block-3 {
+        grid-row: span 10 / auto;
+        grid-column: span 90 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+        grid-column: 2;
+        grid-row: 2;
+
+    }
+
+    .block-4 {
+        grid-row: span 10 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-top: 10px;
+        margin-right: 10px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .block-5 {
+        grid-row: span 90 / auto;
+        grid-column: span 90 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-left: 10px;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .block-6 {
+        grid-column: span 10 / auto;
+        grid-row: span 60 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+        grid-column: 2;
+        grid-row: 4;
+    }
 }
 
-.span-row-12 {
-    grid-row: span 12 / auto;
-}
 
-.span-row-2 {
-    grid-row: span 2 / auto;
-}
-
-.span-row-25 {
-    grid-row: span 25 / auto;
-}
-
-.span-row-30 {
-    grid-row: span 30 / auto;
-} */
-
-
-
-/* .block-1-img{
-    
-
-} */
-
- 
-
-/* Responsive media/order layout */
-
-
-
-
-}
-
+/* Mobile responsive */
 
 @media (max-width: 800px) {
 
@@ -144,136 +184,76 @@ div:hover:after {
         height: 100%;
         font-family: 'Cabin', sans-serif;
     }
-    
+
     body {
         /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
         background-image: url(/src/assets/fondodiap1.PNG);
         background-repeat: no-repeat;
         background-size: cover;
         /* height: auto; */
-    
+
     }
-    
+
     .grid {
-   
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 6px;
-        
-    
     }
-    
+
     .block-1 {
-        grid-row: span 70 / auto;
+        grid-row: span 50 / auto;
         grid-column: span 10 / auto;
         background: rgba(0, 0, 0, 0.466);
         margin-top: 10px;
         margin-left: 10px;
+        margin-right: 10px;
+        grid-column: 1;
+        grid-row: 1;
     }
-    
+
     .block-2 {
-        grid-row: span 20 / auto;
+        grid-row: span 10 / auto;
         background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        grid-column: 1;
+        grid-row: 3;
     }
-    
+
     .block-3 {
         grid-row: span 10 / auto;
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
+        margin-left: 10px;
+        grid-column: 1;
+        grid-row: 2;
     }
-    
-    
+
+
     .block-4 {
         grid-row: span 10 / auto;
         background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
         margin-right: 10px;
+        margin-left: 10px;
+        grid-column: 1;
+        grid-row: 6;
     }
-    
+
     .block-5 {
         grid-row: span 60 / auto;
         background: rgba(0, 0, 0, 0.466);
         margin-left: 10px;
+        margin-right: 10px;
+        grid-column: 1;
+        grid-row: 5;
     }
-    
+
     .block-6 {
         grid-column: span 10 / auto;
         grid-row: span 60 / auto;
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
-    }
-  }
-
-  /* Ipad responsive */
-
-  @media (max-width: 1279px) {
-
-    html,
-    body {
-        height: 100%;
-        font-family: 'Cabin', sans-serif;
-    }
-    
-    body {
-        /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
-        background-image: url(/src/assets/fondodiap1.PNG);
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* height: auto; */
-    
-    }
-    
-    .grid {
-        /* grid-template-columns: repeat(1, 1fr); */
-        grid-gap: 6px;
-     
-    
-    }
-
-
-
-    .block-1 {
-
-        grid-row: span 60 / auto;
-        grid-column: span 10 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
         margin-left: 10px;
+        grid-column: 1;
+        grid-row: 4;
     }
-    
-    .block-2 {
-        grid-row: span 20 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-    }
-    
-    .block-3 {
-        grid-row: span 10 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-    }
-    
-    
-    .block-4 {
-        grid-row: span 10 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-    
-    .block-5 {
-        grid-row: span 90 / auto;
-        grid-column: span 90 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-left: 10px;
-        margin-top: 10px;
-        
-    }
-    
-    .block-6 {
-        grid-column: span 10 / auto;
-        grid-row: span 60 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-    }
-  }
+}
