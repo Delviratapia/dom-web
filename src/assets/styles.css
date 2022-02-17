@@ -155,8 +155,7 @@ div:hover:after {
     }
     
     .grid {
-        display: flex;
-        flex-direction: column;
+   
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 6px;
         
@@ -225,25 +224,16 @@ div:hover:after {
     }
     
     .grid {
-        display: flex;
         /* grid-template-columns: repeat(1, 1fr); */
         grid-gap: 6px;
      
     
     }
-    
-.col2-container{
-    flex-direction: column;
-    
-}
-.col1-container{
-    flex-direction: column;
-   
-}
+
 
 
     .block-1 {
-        flex-direction: row;
+
         grid-row: span 60 / auto;
         grid-column: span 10 / auto;
         background: rgba(0, 0, 0, 0.466);
