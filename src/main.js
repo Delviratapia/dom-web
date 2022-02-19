@@ -6,6 +6,14 @@ let menuTextAudio = document.querySelectorAll(".cursor-pointer.menu-text")
 let items = document.querySelectorAll(".portfolio-item,.cv-item")
 
 
+function showPreview (){
+    item.addEventListener("click",() => {
+        item.classList.remove("hidden");
+    })
+}
+
+
+
 for (let btn of menuTextAudio) {
     btn.addEventListener("click", () => {
         HOVERAUDIO.play()
@@ -16,7 +24,9 @@ for (let btn of menuTextAudio) {
 
 for (let item of items) {
     item.addEventListener("click", () => {
-        USEITEMAUDIO.play()
+        USEITEMAUDIO.play();
+        showPreview();
+
     })
 
 }
