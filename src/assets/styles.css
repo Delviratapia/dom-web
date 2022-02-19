@@ -80,6 +80,13 @@ body {
         margin-right: 10px;
     }
 
+    .block-7 {
+        grid-column: span 2 / auto;
+        grid-row: span 70 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+    }
+
     /* 
 
 div:hover:after {
@@ -172,6 +179,17 @@ div:hover:after {
         grid-column: 2;
         grid-row: 4;
     }
+
+    .block-7 {
+        grid-column: span 10 / auto;
+        grid-row: span 60 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+        margin-left: 10px;
+        grid-column: 1/3;
+        grid-row: 5;
+    }
+
 }
 
 
@@ -235,7 +253,7 @@ div:hover:after {
         margin-right: 10px;
         margin-left: 10px;
         grid-column: 1;
-        grid-row: 6;
+        grid-row: 7;
     }
 
     .block-5 {
@@ -244,7 +262,7 @@ div:hover:after {
         margin-left: 10px;
         margin-right: 10px;
         grid-column: 1;
-        grid-row: 5;
+        grid-row: 6;
     }
 
     .block-6 {
@@ -256,4 +274,16 @@ div:hover:after {
         grid-column: 1;
         grid-row: 4;
     }
+
+
+    .block-7 {
+        grid-column: span 10 / auto;
+        grid-row: span 60 / auto;
+        background: rgba(0, 0, 0, 0.466);
+        margin-right: 10px;
+        margin-left: 10px;
+        grid-column: 1;
+        grid-row: 5;
+    }
+
 }
