@@ -136,7 +136,7 @@ div:hover:after {
     }
 
     .block-2 {
-        grid-row: span 10 / auto;
+        /* grid-row: span 10 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         grid-column: 2;
@@ -144,8 +144,8 @@ div:hover:after {
     }
 
     .block-3 {
-        grid-row: span 10 / auto;
-        grid-column: span 90 / auto;
+        /* grid-row: span 10 / auto;
+        grid-column: span 90 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         grid-column: 2;
@@ -154,7 +154,7 @@ div:hover:after {
     }
 
     .block-4 {
-        grid-row: span 10 / auto;
+        /* grid-row: span 10 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-top: 10px;
         margin-right: 10px;
@@ -163,8 +163,8 @@ div:hover:after {
     }
 
     .block-5 {
-        grid-row: span 90 / auto;
-        grid-column: span 90 / auto;
+        /* grid-row: span 90 / auto;
+        grid-column: span 90 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-left: 10px;
         grid-column: 1;
@@ -172,8 +172,8 @@ div:hover:after {
     }
 
     .block-6 {
-        grid-column: span 10 / auto;
-        grid-row: span 60 / auto;
+        /* grid-column: span 10 / auto;
+        grid-row: span 60 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         grid-column: 2;
@@ -181,8 +181,8 @@ div:hover:after {
     }
 
     .block-7 {
-        grid-column: span 10 / auto;
-        grid-row: span 60 / auto;
+        /* grid-column: span 10 / auto;
+        grid-row: span 60 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         margin-left: 10px;
@@ -218,8 +218,8 @@ div:hover:after {
     }
 
     .block-1 {
-        grid-row: span 50 / auto;
-        grid-column: span 10 / auto;
+        /* grid-row: span 50 / auto;
+        grid-column: span 10 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-top: 10px;
         margin-left: 10px;
@@ -229,7 +229,7 @@ div:hover:after {
     }
 
     .block-2 {
-        grid-row: span 10 / auto;
+        /* grid-row: span 10 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         margin-left: 10px;
@@ -238,7 +238,7 @@ div:hover:after {
     }
 
     .block-3 {
-        grid-row: span 10 / auto;
+        /* grid-row: span 10 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         margin-left: 10px;
@@ -248,7 +248,7 @@ div:hover:after {
 
 
     .block-4 {
-        grid-row: span 10 / auto;
+        /* grid-row: span 10 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         margin-left: 10px;
@@ -257,7 +257,7 @@ div:hover:after {
     }
 
     .block-5 {
-        grid-row: span 60 / auto;
+        /* grid-row: span 60 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-left: 10px;
         margin-right: 10px;
@@ -266,8 +266,8 @@ div:hover:after {
     }
 
     .block-6 {
-        grid-column: span 10 / auto;
-        grid-row: span 60 / auto;
+        /* grid-column: span 10 / auto;
+        grid-row: span 60 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         margin-left: 10px;
@@ -277,8 +277,8 @@ div:hover:after {
 
 
     .block-7 {
-        grid-column: span 10 / auto;
-        grid-row: span 60 / auto;
+        /* grid-column: span 10 / auto;
+        grid-row: span 60 / auto; */
         background: rgba(0, 0, 0, 0.466);
         margin-right: 10px;
         margin-left: 10px;

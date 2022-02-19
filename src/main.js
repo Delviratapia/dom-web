@@ -1,11 +1,30 @@
 const HOVERAUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
-let menuTextAudio = document.querySelectorAll(".cursor-pointer")
+const USEITEMAUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
+const CONFIRMUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
+const DENIEDAUDIO = new Audio("src/assets/audio/rpg_denied.wav")
+let menuTextAudio = document.querySelectorAll(".cursor-pointer.menu-text")
+let items = document.querySelectorAll(".portfolio-item,.cv-item")
+
+
 for (let btn of menuTextAudio) {
     btn.addEventListener("click", () => {
         HOVERAUDIO.play()
     })
 
 }
+
+
+for (let item of items) {
+    item.addEventListener("click", () => {
+        USEITEMAUDIO.play()
+    })
+
+}
+
+
+
+
+
 
 
 
