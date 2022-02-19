@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;400&display=swap');
 
 @tailwind base;
@@ -11,7 +12,9 @@
 html,
 body {
     height: 100%;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    
+    
 }
 
 body {
@@ -29,8 +32,13 @@ body {
 
 @media (min-width: 1280px) {
 
-
-
+    html,
+body {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+    
+    
+}
 
     .grid { 
         grid-template-columns: repeat(3, 1fr);
@@ -105,10 +113,12 @@ div:hover:after {
 @media screen and (max-width: 1279px) and (min-width: 800px){
 
     html,
-    body {
-        height: 100%;
-        font-family: 'Cabin', sans-serif;
-    }
+body {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+    
+    
+}
 
     body {
         /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
@@ -200,7 +210,9 @@ div:hover:after {
     html,
     body {
         height: 100%;
-        font-family: 'Cabin', sans-serif;
+        font-family: 'Press Start 2P', cursive;
+        
+        
     }
 
     body {

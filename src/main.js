@@ -1,3 +1,11 @@
+function timeStr(){    
+    var t=new Date();
+    var ltstr=t.toLocaleTimeString();
+    document.querySelector(".time").innerHTML=ltstr;
+      }
+   setInterval(timeStr,1)   
+
+
 const HOVERAUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
 const USEITEMAUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
 const CONFIRMAUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
@@ -72,7 +80,6 @@ portfTitle.addEventListener("click", () => {
 
 
 let cvTitle = document.querySelector(".cv-title")
-
 cvTitle.addEventListener("click", () => {
     for (let item of myItems.children) {
         if (item.classList.contains("cv-item")) {
@@ -108,11 +115,8 @@ avistaloo.addEventListener("click", () => {
 
 // CV Preview
 
-
-let myItemsPreview = document.querySelector(".my-items-preview")
-let avistaloo = document.querySelector(".avistaloo")
-
-avistaloo.addEventListener("click", () => {
+let cvItem = document.querySelector(".cv-item")
+cvItem.addEventListener("click", () => {
     for (let item of myItemsPreview.children) {
         if (item.classList.contains("preview-links")) {
             item.classList.remove("hidden");

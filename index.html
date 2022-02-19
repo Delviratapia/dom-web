@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/assets/styles.css">
   <title>Vite App</title>
 </head>
@@ -16,7 +19,7 @@
 
     <div class="block-1 p-5 border-solid border-white border-4 rounded-lg">
 
-      <div class="flex flex-row justify-around gap-2 text-xl">
+      <div class="flex flex-row justify-around gap-2 text-xs">
         <div class="text-white">Dominique</div>
         <div class="text-white">Front-End developer
           <div class="text-white">LV Junior</div>
@@ -42,7 +45,7 @@
 
           <div class="w-36 h-3 bg-red-600 bg-gradient-to-l from-red-900 rounded-md absolute max-w-sm translate-y-[90%]">
           </div>
-          <div class="status-container flex gap-12 text-xl">
+          <div class="status-container flex gap-12 text-xs">
             <div class="text-white translate-x-0">HP</div>
             <div class="text-white translate-x-0">316/316</div>
           </div>
@@ -51,7 +54,7 @@
           </div>
 
           <!-- <div class="bg-red w-105 h-130"></div> -->
-          <div class="status-container flex gap-12 text-xl">
+          <div class="status-container flex gap-12 text-xs">
             <div class="text-white translate-x-0">MP</div>
             <div class="text-white translate-x-0">110/110</div>
           </div>
@@ -75,12 +78,13 @@
 
       <div class="flex text-white text-center flex-col">
         <div class="text-white">About me</div>
-        <div class="text-white mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id atque optio itaque.
+        <div class="text-white mb-2 text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id atque optio
+          itaque.
           Sed,
           blanditiisspiciatis</div>
         <div class="flex flex-row justify-around justify-center items-center">
           <div class="text-white px-5 py-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer menu-text rounded-md">
-            <img class="w-10" src="/src/assets/githubicon.png" alt=""></div>
+            <img class="w-16" src="/src/assets/GITHUBLOGO.png" alt=""></div>
           <div class="text-white px-5 py-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer menu-text rounded-md">
             <img class="w-10" src="/src/assets/likedinpixel.png" alt=""></div>
           <div class="text-white px-5 py-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer menu-text rounded-md">
@@ -94,8 +98,8 @@
 
 
 
-    <div class="block-2 border-solid p-5 border-white border-4 rounded-lg text-white">
-      <div class="flex justify-around items-center h-full text-2xl">
+    <div class="block-2 border-solid sm:p-5 border-white border-4 rounded-lg text-white">
+      <div class="flex justify-around items-center h-full text-sm">
         <div class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md cv-title menu-text">CV</div>
         <div class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md portfolio-title menu-text">
           Portfolio
@@ -108,17 +112,12 @@
     </div>
 
     <div class="location-container block-4 border-solid border-white border-4 rounded-lg text-center text-white">
-      Location
-      <div class="location text-center" id="txt1">
-        <iframe class="text-center"
-          src="https://free.timeanddate.com/clock/i84nzrc4/n141/fn13/fcfff/tct/pct/ftb/tt0/tm3/td2/th2/tb2"
-          frameborder="0" width="240" height="18" allowtransparency="true"></iframe>
-        Spain
-      </div>
+      Location Time
+      <div class="time"></div>
     </div>
 
-    <div class="block-3 p-5 border-solid border-white border-4 rounded-lg text-white ">
-      <div class="flex justify-around items-center text-2xl h-full">
+    <div class="block-3 sm:p-5 border-solid border-white border-4 rounded-lg text-white ">
+      <div class="flex justify-around items-center text-sm h-full">
 
         <div class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md menu-text">Language</div>
         <div class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md menu-text">Save</div>
@@ -131,7 +130,7 @@
     <div class="block-6 border-solid border-white border-4 rounded-lg text-white flex items-start my-items">
 
       <div
-        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-lg h-40 items-center flex-col flex hidden portfolio-item menu-item avistaloo">
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-40 items-center flex-col flex hidden portfolio-item menu-item avistaloo ">
         <div class="p-2 cursor-pointer rounded-md">Avistaloo</div><img class="h-16 w-12"
           src="./src/assets/AvistalooLogoPixel.png" alt="Avistaloo">
       </div>
@@ -139,7 +138,7 @@
 
 
       <div
-        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md  sm:w-36 sm:text-lg h-40 items-center flex flex-col hidden portfolio-item menu-item">
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md  sm:w-36 sm:text-sm h-40 items-center flex flex-col hidden portfolio-item menu-item">
         <div class="p-2 cursor-pointer rounded-md">Switchkey</div><img class="h-16" src="./src/assets/PDFLOGO.png"
           alt="CV Español">
       </div>
@@ -147,7 +146,7 @@
 
 
       <div
-        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md  sm:w-36 sm:text-lg h-40 items-center flex flex-col hidden cv-item menu-item">
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md  sm:w-36 sm:text-sm h-40 items-center flex flex-col hidden cv-item menu-item">
         <div class="p-2 cursor-pointer rounded-md">Curriculum</div><img class="h-16" src="./src/assets/PDFLOGO.png"
           alt="CV Español">
       </div>
@@ -159,26 +158,31 @@
 
 
 
-    <div class="block-5 border-solid border-white border-4 rounded-lg text-white flex justify-around preview-container my-items-preview">
-      
+    <div
+      class="block-5 border-solid border-white border-4 rounded-lg text-white flex justify-around preview-container my-items-preview">
+
       <div class="flex flex-col text-center hidden preview-links">
         <img class="h-96 w-56 p-4  preview-links" src="./src/assets/avistalooPREVIEW.png" alt="Avistaloo">
-        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links" href="https://github.com/Delviratapia/lucid-lynx-Avistaloo" Target="_blank">Repository</a>
-        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links" href="http://avistaloo.com" Target="_blank">Website Deployment</a>
+        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links"
+          href="https://github.com/Delviratapia/lucid-lynx-Avistaloo" Target="_blank">Repository</a>
+        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links" href="http://avistaloo.com"
+          Target="_blank">Website Deployment</a>
 
       </div>
 
-      <div class="flex flex-col text-center  preview-links">
-        <img class="h-96 w-56 p-4  preview-links" src="./src/assets/CVESPAÑOLSCREEN.png" alt="CV Español">
-        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links" href="/src/assets/documents/CV Dominique Elvira Tapia ESPAÑOL.pdf"  download Target="_blank">Español</a>
-        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links" href=""  download Target="_blank">English</a>
+      <div class="flex flex-col text-center hidden preview-links cv-preview">
+        <img class="h-96 w-56 p-4  preview-links " src="./src/assets/CVESPAÑOLSCREEN.png" alt="CV Español">
+        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links"
+          href="/src/assets/documents/CV Dominique Elvira Tapia ESPAÑOL.pdf" download Target="_blank">Español</a>
+        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links" href="" download
+          Target="_blank">English</a>
 
       </div>
 
     </div>
 
 
-    
+
 
     <div class="block-7 border-solid border-white border-4 rounded-lg text-white flex items-start ">item 7</div>
 
