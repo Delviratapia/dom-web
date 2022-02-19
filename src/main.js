@@ -17,7 +17,9 @@ function timeStr(){
 
 // MODAL BOX
 
+const TYPINGAUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
 const DENIEDAUDIO = new Audio("src/assets/audio/rpg_denied.wav")
+const CONFIRMAUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
 // Get the modal
 let modal = document.querySelector(".modal");
@@ -31,19 +33,21 @@ let closeModal = document.querySelector(".close-modal");
 // When the user clicks the button, open the modal 
 openModal.onclick = function() {
   modal.style.display = "block";
+  TYPINGAUDIO.play()
 }
 
 // When the user clicks on <span> (x), close the modal
 closeModal.onclick = function() {
   modal.style.display = "none";
-  DENIEDAUDIO.play()
+  TYPINGAUDIO.pause()
+  CONFIRMAUDIO.play()
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    DENIEDAUDIO.play()
+    CONFIRMAUDIO.play()
   }
 }
 
@@ -56,9 +60,11 @@ window.onclick = function(event) {
 
 
 
+
+
+
 const HOVERAUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
 const USEITEMAUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
-const CONFIRMAUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
