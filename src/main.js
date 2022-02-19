@@ -1,9 +1,53 @@
 function timeStr(){    
-    var t=new Date();
-    var ltstr=t.toLocaleTimeString();
+    let t=new Date();
+    let ltstr=t.toLocaleTimeString();
     document.querySelector(".time").innerHTML=ltstr;
       }
    setInterval(timeStr,1)   
+
+
+
+//    let menuText = document.querySelectorAll(".menu-text")
+
+//    menuText.addEventListener("click", () => {
+//     menuText.classList.toggle("active")
+// })
+
+// MODAL BOX
+
+// Get the modal
+let modal = document.querySelector(".modal");
+
+// Get the button that opens the modal
+let openModal = document.querySelector(".email-modal");
+
+// Get the <span> element that closes the modal
+let closeModal = document.querySelector(".close-modal");
+
+// When the user clicks the button, open the modal 
+openModal.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeModal.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+
+
+
+
 
 
 const HOVERAUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
@@ -13,6 +57,12 @@ const DENIEDAUDIO = new Audio("src/assets/audio/rpg_denied.wav")
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
+
+
+
+
+
+
 
 
 //General reusable function 

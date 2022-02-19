@@ -28,6 +28,13 @@ body {
 
 }
 
+
+.menu-text:hover, .menu-text.active {
+    background-color: rgb(74 222 128, 0.7);
+
+}
+
+
 /* Laptop responsive */
 
 @media (min-width: 1280px) {
