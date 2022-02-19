@@ -13,7 +13,11 @@ function timeStr(){
 //     menuText.classList.toggle("active")
 // })
 
+
+
 // MODAL BOX
+
+const DENIEDAUDIO = new Audio("src/assets/audio/rpg_denied.wav")
 
 // Get the modal
 let modal = document.querySelector(".modal");
@@ -32,12 +36,14 @@ openModal.onclick = function() {
 // When the user clicks on <span> (x), close the modal
 closeModal.onclick = function() {
   modal.style.display = "none";
+  DENIEDAUDIO.play()
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    DENIEDAUDIO.play()
   }
 }
 
@@ -53,7 +59,6 @@ window.onclick = function(event) {
 const HOVERAUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
 const USEITEMAUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
 const CONFIRMAUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
-const DENIEDAUDIO = new Audio("src/assets/audio/rpg_denied.wav")
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
