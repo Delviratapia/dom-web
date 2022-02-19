@@ -1,9 +1,17 @@
-function timeStr(){    
-    let t=new Date();
-    let ltstr=t.toLocaleTimeString();
-    document.querySelector(".time").innerHTML=ltstr;
-      }
-   setInterval(timeStr,1)   
+const myTimeout = setTimeout(onloadModal, 2000);
+
+function onloadModal() {
+    window.onload = modalOnload.style.display = "block";
+    TYPINGAUDIO.play()
+
+}
+
+function timeStr() {
+    let t = new Date();
+    let ltstr = t.toLocaleTimeString();
+    document.querySelector(".time").innerHTML = ltstr;
+}
+setInterval(timeStr, 1)
 
 
 
@@ -31,29 +39,41 @@ let openModal = document.querySelector(".email-modal");
 let closeModal = document.querySelector(".close-modal");
 
 // When the user clicks the button, open the modal 
-openModal.onclick = function() {
-  modal.style.display = "block";
-  TYPINGAUDIO.play()
+openModal.onclick = function () {
+    modal.style.display = "block";
+    TYPINGAUDIO.play()
 }
 
 // When the user clicks on <span> (x), close the modal
-closeModal.onclick = function() {
-  modal.style.display = "none";
-  TYPINGAUDIO.pause()
-  CONFIRMAUDIO.play()
+closeModal.onclick = function () {
+    modal.style.display = "none";
+    TYPINGAUDIO.pause()
+    CONFIRMAUDIO.play()
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    CONFIRMAUDIO.play()
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        CONFIRMAUDIO.play()
+    }
 }
 
 
+// WINDOW ONLOAD MODAL BOX
 
+// Get the modal
+let modalOnload = document.querySelector(".modal-Onload");
 
+// Get the <span> element that closes the modal
+let closeModalOnload = document.querySelector(".close-modal-Onload");
+
+// When the user clicks on <span> (x), close the modal
+closeModalOnload.onclick = function () {
+    modalOnload.style.display = "none";
+    TYPINGAUDIO.pause()
+    CONFIRMAUDIO.play()
+}
 
 
 
@@ -111,7 +131,7 @@ for (let btn of menuPreview) {
 // for (let item of items) {
 //     item.addEventListener("click", () => {
 //         USEITEMAUDIO.play();
-      
+
 //     })
 
 // }
@@ -218,5 +238,3 @@ cvItem.addEventListener("click", () => {
 //         }
 
 // })
-
-
