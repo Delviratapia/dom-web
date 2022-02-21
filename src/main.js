@@ -98,6 +98,7 @@ let menuPreview = document.querySelectorAll(".preview-links")
 
 //General reusable function 
 
+
 function showPreview() {
     item.addEventListener("click", () => {
         item.classList.remove("hidden");
@@ -156,6 +157,26 @@ portfTitle.addEventListener("click", () => {
 })
 
 
+// Portfolio PREVIEW
+
+let myItemsPreview = document.querySelector(".my-items-preview")
+let avistaloo = document.querySelector(".avistaloo")
+
+avistaloo.addEventListener("click", () => {
+    for (let item of myItemsPreview.children) {
+        if (item.classList.contains("preview-links") && item.classList.contains("portfolio-preview")) {
+            item.classList.remove("hidden");
+        } else {
+            if (!item.classList.contains("hidden")) {
+                item.classList.add("hidden");
+            }
+
+        }
+    }
+})
+
+
+
 
 // CV
 
@@ -175,31 +196,12 @@ cvTitle.addEventListener("click", () => {
 })
 
 
-// Portfolio PREVIEW
-
-let myItemsPreview = document.querySelector(".my-items-preview")
-let avistaloo = document.querySelector(".avistaloo")
-
-avistaloo.addEventListener("click", () => {
-    for (let item of myItemsPreview.children) {
-        if (item.classList.contains("preview-links")) {
-            item.classList.remove("hidden");
-        } else {
-            if (!item.classList.contains("hidden")) {
-                item.classList.add("hidden");
-            }
-
-        }
-    }
-})
-
-
 // CV Preview
 
 let cvItem = document.querySelector(".cv-item")
 cvItem.addEventListener("click", () => {
     for (let item of myItemsPreview.children) {
-        if (item.classList.contains("preview-links")) {
+        if (item.classList.contains("cv-preview") && item.classList.contains("preview-links") ) {
             item.classList.remove("hidden");
         } else {
             if (!item.classList.contains("hidden")) {
@@ -209,6 +211,9 @@ cvItem.addEventListener("click", () => {
         }
     }
 })
+
+
+
 
 
 
