@@ -15,12 +15,19 @@ setInterval(timeStr, 1)
 
 
 
-//    let menuText = document.querySelectorAll(".menu-text")
+let menuTexts = document.querySelectorAll(".menu-text")
 
-//    menuText.addEventListener("click", () => {
-//     menuText.classList.toggle("active")
-// })
+for (let menuText of menuTexts) {
+    menuText.addEventListener("click", () => {
+        for (let menuText of menuTexts) {
+            if (menuText.classList.contains("active")) {
+                menuText.classList.remove("active");
+            }
+        }
+        menuText.classList.toggle("active")
+    })
 
+}
 
 
 // MODAL BOX
@@ -201,7 +208,7 @@ cvTitle.addEventListener("click", () => {
 let cvItem = document.querySelector(".cv-item")
 cvItem.addEventListener("click", () => {
     for (let item of myItemsPreview.children) {
-        if (item.classList.contains("cv-preview") && item.classList.contains("preview-links") ) {
+        if (item.classList.contains("cv-preview") && item.classList.contains("preview-links")) {
             item.classList.remove("hidden");
         } else {
             if (!item.classList.contains("hidden")) {
@@ -212,34 +219,3 @@ cvItem.addEventListener("click", () => {
     }
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Portfolio PREVIEW
-
-// let avistaloo = document.querySelector(".avistaloo")
-// let previewContainer = document.querySelectorAll(".preview-container > .preview-links")
-
-// avistaloo.addEventListener("click", () => {
-//         if (previewContainer.classList.contains("hidden")) {
-//             previewContainer.classList.remove("hidden");
-//         } else {
-//             if (!previewContainer.classList.contains("hidden")) {
-//                 previewContainer.classList.add("hidden");
-//             }
-
-//         }
-
-// })
