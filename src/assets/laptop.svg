@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 34" width="36" height="34">
+	<title>output-onlinepngtools(6)</title>
+	<defs>
+		<image  width="24" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAPBAMAAAAMihLoAAAAAXNSR0IB2cksfwAAABhQTFRF////7PDxYo3RwMzcEE6J7PDx93Yii5u1R7OcUwAAAAh0Uk5TADD////////vn7tQAAAATUlEQVR4nGNgEIQDBgYGISUoUARxjJA5SiouLi5OMBnV0NDQIJiMampqarixEUIGxgHKIHNCcXGAoLwciWNsjMSBuUA0FAoCGRjKkQAA+GQf/eU27NkAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="6" y="8" />
+</svg>

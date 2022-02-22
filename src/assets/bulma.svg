@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>bulma_icon_138839-svg</title>
+	<defs>
+		<image  width="24" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAQMAAADaua+7AAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAAK2T18i5lQAAAAJ0Uk5TAP9bkSK1AAAAPUlEQVR4nDXM4QkAIAiE0S/64UoNF9FojtIk1VV28EBOFH6KVJmQFuTVxUPH1NkMZ76dy9B+6MZBPS1+vWxURBfaWmjzEwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<path id="Layer" class="s0" d="m17.6 8.3l-3.7 3.7l5 5l-7.5 5l-6.3-6.3l1.3-8.7l5-5z" />
+	<use id="Layer copy" href="#img1" x="0" y="0" />
+</svg>
