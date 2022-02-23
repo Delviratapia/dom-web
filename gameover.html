@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/assets/styles.css">
+    <title>Document</title>
+</head>
+
+<body class="gameover-bg">
+
+
+
+
+<!-- 
+    <div class="container-t flex justify-center items-center">
+
+        <div class="gameover-text ">Game over</div>
+
+
+
+
+    </div>
+ -->
+ 
+
+
+
+
+    <!-- MODAL -->
+
+    <!-- 
+    <div class="modal-Initial w-1/3 absolute  top-1/3 left-1/3 border-4 rounded-xl"
+        aria-modal="true" role="dialog">
+        <div class="w-auto pointer-events-none">
+
+            <div class="flex flex-col w-full pointer-events-auto bg-black bg-clip-padding rounded-md items-center">
+                <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+                </div>
+                <div class="p-4 text-white typewriter flex">
+                    <p class="tw-1 text-center">"Enter you name"</p>
+                    <p class="tw-2"></p>
+                </div>
+                <input type="name" class="flex w-1/3 input-name ">
+                <div class="flex p-4 border-gray-200 rounded-b-md">
+                    <button type="button"
+                        class="inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-black hover:text-white hover:shadow-lg  hover:outline-dashed focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-modal-Initial"
+                        data-bs-dismiss="modal"><a href="/index.html">Enter</a>
+                    
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container">	
+        <!-- Codrops top bar -->
+        <div class="codrops-top clearfix">
+            <a href="http://tympanus.net/Tutorials/YouTubeLeftSideMenu/"><strong>&laquo; Previous Demo: </strong>YouTube Menu Effect</a>
+            <span class="right"><a href="http://tympanus.net/codrops/?p=14902"><strong>Back to the Codrops Article</strong></a></span>
+        </div>
+        <div class="os-phrases" id="os-phrases">
+            <h2>Sometimes it's better</h2>
+            <h2>to hide</h2>
+            <h2>in order to</h2>
+            <h2>survive evil</h2>
+            <h2>Thanatos</h2>
+            <h2>This fall</h2>
+            <h2>Prepare</h2>
+            <h2>Refresh to replay</h2>
+        </div>
+    </div><!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/src/jquery.lettering.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#os-phrases > h2").lettering('words').children("span").lettering().children("span").lettering(); 
+        })
+    </script>
+
+
+
+
+
+
+    <script type="module" defer src="/src/modals.js"></script>
+
+
+
+</body>
+
+</html>
