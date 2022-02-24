@@ -33,39 +33,192 @@ body {
 }
 
 
-/* Typewriter effect */
+/* Typewriter effect modal on load*/
 
-.typewriter p {
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
+
+.css-typing p {
     white-space: nowrap;
-    /* Keeps the content on a single line */
-    letter-spacing: .15em;
-    /* Adjust as needed */
-    animation:
-        typing 3.5s steps(30, end),
-        blink-caret .5s step-end infinite;
+    overflow: hidden;
+  }
 
+  .css-typing p:nth-child(2) {
+    width: 50.5em;
+    opacity: 0;
+    -webkit-animation: type1 2s steps(40, end);
+    animation: type1 2s steps(40, end);
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(3) {
+    width: 50.5em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
 
-}
-
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0
+  @keyframes type1 {
+    0% {
+      width: 0;
     }
-
-    to {
-        width: 100%
+    1% {
+      opacity: 1;
     }
-}
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+   
+    }
+  }
+  
+  @-webkit-keyframes type1 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+     
+    }
+  }
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+   
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+     
+    }
+  }
+  
+/* Typewriter effect email button*/
 
 
+.css-typing-email p {
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
+  .css-typing-email p:nth-child(2) {
+    width: 50.5em;
+    opacity: 0;
+    -webkit-animation: type1 2s steps(40, end);
+    animation: type1 2s steps(40, end);
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing-email p:nth-child(3) {
+    width: 50.5em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
 
-
-
-
+  @keyframes type1 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+   
+    }
+  }
+  
+  @-webkit-keyframes type1 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+     
+    }
+  }
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+   
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+     
+    }
+  }
+  
 
 
 /* Laptop responsive */
@@ -345,9 +498,9 @@ div:hover:after {
 .gameover-bg {
     color: #fff;
     /* background: #000; */
-background-image: url(./pixelartbg.jpg);
-background-repeat: no-repeat;
-background-size: cover;
+    background-image: url(./pixelartbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .go-text-container {
