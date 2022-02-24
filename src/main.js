@@ -2,7 +2,7 @@ const myTimeout = setTimeout(onloadModal, 2000);
 
 function onloadModal() {
     window.onload = modalOnload.style.display = "block";
-    TYPINGAUDIO.play()
+    TYPIN_GAUDIO.play()
 
 }
 
@@ -32,9 +32,9 @@ for (let menuText of menuTexts) {
 
 // MODAL BOX
 
-const TYPINGAUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
-const DENIEDAUDIO = new Audio("src/assets/audio/rpg_denied.wav")
-const CONFIRMAUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
+const TYPIN_GAUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
+const DENIED_AUDIO = new Audio("src/assets/audio/rpg_denied.wav")
+const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
 // Get the modal
 let modal = document.querySelector(".modal");
@@ -48,21 +48,21 @@ let closeModal = document.querySelector(".close-modal");
 // When the user clicks the button, open the modal 
 openModal.onclick = function () {
     modal.style.display = "block";
-    TYPINGAUDIO.play()
+    TYPING_AUDIO.play()
 }
 
 // When the user clicks on <span> (x), close the modal
 closeModal.onclick = function () {
     modal.style.display = "none";
-    TYPINGAUDIO.pause()
-    CONFIRMAUDIO.play()
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
-        CONFIRMAUDIO.play()
+        CONFIRM_AUDIO.play()
     }
 }
 
@@ -78,8 +78,8 @@ let closeModalOnload = document.querySelector(".close-modal-Onload");
 // When the user clicks on <span> (x), close the modal
 closeModalOnload.onclick = function () {
     modalOnload.style.display = "none";
-    TYPINGAUDIO.pause()
-    CONFIRMAUDIO.play()
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
 }
 
 
@@ -90,8 +90,8 @@ closeModalOnload.onclick = function () {
 
 
 
-const HOVERAUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
-const USEITEMAUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
+const HOVER_AUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
+const USE_ITEM_AUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
@@ -116,21 +116,21 @@ function showPreview() {
 
 for (let btn of menuText) {
     btn.addEventListener("click", () => {
-        HOVERAUDIO.play()
+        HOVER_AUDIO.play()
     })
 
 }
 
 for (let btn of menuItems) {
     btn.addEventListener("click", () => {
-        USEITEMAUDIO.play()
+        USE_ITEM_AUDIO.play()
     })
 
 }
 
 for (let btn of menuPreview) {
     btn.addEventListener("click", () => {
-        CONFIRMAUDIO.play()
+        CONFIRM_AUDIO.play()
     })
 
 }
