@@ -2,7 +2,7 @@ const myTimeout = setTimeout(onloadModal, 2000);
 
 function onloadModal() {
     window.onload = modalOnload.style.display = "block";
-    TYPIN_GAUDIO.play()
+    TYPING_AUDIO.play()
 
 }
 
@@ -32,7 +32,7 @@ for (let menuText of menuTexts) {
 
 // MODAL BOX
 
-const TYPIN_GAUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
+const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
 const DENIED_AUDIO = new Audio("src/assets/audio/rpg_denied.wav")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
