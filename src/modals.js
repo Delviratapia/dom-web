@@ -1,4 +1,4 @@
-const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
+const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
 const myTimeout = setTimeout(onloadModalInitial, 2000);
