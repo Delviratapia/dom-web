@@ -84,23 +84,11 @@ closeModalOnload.onclick = function () {
 
 
 
-
-
-
-
-
-
 const HOVER_AUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
 const USE_ITEM_AUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
-
-
-
-
-
-
 
 
 //General reusable function 
@@ -134,15 +122,6 @@ for (let btn of menuPreview) {
     })
 
 }
-
-
-// for (let item of items) {
-//     item.addEventListener("click", () => {
-//         USEITEMAUDIO.play();
-
-//     })
-
-// }
 
 
 // portfolio 
@@ -218,4 +197,3 @@ cvItem.addEventListener("click", () => {
         }
     }
 })
-

@@ -10,12 +10,19 @@ function onloadModal() {
 
 
 const HOVER_AUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
-let gameoverBtn = document.querySelectorAll(".gameover-btn")
+let gameContinueBtn = document.querySelectorAll(".gamecontinue-btn")
 
 
-for (let btn of gameoverBtn) {
+for (let btn of gameContinueBtn) {
     btn.addEventListener("click", () => {
         HOVER_AUDIO.play()
     })
 
 }
+
+const DENIED_AUDIO = new Audio("src/assets/audio/rpg_denied.wav")
+let endBtn = document.querySelector(".end-game-btn");
+
+endBtn.addEventListener("click", () => {
+            DENIED_AUDIO.play()
+        })
