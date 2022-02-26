@@ -199,3 +199,21 @@ closeModalOnload.onclick = function () {
     CONFIRM_AUDIO.play()
 }
 
+
+
+// SAVE MODAL
+
+
+let saveModal = document.querySelector(".modal-savegame");
+let saveText = document.querySelector(".saveText");
+
+let closeSaveModal = document.querySelector(".close-modal-savegame");
+
+saveText.onclick = function () {
+    saveModal.style.display = "block";
+}
+
+closeSaveModal.onclick = function () {
+    saveModal.style.display = "none";
+    CONFIRM_AUDIO.play()
+}
