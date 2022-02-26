@@ -1,4 +1,4 @@
-const myTimeout = setTimeout(onloadModal, 2000);
+// const myTimeout = setTimeout(onloadModal, 2000);
 
 function onloadModal() {
     window.onload = modalOnload.style.display = "block";
@@ -7,10 +7,15 @@ function onloadModal() {
 }
 
 function timeStr() {
-    let t = new Date();
-    let ltstr = t.toLocaleTimeString();
-    document.querySelector(".time").innerHTML = ltstr;
+    let timeLocale = new Date();
+    let toLocaleTS = timeLocale.toLocaleTimeString();
+    let time = document.querySelector(".time")
+    time.innerHTML = toLocaleTS;
+ 
+
+
 }
+
 setInterval(timeStr, 1)
 
 
