@@ -8,15 +8,28 @@ function onloadModal() {
 
 function timeStr() {
     let timeLocale = new Date();
+    let dateLocale = new Date();
     let toLocaleTS = timeLocale.toLocaleTimeString();
+    let toLocaleD = dateLocale.toLocaleDateString();
     let time = document.querySelector(".time")
-    time.innerHTML = toLocaleTS;
- 
-
-
+    time.innerHTML = toLocaleTS + " " + toLocaleD;
 }
 
 setInterval(timeStr, 1)
+
+
+// SAVE GAME REGISTER DATE
+
+let saveSlot = document.querySelectorAll(".save-slot");
+for (let slot of saveSlot) {
+    slot.addEventListener("click",() => {
+        let gameTime = new Date();
+        let saveTime = gameTime.toLocaleTimeString();
+        slot.innerHTML = String(saveTime)
+    })
+}
+
+
 
 
 
