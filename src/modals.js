@@ -5,6 +5,7 @@ const myTimeout = setTimeout(onloadModalInitial, 2000);
 
 
 let modalInitial = document.querySelector(".modal-Initial");
+
 function onloadModalInitial() {
     window.onload = modalInitial.style.display = "block";
     TYPING_AUDIO.play()
@@ -12,22 +13,31 @@ function onloadModalInitial() {
 }
 
 
-    let closeModalInitial = document.querySelector(".close-modal-Initial");
-    
-if (!modalInitial && closeModalInitial === null) {
-    
-    closeModalInitial.onclick = function () {
-        modalInitial.style.display = "none";
-        TYPING_AUDIO.pause()
-        CONFIRM_AUDIO.play()
-    }
+let inputName = document.querySelector("input");
+let title = document.querySelector("title")
+inputName.onclick = function () {
+    title.innerHTML = inputName.value
 }
 
 
 
+function play(url) {
+    return new Promise(function (resolve, reject) { // return a promise
+            var audio = new Audio(url); // create audio wo/ src
+            audio.preload = "auto"; // intend to play through
+            audio.autoplay = true; // autoplay when loaded
+            audio.onerror = reject; // on error, reject
+            audio.onended = resolve; // when done, resolve
+        
+    });
+}
 
-let inputName = document.querySelector("input");
-let title = document.querySelector("title")
-inputName.onclick = function () {
-title.innerHTML=inputName.value
+let closeModalInitial = document.querySelector(".close-modal-Initial");
+closeModalInitial.onclick = function () {
+    // CONFIRM_AUDIO.play()
+    play("src/assets/audio/rpg_confirm.wav").then(()=>{
+        modalInitial.style.display = "none";
+        window.location.href = "./index.html"
+    })
+   
 }

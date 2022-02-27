@@ -1,5 +1,4 @@
-// const myTimeout = setTimeout(onloadModal, 2000);
-
+const myTimeout = setTimeout(onloadModal, 2000);
 function onloadModal() {
     window.onload = modalOnload.style.display = "block";
     TYPING_AUDIO.play()
