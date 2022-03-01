@@ -26,9 +26,23 @@ for (let slot of saveSlot) {
         let gameTime = new Date();
         let saveTime = gameTime.toLocaleTimeString();
         slot.innerHTML = localStorage.getItem('name') + " " + String(saveTime)
-        slot.inner
+        localStorage.setItem("savegame", slot.innerHTML )
+        
     })
 }
+
+let saveBtn = document.querySelectorAll(".saveText");
+    saveBtn.addEventListener("click", () => {
+        slot.innerHTML = localStorage.getItem("savegame")
+    })
+
+
+
+
+
+
+
+
 
 
 let menuTexts = document.querySelectorAll(".menu-text")
