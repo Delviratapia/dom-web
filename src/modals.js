@@ -24,12 +24,24 @@ if (localStorage.getItem('name') !== null) {
 let inputName = document.querySelector("input");
 let enterBtn = document.querySelector(".intro-modal-enter")
 enterBtn.addEventListener("click", () => {
-    localStorage.setItem("name",inputName.value)
+    if (inputName.value === " " || inputName.value.length <= 0 ) {
+    localStorage.setItem("name", "Anon")
+    title.innerHTML = localStorage.getItem("name")
+    } else {
+        localStorage.setItem("name",inputName.value)
+        title.innerHTML = localStorage.getItem("name")
+        inputName.value=""
+    }
+    
+})
+
+let skipBtn = document.querySelector(".intro-modal-skip")
+skipBtn.addEventListener("click", () => {
+    localStorage.setItem("name", "Anon")
     title.innerHTML = localStorage.getItem("name")
     inputName.value=""
 
 })
-
 
 
 
@@ -52,6 +64,13 @@ function play(url) {
 
 
 enterBtn.onclick = function () {
+    play("src/assets/audio/rpg_confirm.wav").then(()=>{
+        modalInitial.style.display = "none";
+        window.location.href = "./index.html"
+    })
+   
+}
+skipBtn.onclick = function () {
     play("src/assets/audio/rpg_confirm.wav").then(()=>{
         modalInitial.style.display = "none";
         window.location.href = "./index.html"
