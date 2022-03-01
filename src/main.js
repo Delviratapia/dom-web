@@ -1,4 +1,5 @@
 const myTimeout = setTimeout(onloadModal, 2000);
+
 function onloadModal() {
     window.onload = modalOnload.style.display = "block";
     TYPING_AUDIO.play()
@@ -21,15 +22,13 @@ setInterval(timeStr, 1)
 
 let saveSlot = document.querySelectorAll(".save-slot");
 for (let slot of saveSlot) {
-    slot.addEventListener("click",() => {
+    slot.addEventListener("click", () => {
         let gameTime = new Date();
         let saveTime = gameTime.toLocaleTimeString();
-        slot.innerHTML = String(saveTime)
+        slot.innerHTML = localStorage.getItem('name') + " " + String(saveTime)
+        slot.inner
     })
 }
-
-
-
 
 
 let menuTexts = document.querySelectorAll(".menu-text")
@@ -87,21 +86,18 @@ for (let btn of menuPreview) {
 
 }
 
+// this variable contains all the items that are deployed when pressing a menu button
+const myItems = document.querySelector(".my-items")
 
 // portfolio 
 
-let myItems = document.querySelector(".my-items")
 let portfTitle = document.querySelector(".portfolio-title")
-
 portfTitle.addEventListener("click", () => {
     for (let item of myItems.children) {
         if (item.classList.contains("portfolio-item")) {
             item.classList.remove("hidden");
-        } else {
-            if (!item.classList.contains("hidden")) {
-                item.classList.add("hidden");
-            }
-
+        } else if (!item.classList.contains("hidden")) {
+            item.classList.add("hidden");
         }
     }
 })
@@ -147,8 +143,8 @@ cvTitle.addEventListener("click", () => {
 
 
 // CV Preview
-
 let cvItem = document.querySelector(".cv-item")
+
 cvItem.addEventListener("click", () => {
     for (let item of myItemsPreview.children) {
         if (item.classList.contains("cv-preview") && item.classList.contains("preview-links")) {
@@ -162,7 +158,36 @@ cvItem.addEventListener("click", () => {
     }
 })
 
+// Items
+let itemsTitle = document.querySelector(".items-title")
 
+itemsTitle.addEventListener("click", () => {
+    for (let item of myItems.children) {
+        if (item.classList.contains("menu-item")) {
+            item.classList.remove("hidden");
+        } else {
+            if (!item.classList.contains("hidden")) {
+                item.classList.add("hidden");
+            }
+
+        }
+    }
+})
+
+// Skills
+let skillsTitle = document.querySelector(".skills-title")
+skillsTitle.addEventListener("click", () => {
+    for (let item of myItems.children) {
+        if (item.classList.contains("skill-item")) {
+            item.classList.remove("hidden");
+        } else {
+            if (!item.classList.contains("hidden")) {
+                item.classList.add("hidden");
+            }
+
+        }
+    }
+})
 
 // MODAL BOX
 
