@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 34" width="36" height="34">
+	<title>laptop-svg</title>
+	<defs>
+		<image  width="10" height="20" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUBAMAAABGwLFlAAAAAXNSR0IB2cksfwAAABJQTFRFwMzcW2mG7PDxEE6JAJnc////wVHhRgAAAAZ0Uk5T//////8As7+kvwAAADNJREFUeJxjYBQUFBRggJNCAgzMxsZGBkDSGUyC2SbGCDZM1hhJxBisxhjOxiICUo8ArAAGXAzzPawiVwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Capa 1" href="#img1" x="13" y="7" />
+</svg>

@@ -31,10 +31,12 @@ for (let slot of saveSlot) {
     })
 }
 
-let saveBtn = document.querySelectorAll(".saveText");
-    saveBtn.addEventListener("click", () => {
-        slot.innerHTML = localStorage.getItem("savegame")
-    })
+// Function that register time and name using local Storage
+
+// let saveBtn = document.querySelectorAll(".saveText");
+//     saveBtn.addEventListener("click", () => {
+//         slot.innerHTML = localStorage.getItem("savegame")
+//     })
 
 
 
