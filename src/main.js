@@ -278,15 +278,21 @@ closeSaveModal.addEventListener("click", () =>{
 
 window.addEventListener("click", function (event) {
     if (event.target == emailModal) {
+        console.log("1")
         emailModal.style.display = "none";
         CONFIRM_AUDIO.play()
     }
     if (event.target == saveModal) {
-        emailModal.style.display = "none";
+        console.log("2")
+
+        saveModal.style.display = "none";
         CONFIRM_AUDIO.play()
     }
     if (event.target == modalOnload) {
-        emailModal.style.display = "none";
+        console.log("3")
+
+        modalOnload.style.display = "none";
         CONFIRM_AUDIO.play()
     }
 })
+
