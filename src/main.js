@@ -214,34 +214,27 @@ const DENIED_AUDIO = new Audio("src/assets/audio/rpg_denied.wav")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
 // Get the modal
-let modal = document.querySelector(".modal");
+let emailModal = document.querySelector(".email-modal");
 
 // Get the button that opens the modal
-let openModal = document.querySelector(".email-modal");
+let openModal = document.querySelector(".email-open-modal");
 
 // Get the <span> element that closes the modal
 let closeModal = document.querySelector(".close-modal");
 
 // When the user clicks the button, open the modal 
-openModal.onclick = function () {
-    modal.style.display = "block";
+openModal.addEventListener("click", () =>{
+    emailModal.style.display = "block";
     TYPING_AUDIO.play()
-}
+})
 
 // When the user clicks on <span> (x), close the modal
-closeModal.onclick = function () {
-    modal.style.display = "none";
+closeModal.addEventListener("click", () =>{
+    emailModal.style.display = "none";
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
-}
+})
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        CONFIRM_AUDIO.play()
-    }
-}
 
 
 // WINDOW ONLOAD MODAL BOX
@@ -253,11 +246,11 @@ let modalOnload = document.querySelector(".modal-Onload");
 let closeModalOnload = document.querySelector(".close-modal-Onload");
 
 // When the user clicks on <span> (x), close the modal
-closeModalOnload.onclick = function () {
+closeModalOnload.addEventListener("click", () =>{
     modalOnload.style.display = "none";
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
-}
+})
 
 
 
@@ -269,11 +262,31 @@ let saveText = document.querySelector(".saveText");
 
 let closeSaveModal = document.querySelector(".close-modal-savegame");
 
-saveText.onclick = function () {
+saveText.addEventListener("click", () =>{
     saveModal.style.display = "block";
-}
+})
 
-closeSaveModal.onclick = function () {
+closeSaveModal.addEventListener("click", () =>{
     saveModal.style.display = "none";
     CONFIRM_AUDIO.play()
-}
+})
+
+
+// GENERAL MODAL CLOSES WHEN CLICKS OUTSIDE MODAL
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.addEventListener("click", function (event) {
+    if (event.target == emailModal) {
+        emailModal.style.display = "none";
+        CONFIRM_AUDIO.play()
+    }
+    if (event.target == saveModal) {
+        emailModal.style.display = "none";
+        CONFIRM_AUDIO.play()
+    }
+    if (event.target == modalOnload) {
+        emailModal.style.display = "none";
+        CONFIRM_AUDIO.play()
+    }
+})
