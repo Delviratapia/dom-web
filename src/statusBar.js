@@ -26,6 +26,8 @@ unknownItem.addEventListener("click", () => {
     if (stCounter <= 0) {
         stCounter = 0
         modifyStBar('w-0')
+        // poner aqui una promesa de imagen svg triste
+        window.location.href = "./gameover.html"
     }
 })
 
@@ -41,6 +43,54 @@ riceItem.addEventListener("click", () => {
     }
     if (stCounter >= 50 && stCounter < 150) {
         modifyStBar('w-7')
+    }
+
+})
+
+// Functions and arguments for the MP status bar
+
+let mpCounter = 110
+let mpLife = document.querySelector(".mp-life")
+let beerItem = document.querySelector(".beer-item")
+let juiceItem = document.querySelector(".juice-item")
+
+function modifyMpBar(newValue) {
+    mpLife.classList.remove('w-36')
+    mpLife.classList.remove('w-20')
+    mpLife.classList.remove('w-4')
+    mpLife.classList.remove('w-0')
+    mpLife.classList.add(newValue)
+
+}
+
+// function that sustracts counter number
+beerItem.addEventListener("click", () => {
+    mpCounter = mpCounter - 50
+    if (mpCounter >= 60) {
+        modifyMpBar('w-20')
+    }
+    if (mpCounter >= 10 && mpCounter < 60) {
+        modifyMpBar('w-4')
+    }
+    if (mpCounter <= 0) {
+        mpCounter = 0
+        modifyMpBar('w-0')
+        // poner aqui una promesa de imagen svg triste
+    }
+})
+
+// function that adds counter number
+juiceItem.addEventListener("click", () => {
+    mpCounter = mpCounter + 50
+    if (mpCounter >= 110) {
+        mpCounter = 110
+        modifyMpBar('w-36')
+    }
+    if (mpCounter >= 60 && mpCounter < 110) {
+        modifyMpBar('w-20')
+    }
+    if (mpCounter >= 10 && mpCounter < 60) {
+        modifyMpBar('w-4')
     }
 
 })
