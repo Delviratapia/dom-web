@@ -26,6 +26,19 @@ let openBeerModal = document.querySelector(".beer-item");
 // Get the <span> element that closes the modal
 let closeBeerModal = document.querySelector(".close-beer-modal");
 
+// function that changes image when hovering the beer item
+openBeerModal.addEventListener("mouseover", mouseOverBeer);
+function mouseOverBeer() {
+    avatarImg.src="src/assets/images/midmouth-normal-eyesopen8.svg"
+}
+
+// function that changes image when hovering outside the beer item
+openBeerModal.addEventListener("mouseout", mouseOutBeer);
+function mouseOutBeer() {
+    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+}
+
+
 // When the user clicks the button, open the modal 
 openBeerModal.addEventListener("click", () => {
     beerItem.style.display = "block";
