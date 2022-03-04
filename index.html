@@ -38,21 +38,23 @@
 
 
 
-<!--  Codes that affect the status/bar/numbers -->
+      <!--  Codes that affect the status/bar/numbers -->
 
       <div class="flex justify-around items-center">
 
         <img class="w-15 h-40 order-1 avatar-img" src="src/assets/images/smile-normal-eyesopen6.svg" alt="">
         <div class="order-2">
 
-          <div class="w-36 h-3 hp-life bg-red-600 bg-gradient-to-l from-red-900 rounded-md absolute max-w-sm translate-y-[90%]">
+          <div
+            class="w-36 h-3 hp-life bg-red-600 bg-gradient-to-l from-red-900 rounded-md absolute max-w-sm translate-y-[90%]">
           </div>
           <div class="status-container flex gap-12 text-xs">
             <div class="text-white translate-x-0">HP</div>
             <div class="text-white translate-x-0">316/316</div>
           </div>
-          
-          <div class="w-36 h-3 mp-life bg-blue-500 bg-gradient-to-l from-blue-900 rounded-md absolute max-w-sm translate-y-[90%]">
+
+          <div
+            class="w-36 h-3 mp-life bg-blue-500 bg-gradient-to-l from-blue-900 rounded-md absolute max-w-sm translate-y-[90%]">
           </div>
 
           <!-- <div class="bg-red w-105 h-130"></div> -->
@@ -62,7 +64,8 @@
           </div>
 
 
-          <div class="w-36 h-3 stamina-life bg-green-600 bg-gradient-to-l from-green-900 rounded-md absolute max-w-sm translate-y-[90%]">
+          <div
+            class="w-36 h-3 stamina-life bg-green-600 bg-gradient-to-l from-green-900 rounded-md absolute max-w-sm translate-y-[90%]">
           </div>
 
           <!-- <div class="bg-red w-105 h-130"></div> -->
@@ -445,10 +448,18 @@
         class="flex flex-col h-full pointer-events-auto text-center bg-gradient-to-r from-primary-blue via-secondary-blue to-terciary-blue bg-clip-padding rounded-md">
 
 
-        <div class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">Save Slot 1</div>
-        <div class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">Save Slot 2</div>
-        <div class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">Save Slot 3</div>
-        <div class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">Save Slot 4</div>
+        <div
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          Save Slot 1</div>
+        <div
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          Save Slot 2</div>
+        <div
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          Save Slot 3</div>
+        <div
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          Save Slot 4</div>
 
       </div>
     </div>
@@ -461,38 +472,64 @@
     </div>
   </div>
 
-  
-<!-- ITEM BEER MODAL -->
 
-<div class="beer-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl" aria-modal="true"
-role="dialog">
-<div class="w-auto pointer-events-none">
+  <!-- ITEM BEER MODAL -->
 
-  <div
-    class="flex flex-col w-full pointer-events-auto bg-gradient-to-r from-primary-blue via-secondary-blue to-terciary-blue bg-clip-padding rounded-md">
-    <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+  <div class="beer-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
 
-      <div class="css-typing-email p-4 text-white ">
-        <p class="text-xl font-medium text-white mb-4">
-          Dominique:
-        </p>
-        <p class="beer-item-text"></p>
+      <div
+        class="flex flex-col w-full pointer-events-auto bg-gradient-to-r from-primary-blue via-secondary-blue to-terciary-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class="css-typing-email p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="beer-item-text"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-beer-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
       </div>
-
-
-
-    </div>
-    <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
-      <button type="button"
-        class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-beer-modal"
-        data-bs-dismiss="modal">
-        x
-      </button>
-
     </div>
   </div>
-</div>
-</div>
+
+  <!-- ITEM JUICE MODAL -->
+
+  <div class="juice-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div
+        class="flex flex-col w-full pointer-events-auto bg-gradient-to-r from-primary-blue via-secondary-blue to-terciary-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class="css-typing-email p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="juice-item-text"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-juice-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
