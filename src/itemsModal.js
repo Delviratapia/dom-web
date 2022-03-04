@@ -31,16 +31,9 @@ openBeerModal.addEventListener("click", () => {
     beerItem.style.display = "block";
     beerItemText.innerHTML = "<p>" + '"' + randomBeerText[Math.floor(Math.random() * randomBeerText.length)] + '"' + "</p>";
     avatarImg.src="src/assets/images/worry-brow-smile.gif"
-    // setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 200);
-    // setTimeout(() => {avatarImg.src="src/assets/images/openmouth-brows-eyesopen2.svg"}, 500);
-    // setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 800);
-    // setTimeout(() => {avatarImg.src="src/assets/images/openmouth-brows-eyesopen2"}, 1000);
-    // setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 1300);
-    // setTimeout(() => {avatarImg.src="src/assets/images/openmouth-brows-eyesopen2.svg"}, 1600);
-    // setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 1900);
-    // setTimeout(() => {avatarImg.src="src/assets/images/openmouth-brows-eyesopen2"}, 2200);
-   
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 1200);
     TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 1000);
 })
 
 // When the user clicks on <span> (x), close the modal
