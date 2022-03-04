@@ -3,6 +3,35 @@ let riceItem = document.querySelector(".rice-item")
 let juiceItem = document.querySelector(".juice-item")
 let avatarImg = document.querySelector(".avatar-img")
 
+let openBeerModal = document.querySelector(".beer-item");
+
+// function that changes image when hovering the items
+
+openBeerModal.addEventListener("mouseover", mouseOverWorry);
+unknownItem.addEventListener("mouseover", mouseOverWorry);
+riceItem.addEventListener("mouseover", mouseOverHappy);
+juiceItem.addEventListener("mouseover", mouseOverHappy);
+
+function mouseOverWorry() {
+    avatarImg.src="src/assets/images/midmouth-normal-eyesopen8.svg"
+}
+function mouseOverHappy() {
+    avatarImg.src="src/assets/images/smile-teeth-eyesclosed7.svg"
+}
+
+// function that changes image when hovering outside the items
+openBeerModal.addEventListener("mouseout", mouseOutWorry);
+unknownItem.addEventListener("mouseout", mouseOutWorry);
+riceItem.addEventListener("mouseout", mouseOutHappy);
+juiceItem.addEventListener("mouseout", mouseOutHappy);
+
+function mouseOutWorry() {
+    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+}
+function mouseOutHappy() {
+    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+}
+
 
 // MODAL BOX FOR BEER ITEM
 
@@ -15,11 +44,9 @@ let randomBeerText = ["I'm afraid I can't",
 const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
+
 // Get the modal
 let beerItem = document.querySelector(".beer-item-modal")
-
-// Get the button that opens the modal
-let openBeerModal = document.querySelector(".beer-item");
 
 // Get the <span> element that closes the modal
 let closeBeerModal = document.querySelector(".close-beer-modal");
@@ -60,7 +87,6 @@ let openJuiceModal = document.querySelector(".juice-item");
 // Get the <span> element that closes the modal
 let closeJuiceModal = document.querySelector(".close-juice-modal");
 
-
 // When the user clicks the button, open the modal 
 openJuiceModal.addEventListener("click", () => {
     juiceItemModal.style.display = "block";
@@ -79,39 +105,39 @@ closeJuiceModal.addEventListener("click", () => {
 })
 
 
+// MODAL BOX FOR RICE ITEM
+
+let riceItemText = document.querySelector(".rice-item-text")
+let randomRiceText = ["White rice with everything",
+    "I love eating white rice",
+]
+
+// Get the modal
+let riceItemModal = document.querySelector(".rice-item-modal")
+
+// Get the button that opens the modal
+let openRiceModal = document.querySelector(".rice-item");
+
+// Get the <span> element that closes the modal
+let closeRiceModal = document.querySelector(".close-rice-modal");
 
 
+// When the user clicks the button, open the modal 
+openRiceModal.addEventListener("click", () => {
+    riceItemModal.style.display = "block";
+    riceItemText.innerHTML = "<p>" + '"' + randomRiceText[Math.floor(Math.random() * randomRiceText.length)] + '"' + "</p>";
+    avatarImg.src="src/assets/images/happy-smile.gif"
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 1300);
+})
+
+// When the user clicks on <span> (x), close the modal
+closeRiceModal.addEventListener("click", () => {
+   riceItemModal.style.display = "none";
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
+})
 
 
-
-
-
-
-
-// function that changes image when hovering the items
-
-openBeerModal.addEventListener("mouseover", mouseOverWorry);
-unknownItem.addEventListener("mouseover", mouseOverWorry);
-riceItem.addEventListener("mouseover", mouseOverHappy);
-juiceItem.addEventListener("mouseover", mouseOverHappy);
-
-function mouseOverWorry() {
-    avatarImg.src="src/assets/images/midmouth-normal-eyesopen8.svg"
-}
-function mouseOverHappy() {
-    avatarImg.src="src/assets/images/smile-teeth-eyesclosed7.svg"
-}
-
-// function that changes image when hovering outside the items
-openBeerModal.addEventListener("mouseout", mouseOutWorry);
-unknownItem.addEventListener("mouseout", mouseOutWorry);
-riceItem.addEventListener("mouseout", mouseOutHappy);
-juiceItem.addEventListener("mouseout", mouseOutHappy);
-
-function mouseOutWorry() {
-    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
-}
-function mouseOutHappy() {
-    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
-}
 
