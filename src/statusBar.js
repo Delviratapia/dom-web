@@ -27,8 +27,11 @@ unknownItem.addEventListener("click", () => {
         stCounter = 0
         modifyStBar('w-0')
         // poner aqui una promesa de imagen svg triste
+        // setTimeout(() => modifyStBar('w-0'),6000)
         window.location.href = "./gameover.html"
     }
+
+
 })
 
 // function that adds counter number

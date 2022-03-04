@@ -69,6 +69,40 @@ closeBeerModal.addEventListener("click", () => {
     CONFIRM_AUDIO.play()
 })
 
+// MODAL BOX FOR UNKNOWN ITEM
+
+let unknownItemText = document.querySelector(".unknown-item-text")
+let randomUnknownText = ["I'm afraid I can't",
+    "That looks suspicious",
+    "A-are you sure?",
+    "I wouldn't click again"
+]
+
+// Get the modal
+let unknownItemModal = document.querySelector(".unknown-item-modal")
+
+let openUnknownModal = document.querySelector(".unknown-item");
+// Get the <span> element that closes the modal
+let closeUnknownModal = document.querySelector(".close-unknown-modal");
+
+
+// When the user clicks the button, open the modal 
+openUnknownModal.addEventListener("click", () => {
+    unknownItemModal.style.display = "block";
+    unknownItemText.innerHTML = "<p>" + '"' + randomUnknownText[Math.floor(Math.random() * randomUnknownText.length)] + '"' + "</p>";
+    avatarImg.src="src/assets/images/worry-brow-smile.gif"
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 1200);
+    TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 1000);
+})
+
+// When the user clicks on <span> (x), close the modal
+closeUnknownModal.addEventListener("click", () => {
+    unknownItemModal.style.display = "none";
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
+})
+
 
 // MODAL BOX FOR JUICE ITEM
 
