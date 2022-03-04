@@ -1,19 +1,17 @@
-let STlife = document.querySelector(".stamina-life")
 let unknownItem = document.querySelector(".unknown-item")
 let riceItem = document.querySelector(".rice-item")
 let juiceItem = document.querySelector(".juice-item")
 let avatarImg = document.querySelector(".avatar-img")
 
-let beerItemText = document.querySelector(".beer-item-text")
 
+// MODAL BOX FOR BEER ITEM
+
+let beerItemText = document.querySelector(".beer-item-text")
 let randomBeerText = ["I'm afraid I can't.",
     "Sorry, I can't",
     "Not for me, thanks.",
     "I think I'll pass"
 ]
-
-// MODAL BOX
-
 const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
@@ -26,18 +24,31 @@ let openBeerModal = document.querySelector(".beer-item");
 // Get the <span> element that closes the modal
 let closeBeerModal = document.querySelector(".close-beer-modal");
 
-// function that changes image when hovering the beer item
-openBeerModal.addEventListener("mouseover", mouseOverBeer);
-function mouseOverBeer() {
+// function that changes image when hovering the items
+openBeerModal.addEventListener("mouseover", mouseOverWorry);
+unknownItem.addEventListener("mouseover", mouseOverWorry);
+riceItem.addEventListener("mouseover", mouseOverHappy);
+juiceItem.addEventListener("mouseover", mouseOverHappy);
+
+function mouseOverWorry() {
     avatarImg.src="src/assets/images/midmouth-normal-eyesopen8.svg"
 }
-
-// function that changes image when hovering outside the beer item
-openBeerModal.addEventListener("mouseout", mouseOutBeer);
-function mouseOutBeer() {
-    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+function mouseOverHappy() {
+    avatarImg.src="src/assets/images/smile-teeth-eyesclosed7.svg"
 }
 
+// function that changes image when hovering outside the items
+openBeerModal.addEventListener("mouseout", mouseOutWorry);
+unknownItem.addEventListener("mouseout", mouseOutWorry);
+riceItem.addEventListener("mouseout", mouseOutHappy);
+juiceItem.addEventListener("mouseout", mouseOutHappy);
+
+function mouseOutWorry() {
+    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+}
+function mouseOutHappy() {
+    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+}
 
 // When the user clicks the button, open the modal 
 openBeerModal.addEventListener("click", () => {
