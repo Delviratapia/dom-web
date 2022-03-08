@@ -173,5 +173,40 @@ closeRiceModal.addEventListener("click", () => {
     CONFIRM_AUDIO.play()
 })
 
+// MODAL BOX FOR LAPTOP ITEM
+
+let laptopItemText1 = document.querySelector(".laptop-item-text1")
+let laptopItemText2 = document.querySelector(".laptop-item-text2")
+let laptopItemText3 = document.querySelector(".laptop-item-text3")
+
+// Get the modal
+let laptopItemModal = document.querySelector(".laptop-item-modal")
+
+// Get the button that opens the modal
+let openLaptopModal = document.querySelector(".laptop-item");
+
+// Get the <span> element that closes the modal
+let closeLaptopModal = document.querySelector(".close-laptop-modal");
+
+
+// When the user clicks the button, open the modal 
+openLaptopModal.addEventListener("click", () => {
+    laptopItemModal.style.display = "block";
+    laptopItemText1.innerHTML = "My good friend and companion"
+    laptopItemText2.innerHTML = "for this coding journey is"
+    laptopItemText3.innerHTML = "a 'Toshiba Satellite' laptop"
+    avatarImg.src="src/assets/images/happy-smile.gif"
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 1300);
+})
+
+// When the user clicks on <span> (x), close the modal
+closeLaptopModal.addEventListener("click", () => {
+   laptopItemModal.style.display = "none";
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
+})
+
 
 

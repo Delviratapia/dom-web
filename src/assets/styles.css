@@ -134,12 +134,12 @@ body {
 /* Typewriter effect email button*/
 
 
-.css-typing-email p {
+.css-typing-general p {
     white-space: nowrap;
     overflow: hidden;
   }
 
-  .css-typing-email p:nth-child(2) {
+  .css-typing-general p:nth-child(2) {
     width: 50.5em;
     opacity: 0;
     -webkit-animation: type1 2s steps(40, end);
@@ -149,13 +149,23 @@ body {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
-  .css-typing-email p:nth-child(3) {
+  .css-typing-general p:nth-child(3) {
     width: 50.5em;
     opacity: 0;
     -webkit-animation: type2 2s steps(40, end);
     animation: type2 2s steps(40, end);
     -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing-general p:nth-child(4) {
+    width: 50.5em;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2.8s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
@@ -224,6 +234,43 @@ body {
     }
   }
   
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+   
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      
+    }
+    100% {
+      opacity: 1;
+     
+    }
+  }
+  
+
+
+
+
+
 
 /* typewritter effect intro modal */
 
