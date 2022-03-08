@@ -13,10 +13,11 @@ riceItem.addEventListener("mouseover", mouseOverHappy);
 juiceItem.addEventListener("mouseover", mouseOverHappy);
 
 function mouseOverWorry() {
-    avatarImg.src="src/assets/images/midmouth-normal-eyesopen8.svg"
+    avatarImg.src = "src/assets/images/midmouth-normal-eyesopen8.svg"
 }
+
 function mouseOverHappy() {
-    avatarImg.src="src/assets/images/smile-teeth-eyesclosed7.svg"
+    avatarImg.src = "src/assets/images/smile-teeth-eyesclosed7.svg"
 }
 
 // function that changes image when hovering outside the items
@@ -26,10 +27,11 @@ riceItem.addEventListener("mouseout", mouseOutHappy);
 juiceItem.addEventListener("mouseout", mouseOutHappy);
 
 function mouseOutWorry() {
-    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+    avatarImg.src = "src/assets/images/smile-normal-eyesopen6.svg"
 }
+
 function mouseOutHappy() {
-    avatarImg.src="src/assets/images/smile-normal-eyesopen6.svg"
+    avatarImg.src = "src/assets/images/smile-normal-eyesopen6.svg"
 }
 
 
@@ -56,8 +58,10 @@ let closeBeerModal = document.querySelector(".close-beer-modal");
 openBeerModal.addEventListener("click", () => {
     beerItem.style.display = "block";
     beerItemText.innerHTML = "<p>" + '"' + randomBeerText[Math.floor(Math.random() * randomBeerText.length)] + '"' + "</p>";
-    avatarImg.src="src/assets/images/worry-brow-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 1200);
+    avatarImg.src = "src/assets/images/worry-brow-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-brows-eyesopen1.svg"
+    }, 1200);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1000);
 })
@@ -90,8 +94,10 @@ let closeUnknownModal = document.querySelector(".close-unknown-modal");
 openUnknownModal.addEventListener("click", () => {
     unknownItemModal.style.display = "block";
     unknownItemText.innerHTML = "<p>" + '"' + randomUnknownText[Math.floor(Math.random() * randomUnknownText.length)] + '"' + "</p>";
-    avatarImg.src="src/assets/images/worry-brow-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-brows-eyesopen1.svg"}, 1200);
+    avatarImg.src = "src/assets/images/worry-brow-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-brows-eyesopen1.svg"
+    }, 1200);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1000);
 })
@@ -125,8 +131,10 @@ let closeJuiceModal = document.querySelector(".close-juice-modal");
 openJuiceModal.addEventListener("click", () => {
     juiceItemModal.style.display = "block";
     juiceItemText.innerHTML = "<p>" + '"' + randomJuiceText[Math.floor(Math.random() * randomJuiceText.length)] + '"' + "</p>";
-    avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    avatarImg.src = "src/assets/images/happy-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+    }, 1500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1300);
 })
@@ -160,15 +168,17 @@ let closeRiceModal = document.querySelector(".close-rice-modal");
 openRiceModal.addEventListener("click", () => {
     riceItemModal.style.display = "block";
     riceItemText.innerHTML = "<p>" + '"' + randomRiceText[Math.floor(Math.random() * randomRiceText.length)] + '"' + "</p>";
-    avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    avatarImg.src = "src/assets/images/happy-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+    }, 1500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1300);
 })
 
 // When the user clicks on <span> (x), close the modal
 closeRiceModal.addEventListener("click", () => {
-   riceItemModal.style.display = "none";
+    riceItemModal.style.display = "none";
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -195,15 +205,17 @@ openLaptopModal.addEventListener("click", () => {
     laptopItemText1.innerHTML = "My good friend and companion"
     laptopItemText2.innerHTML = "for this coding journey is"
     laptopItemText3.innerHTML = "a 'Toshiba Satellite' laptop"
-    avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 3000);
+    avatarImg.src = "src/assets/images/happy-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+    }, 3000);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 3000);
 })
 
 // When the user clicks on <span> (x), close the modal
 closeLaptopModal.addEventListener("click", () => {
-   laptopItemModal.style.display = "none";
+    laptopItemModal.style.display = "none";
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -229,15 +241,17 @@ openBagModal.addEventListener("click", () => {
     bagItemModal.style.display = "block";
     bagItemText1.innerHTML = "Actually I prefer backpacks,"
     bagItemText2.innerHTML = "they are very practical"
-    avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 2500);
+    avatarImg.src = "src/assets/images/happy-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+    }, 2500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 2800);
 })
 
 // When the user clicks on <span> (x), close the modal
 closeBagModal.addEventListener("click", () => {
-   bagItemModal.style.display = "none";
+    bagItemModal.style.display = "none";
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -262,18 +276,17 @@ openMusicModal.addEventListener("click", () => {
     musicItemModal.style.display = "block";
     musicItemText1.innerHTML = "I love 80's music, my favorite song"
     musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
-    avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 2500);
+    avatarImg.src = "src/assets/images/happy-smile.gif"
+    setTimeout(() => {
+        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+    }, 2500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 2800);
 })
 
 // When the user clicks on <span> (x), close the modal
 closeMusicModal.addEventListener("click", () => {
-   musicItemModal.style.display = "none";
+    musicItemModal.style.display = "none";
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
-
-
-
