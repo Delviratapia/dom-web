@@ -70,9 +70,7 @@ const USE_ITEM_AUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
-
-
-//General reusable function 
+let portfolioItem = document.querySelectorAll(".portfolio-item")
 
 
 function showPreview() {
@@ -103,6 +101,12 @@ for (let btn of menuPreview) {
     })
 
 }
+for (let btn of portfolioItem) {
+    btn.addEventListener("click", () => {
+        USE_ITEM_AUDIO.play()
+    })
+
+}
 
 // this variable contains all the items that are deployed when pressing a menu button
 const myItems = document.querySelector(".my-items")
@@ -118,6 +122,7 @@ portfTitle.addEventListener("click", () => {
             item.classList.add("hidden");
         }
     }
+        
 })
 
 
@@ -174,7 +179,10 @@ cvItem.addEventListener("click", () => {
 
         }
     }
+    USE_ITEM_AUDIO.play()
 })
+
+
 
 // Items
 let itemsTitle = document.querySelector(".items-title")
