@@ -41,7 +41,7 @@ let randomBeerText = ["I'm afraid I can't",
     "Not for me, thanks",
     "I think I'll pass"
 ]
-const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
+const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
 
@@ -196,9 +196,9 @@ openLaptopModal.addEventListener("click", () => {
     laptopItemText2.innerHTML = "for this coding journey is"
     laptopItemText3.innerHTML = "a 'Toshiba Satellite' laptop"
     avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 3000);
     TYPING_AUDIO.play()
-    setTimeout(() => TYPING_AUDIO.pause(), 1300);
+    setTimeout(() => TYPING_AUDIO.pause(), 3000);
 })
 
 // When the user clicks on <span> (x), close the modal
@@ -230,9 +230,9 @@ openBagModal.addEventListener("click", () => {
     bagItemText1.innerHTML = "Actually I prefer backpacks,"
     bagItemText2.innerHTML = "they are very practical"
     avatarImg.src="src/assets/images/happy-smile.gif"
-    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 2500);
     TYPING_AUDIO.play()
-    setTimeout(() => TYPING_AUDIO.pause(), 1300);
+    setTimeout(() => TYPING_AUDIO.pause(), 2800);
 })
 
 // When the user clicks on <span> (x), close the modal
