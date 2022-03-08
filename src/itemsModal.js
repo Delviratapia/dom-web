@@ -243,4 +243,37 @@ closeBagModal.addEventListener("click", () => {
 })
 
 
+// MODAL BOX FOR MUSIC ITEM
+
+let musicItemText1 = document.querySelector(".music-item-text1")
+let musicItemText2 = document.querySelector(".music-item-text2")
+// Get the modal
+let musicItemModal = document.querySelector(".music-item-modal")
+
+// Get the button that opens the modal
+let openMusicModal = document.querySelector(".music-item");
+
+// Get the <span> element that closes the modal
+let closeMusicModal = document.querySelector(".close-music-modal");
+
+
+// When the user clicks the button, open the modal 
+openMusicModal.addEventListener("click", () => {
+    musicItemModal.style.display = "block";
+    musicItemText1.innerHTML = "I love 80's music, my favorite song"
+    musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
+    avatarImg.src="src/assets/images/happy-smile.gif"
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 2500);
+    TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 2800);
+})
+
+// When the user clicks on <span> (x), close the modal
+closeMusicModal.addEventListener("click", () => {
+   musicItemModal.style.display = "none";
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
+})
+
+
 
