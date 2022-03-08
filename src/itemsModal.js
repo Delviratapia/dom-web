@@ -290,3 +290,15 @@ closeMusicModal.addEventListener("click", () => {
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
+
+
+
+
+// Buttons for language options
+
+let languageBtn = document.querySelector(".language-btn")
+languageBtn.addEventListener("click", () => {
+    console.log("hola")
+    languageBtn.classList.remove("hidden")
+    console.log("hola3")
+})
