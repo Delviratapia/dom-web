@@ -209,4 +209,38 @@ closeLaptopModal.addEventListener("click", () => {
 })
 
 
+// MODAL BOX FOR BAG ITEM
+
+let bagItemText1 = document.querySelector(".bag-item-text1")
+let bagItemText2 = document.querySelector(".bag-item-text2")
+
+// Get the modal
+let bagItemModal = document.querySelector(".bag-item-modal")
+
+// Get the button that opens the modal
+let openBagModal = document.querySelector(".bag-item");
+
+// Get the <span> element that closes the modal
+let closeBagModal = document.querySelector(".close-bag-modal");
+
+
+// When the user clicks the button, open the modal 
+openBagModal.addEventListener("click", () => {
+    bagItemModal.style.display = "block";
+    bagItemText1.innerHTML = "Actually I prefer backpacks,"
+    bagItemText2.innerHTML = "they are very practical"
+    avatarImg.src="src/assets/images/happy-smile.gif"
+    setTimeout(() => {avatarImg.src="src/assets/images/smile-eyesclosed4.svg"}, 1500);
+    TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 1300);
+})
+
+// When the user clicks on <span> (x), close the modal
+closeBagModal.addEventListener("click", () => {
+   bagItemModal.style.display = "none";
+    TYPING_AUDIO.pause()
+    CONFIRM_AUDIO.play()
+})
+
+
 
