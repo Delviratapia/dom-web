@@ -283,24 +283,18 @@ closeSaveModal.addEventListener("click", () =>{
 // GENERAL MODAL CLOSES WHEN CLICKS OUTSIDE MODAL
 
 // When the user clicks anywhere outside of the modal, close it
-
+let allHiddenModals = document.querySelectorAll(".all-hidden-modal")
 window.addEventListener("click", function (event) {
-    if (event.target == emailModal) {
-        console.log("1")
-        emailModal.style.display = "none";
-        CONFIRM_AUDIO.play()
-    }
-    if (event.target == saveModal) {
-        console.log("2")
+    for (let modal of allHiddenModals){
+        console.log("arriba if")
+        console.log(modal.classList)
+        console.log(!modal.classList.contains("hidden"))
 
-        saveModal.style.display = "none";
-        CONFIRM_AUDIO.play()
-    }
-    if (event.target == modalOnload) {
-        console.log("3")
-
-        modalOnload.style.display = "none";
-        CONFIRM_AUDIO.play()
+        if (!modal.classList.contains("hidden") &&  event.target !== modal){
+            console.log("dentro if")
+            modal.classList.add("hidden");
+        }
+        console.log("abajo if")
     }
 })
 

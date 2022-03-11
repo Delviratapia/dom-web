@@ -297,8 +297,9 @@ closeMusicModal.addEventListener("click", () => {
 // Buttons for language options
 
 let languageBtn = document.querySelector(".language-btn")
+let languageContainer = document.querySelector(".language-container")
 languageBtn.addEventListener("click", () => {
     console.log("hola")
-    languageBtn.classList.remove("hidden")
+    languageContainer.classList.remove("hidden")
     console.log("hola3")
 })
