@@ -55,8 +55,9 @@ let closeBeerModal = document.querySelector(".close-beer-modal");
 
 
 // When the user clicks the button, open the modal 
-openBeerModal.addEventListener("click", () => {
-    beerItem.style.display = "block";
+openBeerModal.addEventListener("click", (event) => {
+    event.stopPropagation()
+    beerItem.classList.remove("hidden")
     beerItemText.innerHTML = "<p>" + '"' + randomBeerText[Math.floor(Math.random() * randomBeerText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/worry-brow-smile.gif"
     setTimeout(() => {
@@ -68,7 +69,7 @@ openBeerModal.addEventListener("click", () => {
 
 // When the user clicks on <span> (x), close the modal
 closeBeerModal.addEventListener("click", () => {
-    beerItem.style.display = "none";
+    beerItem.classList.add("hidden")
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -91,8 +92,9 @@ let closeUnknownModal = document.querySelector(".close-unknown-modal");
 
 
 // When the user clicks the button, open the modal 
-openUnknownModal.addEventListener("click", () => {
-    unknownItemModal.style.display = "block";
+openUnknownModal.addEventListener("click", (event) => {
+    event.stopPropagation()
+    unknownItemModal.classList.remove("hidden")
     unknownItemText.innerHTML = "<p>" + '"' + randomUnknownText[Math.floor(Math.random() * randomUnknownText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/worry-brow-smile.gif"
     setTimeout(() => {
@@ -104,7 +106,7 @@ openUnknownModal.addEventListener("click", () => {
 
 // When the user clicks on <span> (x), close the modal
 closeUnknownModal.addEventListener("click", () => {
-    unknownItemModal.style.display = "none";
+    unknownItemModal.classList.add("hidden")
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -128,8 +130,9 @@ let openJuiceModal = document.querySelector(".juice-item");
 let closeJuiceModal = document.querySelector(".close-juice-modal");
 
 // When the user clicks the button, open the modal 
-openJuiceModal.addEventListener("click", () => {
-    juiceItemModal.style.display = "block";
+openJuiceModal.addEventListener("click", (event) => {
+    event.stopPropagation()
+    juiceItemModal.classList.remove("hidden")
     juiceItemText.innerHTML = "<p>" + '"' + randomJuiceText[Math.floor(Math.random() * randomJuiceText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
@@ -141,7 +144,7 @@ openJuiceModal.addEventListener("click", () => {
 
 // When the user clicks on <span> (x), close the modal
 closeJuiceModal.addEventListener("click", () => {
-    juiceItemModal.style.display = "none";
+    juiceItemModal.classList.add("hidden")
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -165,8 +168,10 @@ let closeRiceModal = document.querySelector(".close-rice-modal");
 
 
 // When the user clicks the button, open the modal 
-openRiceModal.addEventListener("click", () => {
-    riceItemModal.style.display = "block";
+openRiceModal.addEventListener("click", (event) => {
+    event.stopPropagation()
+    riceItemModal.classList.remove("hidden");
+
     riceItemText.innerHTML = "<p>" + '"' + randomRiceText[Math.floor(Math.random() * randomRiceText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
@@ -178,7 +183,7 @@ openRiceModal.addEventListener("click", () => {
 
 // When the user clicks on <span> (x), close the modal
 closeRiceModal.addEventListener("click", () => {
-    riceItemModal.style.display = "none";
+    riceItemModal.classList.add("hidden");
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -200,8 +205,9 @@ let closeLaptopModal = document.querySelector(".close-laptop-modal");
 
 
 // When the user clicks the button, open the modal 
-openLaptopModal.addEventListener("click", () => {
-    laptopItemModal.style.display = "block";
+openLaptopModal.addEventListener("click", (event) => {
+    event.stopPropagation()
+    laptopItemModal.classList.remove("hidden")
     laptopItemText1.innerHTML = "My good friend and companion"
     laptopItemText2.innerHTML = "for this coding journey is"
     laptopItemText3.innerHTML = "a 'Toshiba Satellite' laptop"
@@ -215,7 +221,8 @@ openLaptopModal.addEventListener("click", () => {
 
 // When the user clicks on <span> (x), close the modal
 closeLaptopModal.addEventListener("click", () => {
-    laptopItemModal.style.display = "none";
+    laptopItemModal.classList.add("hidden")
+
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -237,8 +244,9 @@ let closeBagModal = document.querySelector(".close-bag-modal");
 
 
 // When the user clicks the button, open the modal 
-openBagModal.addEventListener("click", () => {
-    bagItemModal.style.display = "block";
+openBagModal.addEventListener("click", (event) => {
+    event.stopPropagation()
+    bagItemModal.classList.remove("hidden")
     bagItemText1.innerHTML = "Actually I prefer backpacks,"
     bagItemText2.innerHTML = "they are very practical"
     avatarImg.src = "src/assets/images/happy-smile.gif"
@@ -251,7 +259,8 @@ openBagModal.addEventListener("click", () => {
 
 // When the user clicks on <span> (x), close the modal
 closeBagModal.addEventListener("click", () => {
-    bagItemModal.style.display = "none";
+    bagItemModal.classList.add("hidden")
+
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -272,7 +281,8 @@ let closeMusicModal = document.querySelector(".close-music-modal");
 
 
 // When the user clicks the button, open the modal 
-openMusicModal.addEventListener("click", () => {
+openMusicModal.addEventListener("click", (event) => {
+    event.stopPropagation()
     musicItemModal.style.display = "block";
     musicItemText1.innerHTML = "I love 80's music, my favorite song"
     musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
@@ -298,8 +308,7 @@ closeMusicModal.addEventListener("click", () => {
 
 let languageBtn = document.querySelector(".language-btn")
 let languageContainer = document.querySelector(".language-container")
-languageBtn.addEventListener("click", () => {
-    console.log("hola")
+languageBtn.addEventListener("click", (event) => {
+    event.stopPropagation()
     languageContainer.classList.remove("hidden")
-    console.log("hola3")
 })

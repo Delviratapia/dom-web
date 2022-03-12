@@ -3,7 +3,7 @@
 const myTimeout = setTimeout(onloadModal, 2000);
 
 function onloadModal() {
-    window.onload = modalOnload.style.display = "block";
+    window.onload = modalOnload.classList.remove("hidden")
     TYPING_AUDIO.play()
 
 }
@@ -231,14 +231,17 @@ let openModal = document.querySelector(".email-open-modal");
 let closeModal = document.querySelector(".close-modal");
 
 // When the user clicks the button, open the modal 
-openModal.addEventListener("click", () =>{
-    emailModal.style.display = "block";
+openModal.addEventListener("click", (event) =>{
+    event.stopPropagation()
+    emailModal.classList.remove("hidden")
     TYPING_AUDIO.play()
 })
 
 // When the user clicks on <span> (x), close the modal
-closeModal.addEventListener("click", () =>{
-    emailModal.style.display = "none";
+closeModal.addEventListener("click", (event) =>{
+    event.stopPropagation()
+    emailModal.classList.add("hidden")
+
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -254,8 +257,9 @@ let modalOnload = document.querySelector(".modal-Onload");
 let closeModalOnload = document.querySelector(".close-modal-Onload");
 
 // When the user clicks on <span> (x), close the modal
-closeModalOnload.addEventListener("click", () =>{
-    modalOnload.style.display = "none";
+closeModalOnload.addEventListener("click", (event) =>{
+    event.stopPropagation()
+    modalOnload.classList.add("hidden")
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -270,31 +274,30 @@ let saveText = document.querySelector(".saveText");
 
 let closeSaveModal = document.querySelector(".close-modal-savegame");
 
-saveText.addEventListener("click", () =>{
-    saveModal.style.display = "block";
+saveText.addEventListener("click", (event) =>{
+    event.stopPropagation()
+    saveModal.classList.remove("hidden")
+
 })
 
 closeSaveModal.addEventListener("click", () =>{
-    saveModal.style.display = "none";
+    saveModal.classList.add("hidden")
     CONFIRM_AUDIO.play()
 })
 
 
 // GENERAL MODAL CLOSES WHEN CLICKS OUTSIDE MODAL
 
-// When the user clicks anywhere outside of the modal, close it
-let allHiddenModals = document.querySelectorAll(".all-hidden-modal")
-window.addEventListener("click", function (event) {
-    for (let modal of allHiddenModals){
-        console.log("arriba if")
-        console.log(modal.classList)
-        console.log(!modal.classList.contains("hidden"))
-
-        if (!modal.classList.contains("hidden") &&  event.target !== modal){
-            console.log("dentro if")
-            modal.classList.add("hidden");
+let allHiddenModal = document.querySelectorAll(".all-hidden-modal")
+window.addEventListener("click", function(event){
+    for (let modal of allHiddenModal){
+        if (event.target != modal && event.target.parentNode != modal) {
+            if (!modal.classList.contains("hidden")){
+                modal.classList.add("hidden")
+            }
+            
         }
-        console.log("abajo if")
     }
-})
 
+
+})
