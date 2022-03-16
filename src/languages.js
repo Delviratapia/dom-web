@@ -1,7 +1,3 @@
-// Define language reload anchors
-
-let dataReload = document.querySelectorAll("[data-reload]")
-
 // Language translations
 
 let language = {
@@ -27,11 +23,17 @@ let language = {
         aboutMeText: 'Soy una persona creativa con ganas de ganar más experiencia en el mundo de la programación, siempre comprometida al commit.',
         locationTime: 'Hora local',
         repoBtn: 'Ir al repositorio',
-        AvWebBtn: 'Ir a página web'
-
-
-
-
+        AvWebBtn: 'Ir a página web',
+        saveS1: 'Ranura de guardado 1',
+        saveS2: 'Ranura de guardado 2',
+        saveS3: 'Ranura de guardado 3',
+        saveS4: 'Ranura de guardado 4',
+        juiceLang: 'Jugo',
+        riceLang: 'Arroz',
+        beerLang: 'Cerveza',
+        handbagLang: 'Bolso',
+        laptopLang: 'Laptop',
+        musicLang: 'Música',
 
 
     }
@@ -50,8 +52,19 @@ let abtMeText = qs("#abtMeText")
 let locationTime = qs("#lcTime")
 let repoBtn= qs("#repoBtn")
 let AvWebBtn= qs("#AvWebBtn")
+let saveS1 = qs("#saveS1")
+let saveS2 = qs("#saveS2")
+let saveS3 = qs("#saveS3")
+let saveS4 = qs("#saveS4")
+let juiceLang = qs("#juiceLang")
+let riceLang = qs("#riceLang")
+let beerLang = qs("#beerLang")
+let handbagLang = qs("#handbagLang")
+let laptopLang = qs("#laptopLang")
+let musicLang = qs("#musicLang")
 
 // Define language using window hash
+
 
 if (window.location.hash) {
     if (window.location.hash === "#es") {
@@ -66,12 +79,23 @@ if (window.location.hash) {
         locationTime.textContent = language.es.locationTime;
         repoBtn.textContent = language.es.repoBtn;
         AvWebBtn.textContent = language.es.AvWebBtn;
+        saveS1.textContent = language.es.saveS1;
+        saveS2.textContent = language.es.saveS2;
+        saveS3.textContent = language.es.saveS3;
+        saveS4.textContent = language.es.saveS4;
+        juiceLang.textContent = language.es.juiceLang;
+        riceLang.textContent = language.es.riceLang;
+        beerLang.textContent = language.es.beerLang;
+        handbagLang.textContent = language.es.handbagLang;
+        laptopLang.textContent = language.es.laptopLang;
+        musicLang.textContent = language.es.musicLang;
     }
    
 }
 
+// Define language reload anchors
 
-
+let dataReload = document.querySelectorAll("[data-reload]")
 
 // Define language reload onclick illiteration
 let i = 0;
