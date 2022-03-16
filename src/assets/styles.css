@@ -38,7 +38,7 @@ body {
 }
 
 
-/* Typewriter effect modal on load*/
+/* Typewriter effect for the modal when the page loads*/
 
 
 .css-typing p {
@@ -47,7 +47,7 @@ body {
   }
 
   .css-typing p:nth-child(2) {
-    width: 50.5em;
+    width: 60.5em;
     opacity: 0;
     -webkit-animation: type1 2s steps(40, end);
     animation: type1 2s steps(40, end);

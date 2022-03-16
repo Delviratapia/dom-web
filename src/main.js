@@ -288,9 +288,9 @@ closeSaveModal.addEventListener("click", () =>{
 
 // GENERAL MODAL CLOSES WHEN CLICKS OUTSIDE MODAL
 
-let allHiddenModal = document.querySelectorAll(".all-hidden-modal")
+let hiddenModal = document.querySelectorAll(".hidden-modal")
 window.addEventListener("click", function(event){
-    for (let modal of allHiddenModal){
+    for (let modal of hiddenModal){
         if (event.target != modal && event.target.parentNode != modal) {
             if (!modal.classList.contains("hidden")){
                 modal.classList.add("hidden")
