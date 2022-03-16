@@ -2,7 +2,7 @@
 
 let language = {
     // eng: {
-    //     hello1: '"Hello, nice to meet you, hope you like my web site.',
+    //     hello1: '"Hello,' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."',
     //     hello2: 'And don´t forget to click on the contact bar!"',
     //     lang: 'Language',
     //     save: 'Save',
@@ -12,8 +12,9 @@ let language = {
     //     aboutMeText: 'Im a creative person willing to gain more experience in the programming world, always commited to commit',
     //     locationTime: 'Location time',
     // },
+    
     es: {
-        hello1: '"Hola, me alegro de conocerte, espero que te guste mi página web.',
+        hello1: '"Hola' + " " + localStorage.getItem("name") + " " + 'me alegro de conocerte, espero que te guste mi página web."',
         hello2: '¡Y no olvides hacer clic en la barra de contacto!"',
         lang: 'Idioma',
         save: 'Guardar',

@@ -29,9 +29,12 @@ for (let slot of saveSlot) {
         let saveTime = gameTime.toLocaleTimeString();
         slot.innerHTML = localStorage.getItem('name') + " " + String(saveTime)
         localStorage.setItem("savegame", slot.innerHTML )
-        
     })
 }
+
+
+
+
 
 // Function that register time and name using local Storage
 
@@ -255,11 +258,13 @@ let modalOnload = document.querySelector(".modal-Onload");
 
 // Get the <span> element that closes the modal
 let closeModalOnload = document.querySelector(".close-modal-Onload");
+// let nameModal = document.querySelector("#hello1");
 
 // When the user clicks on <span> (x), close the modal
 closeModalOnload.addEventListener("click", (event) =>{
     event.stopPropagation()
     modalOnload.classList.add("hidden")
+    // nameModal.innerHTML = '"Hello,' + "" + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."'
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })

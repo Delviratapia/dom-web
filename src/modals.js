@@ -6,9 +6,11 @@ const myTimeout = setTimeout(onloadModalInitial, 2000);
 
 let modalInitial = document.querySelector(".modal-Initial");
 
+
 function onloadModalInitial() {
     window.onload = modalInitial.style.display = "block";
     TYPING_AUDIO.play()
+   
 
 }
 
