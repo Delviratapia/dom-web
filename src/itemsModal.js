@@ -43,6 +43,18 @@ let randomBeerText = ["I'm afraid I can't",
     "Not for me, thanks",
     "I think I'll pass"
 ]
+
+if (window.location.hash) {
+    if (window.location.hash === "#es") {
+        randomBeerText = ["Me temo que no puedo",
+        "Lo siento, no puedo",
+        "No es para mi, gracias",
+        "Creo que pasaré"
+    ]
+    }
+}
+
+
 const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
@@ -83,6 +95,17 @@ let randomUnknownText = ["I'm afraid I can't",
     "I wouldn't click again"
 ]
 
+if (window.location.hash) {
+    if (window.location.hash === "#es") {
+        randomUnknownText = ["Me temo que no puedo",
+        "Se ve sospechoso",
+        "¿E-estás seguro?",
+        "Yo no haria click otra vez"
+    ]
+    }
+}
+
+
 // Get the modal
 let unknownItemModal = document.querySelector(".unknown-item-modal")
 
@@ -120,6 +143,15 @@ let randomJuiceText = ["I love orange juice",
     "Look up for the MorirSoñando recipe",
 ]
 
+if (window.location.hash) {
+    if (window.location.hash === "#es") {
+        randomJuiceText = ["Me encanta el jugo de naranja",
+    "El jugo de naranja es mi favorito",
+    "Busca la receta del MorirSoñando",
+]
+    }
+}
+
 // Get the modal
 let juiceItemModal = document.querySelector(".juice-item-modal")
 
@@ -156,6 +188,14 @@ let riceItemText = document.querySelector(".rice-item-text")
 let randomRiceText = ["White rice with everything",
     "I love eating white rice",
 ]
+
+if (window.location.hash) {
+    if (window.location.hash === "#es") {
+        randomRiceText = ["El arroz blanco con todo",
+        "Me encanta comer arroz",
+    ]
+        }
+    }
 
 // Get the modal
 let riceItemModal = document.querySelector(".rice-item-modal")
@@ -209,8 +249,16 @@ openLaptopModal.addEventListener("click", (event) => {
     event.stopPropagation()
     laptopItemModal.classList.remove("hidden")
     laptopItemText1.innerHTML = "My good friend and companion"
-    laptopItemText2.innerHTML = "for this coding journey is"
-    laptopItemText3.innerHTML = "a 'Toshiba Satellite' laptop"
+    laptopItemText2.innerHTML = "for this programación journey"
+    laptopItemText3.innerHTML = "is a 'Toshiba Satellite' laptop"
+    if (window.location.hash) {
+        if (window.location.hash === "#es") {
+            laptopItemText1.innerHTML = "Mi buen amigo y compañero"
+            laptopItemText2.innerHTML = "para este viaje de programación"
+            laptopItemText3.innerHTML = "es una laptop 'Toshiba Satellite'"
+        }
+    }
+    
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
         avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
@@ -249,6 +297,13 @@ openBagModal.addEventListener("click", (event) => {
     bagItemModal.classList.remove("hidden")
     bagItemText1.innerHTML = "Actually I prefer backpacks,"
     bagItemText2.innerHTML = "they are very practical"
+    if (window.location.hash) {
+        if (window.location.hash === "#es") {
+            bagItemText1.innerHTML = "En realidad prefiero las mochilas,"
+            bagItemText2.innerHTML = "son muy prácticas"
+            }
+        }
+
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
         avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
@@ -286,6 +341,12 @@ openMusicModal.addEventListener("click", (event) => {
     musicItemModal.style.display = "block";
     musicItemText1.innerHTML = "I love 80's music, my favorite song"
     musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
+    if (window.location.hash) {
+        if (window.location.hash === "#es") {
+            musicItemText1.innerHTML = "Amo la música de los 80, mi favorita"
+            musicItemText2.innerHTML = "es Smooth Criminal de Michael Jackson"
+        }
+    }
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
         avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"

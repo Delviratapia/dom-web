@@ -34,8 +34,6 @@ let language = {
         handbagLang: 'Bolso',
         laptopLang: 'Laptop',
         musicLang: 'Música',
-
-
     }
 };
 
@@ -90,7 +88,6 @@ if (window.location.hash) {
         laptopLang.textContent = language.es.laptopLang;
         musicLang.textContent = language.es.musicLang;
     }
-   
 }
 
 // Define language reload anchors
