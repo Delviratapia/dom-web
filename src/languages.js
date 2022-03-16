@@ -6,7 +6,7 @@ let dataReload = document.querySelectorAll("[data-reload]")
 
 let language = {
     // eng: {
-    //     hello1: '"Hello, nice to see you, hope you like my web site.',
+    //     hello1: '"Hello, nice to meet you, hope you like my web site.',
     //     hello2: 'And don´t forget to click on the contact bar!"',
     //     lang: 'Language',
     //     save: 'Save',
@@ -17,7 +17,7 @@ let language = {
     //     locationTime: 'Location time',
     // },
     es: {
-        hello1: '"Hola, me alegro de verte, espero que te guste mi página web.',
+        hello1: '"Hola, me alegro de conocerte, espero que te guste mi página web.',
         hello2: '¡Y no olvides hacer clic en la barra de contacto!"',
         lang: 'Idioma',
         save: 'Guardar',
@@ -26,6 +26,8 @@ let language = {
         aboutMe: 'Acerca de mi',
         aboutMeText: 'Soy una persona creativa con ganas de ganar más experiencia en el mundo de la programación, siempre comprometida al commit.',
         locationTime: 'Hora local',
+        repoBtn: 'Ir al repositorio',
+        AvWebBtn: 'Ir a página web'
 
 
 
@@ -35,16 +37,19 @@ let language = {
     }
 };
 
+let qs = document.querySelector.bind(document)
 
-let helloId1 = document.querySelector("#hello1")
-let helloId2 = document.querySelector("#hello2")
-let langBtn = document.querySelector("#langbtn")
-let saveBtn = document.querySelector("#savebtn")
-let gameoverBtn = document.querySelector("#gameoverbtn")
-let skillsBtn = document.querySelector("#skillsbtn")
-let abtMe = document.querySelector("#abtMe")
-let abtMeText = document.querySelector("#abtMeText")
-let locationTime = document.querySelector("#lcTime")
+let helloId1 = qs("#hello1")
+let helloId2 = qs("#hello2")
+let langBtn = qs("#langbtn")
+let saveBtn = qs("#savebtn")
+let gameoverBtn = qs("#gameoverbtn")
+let skillsBtn = qs("#skillsbtn")
+let abtMe = qs("#abtMe")
+let abtMeText = qs("#abtMeText")
+let locationTime = qs("#lcTime")
+let repoBtn= qs("#repoBtn")
+let AvWebBtn= qs("#AvWebBtn")
 
 // Define language using window hash
 
@@ -59,6 +64,8 @@ if (window.location.hash) {
         abtMe.textContent = language.es.aboutMe;
         abtMeText.textContent = language.es.aboutMeText;
         locationTime.textContent = language.es.locationTime;
+        repoBtn.textContent = language.es.repoBtn;
+        AvWebBtn.textContent = language.es.AvWebBtn;
     }
    
 }
