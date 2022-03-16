@@ -1,9 +1,11 @@
 
 
 const myTimeout = setTimeout(onloadModal, 2000);
+let nameModal = document.querySelector("#hello1");
 
 function onloadModal() {
     window.onload = modalOnload.classList.remove("hidden")
+    nameModal.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."'
     TYPING_AUDIO.play()
 
 }
@@ -258,13 +260,12 @@ let modalOnload = document.querySelector(".modal-Onload");
 
 // Get the <span> element that closes the modal
 let closeModalOnload = document.querySelector(".close-modal-Onload");
-// let nameModal = document.querySelector("#hello1");
+
 
 // When the user clicks on <span> (x), close the modal
 closeModalOnload.addEventListener("click", (event) =>{
     event.stopPropagation()
     modalOnload.classList.add("hidden")
-    // nameModal.innerHTML = '"Hello,' + "" + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."'
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
