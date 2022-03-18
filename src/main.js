@@ -1,6 +1,19 @@
-
-
 const myTimeout = setTimeout(onloadModal, 2000);
+
+// FUNCTION THAT STARTS TIMER 
+
+let time = -1,
+    intervalId;
+window.addEventListener("load", function () {
+    function incrementTime() {
+        time++;
+    }
+    incrementTime();
+    intervalId = setInterval(incrementTime, 1000);
+});
+
+// FUNCTION THAT LOAD INITIAL MODAL
+
 let nameModal = document.querySelector("#hello1");
 
 function onloadModal() {
@@ -10,11 +23,13 @@ function onloadModal() {
 
 }
 
+
+let timeLocale = new Date();
+let dateLocale = new Date();
+let toLocaleTS = timeLocale.toLocaleTimeString();
+let toLocaleD = dateLocale.toLocaleDateString();
+
 function timeStr() {
-    let timeLocale = new Date();
-    let dateLocale = new Date();
-    let toLocaleTS = timeLocale.toLocaleTimeString();
-    let toLocaleD = dateLocale.toLocaleDateString();
     let time = document.querySelector(".time")
     time.innerHTML = toLocaleTS + " " + toLocaleD;
 }
@@ -27,31 +42,11 @@ setInterval(timeStr, 1)
 let saveSlot = document.querySelectorAll(".save-slot");
 for (let slot of saveSlot) {
     slot.addEventListener("click", () => {
-        let gameTime = new Date();
-        let saveTime = gameTime.toLocaleTimeString();
-        slot.innerHTML = localStorage.getItem('name') + " " + String(saveTime)
-        localStorage.setItem("savegame", slot.innerHTML )
+        slot.innerHTML = localStorage.getItem('name') + " " + ("0" + Math.trunc(time / 60)).slice(-2) +
+            ":" + ("0" + (time % 60)).slice(-2) + " " + String(toLocaleD) + " " + String(toLocaleTS)
+        localStorage.setItem("savegame", slot.innerHTML)
     })
 }
-
-
-
-
-
-// Function that register time and name using local Storage
-
-// let saveBtn = document.querySelectorAll(".saveText");
-//     saveBtn.addEventListener("click", () => {
-//         slot.innerHTML = localStorage.getItem("savegame")
-//     })
-
-
-
-
-
-
-
-
 
 
 let menuTexts = document.querySelectorAll(".menu-text")
@@ -127,7 +122,7 @@ portfTitle.addEventListener("click", () => {
             item.classList.add("hidden");
         }
     }
-        
+
 })
 
 
@@ -236,14 +231,14 @@ let openModal = document.querySelector(".email-open-modal");
 let closeModal = document.querySelector(".close-modal");
 
 // When the user clicks the button, open the modal 
-openModal.addEventListener("click", (event) =>{
+openModal.addEventListener("click", (event) => {
     event.stopPropagation()
     emailModal.classList.remove("hidden")
     TYPING_AUDIO.play()
 })
 
 // When the user clicks on <span> (x), close the modal
-closeModal.addEventListener("click", (event) =>{
+closeModal.addEventListener("click", (event) => {
     event.stopPropagation()
     emailModal.classList.add("hidden")
 
@@ -263,7 +258,7 @@ let closeModalOnload = document.querySelector(".close-modal-Onload");
 
 
 // When the user clicks on <span> (x), close the modal
-closeModalOnload.addEventListener("click", (event) =>{
+closeModalOnload.addEventListener("click", (event) => {
     event.stopPropagation()
     modalOnload.classList.add("hidden")
     TYPING_AUDIO.pause()
@@ -280,13 +275,13 @@ let saveText = document.querySelector(".saveText");
 
 let closeSaveModal = document.querySelector(".close-modal-savegame");
 
-saveText.addEventListener("click", (event) =>{
+saveText.addEventListener("click", (event) => {
     event.stopPropagation()
     saveModal.classList.remove("hidden")
 
 })
 
-closeSaveModal.addEventListener("click", () =>{
+closeSaveModal.addEventListener("click", () => {
     saveModal.classList.add("hidden")
     CONFIRM_AUDIO.play()
 })
@@ -295,13 +290,13 @@ closeSaveModal.addEventListener("click", () =>{
 // GENERAL MODAL CLOSES WHEN CLICKS OUTSIDE MODAL
 
 let hiddenModal = document.querySelectorAll(".hidden-modal")
-window.addEventListener("click", function(event){
-    for (let modal of hiddenModal){
+window.addEventListener("click", function (event) {
+    for (let modal of hiddenModal) {
         if (event.target != modal && event.target.parentNode != modal) {
-            if (!modal.classList.contains("hidden")){
+            if (!modal.classList.contains("hidden")) {
                 modal.classList.add("hidden")
             }
-            
+
         }
     }
 
