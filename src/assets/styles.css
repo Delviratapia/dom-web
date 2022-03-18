@@ -16,15 +16,6 @@ body {
 
 }
 
-.home-bg {
-    /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
-    background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* height: auto; */
-
-}
-
 .intro-bg {
   background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
   background-repeat: no-repeat;
@@ -431,6 +422,15 @@ body {
 
     }
 
+    .home-bg {
+      background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* height: auto; */
+  
+  }
+
+
     .grid {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5px;
@@ -505,10 +505,9 @@ body {
     }
 
     body {
-        /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
-        background-image: url(/src/assets/fondodiap1.PNG);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url(/src/assets/bgIpadPhone.PNG);
+        background-repeat: repeat;
+        background-size: 100%;
         /* height: auto; */
 
     }
@@ -598,10 +597,10 @@ body {
     }
 
     body {
-        /* background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png); */
-        background-image: url(/src/assets/fondodiap1.PNG);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url(/src/assets/bgIpadPhone.PNG);
+        background-repeat: repeat;
+        background-size: auto 100%;
+        background-position: center
         /* height: auto; */
 
     }
