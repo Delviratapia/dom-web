@@ -2,11 +2,11 @@ const myTimeout = setTimeout(onloadModal, 2000);
 
 // FUNCTION THAT STARTS TIMER 
 
-let time = -1,
+let timeCounter = -1,
     intervalId;
 window.addEventListener("load", function () {
     function incrementTime() {
-        time++;
+        timeCounter++;
     }
     incrementTime();
     intervalId = setInterval(incrementTime, 1000);
@@ -28,9 +28,9 @@ let timeLocale = new Date();
 let dateLocale = new Date();
 let toLocaleTS = timeLocale.toLocaleTimeString();
 let toLocaleD = dateLocale.toLocaleDateString();
+let time = document.querySelector(".time")
 
 function timeStr() {
-    let time = document.querySelector(".time")
     time.innerHTML = toLocaleTS + " " + toLocaleD;
 }
 

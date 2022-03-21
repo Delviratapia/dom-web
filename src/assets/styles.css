@@ -547,6 +547,7 @@ body {
     margin-left: 10px;
     grid-column: 1;
     grid-row: 1 / 4;
+    padding: 2px;
   }
 
   .block-2 {
@@ -555,6 +556,8 @@ body {
     margin-right: 10px;
     grid-column: 2;
     grid-row: 3 / 4;
+  
+
   }
 
   .block-3 {
@@ -564,7 +567,6 @@ body {
     margin-right: 10px;
     grid-column: 2;
     grid-row: 2;
-
   }
 
   .block-4 {
@@ -592,6 +594,8 @@ body {
     margin-right: 10px;
     grid-column: 2;
     grid-row: 4;
+    justify-content: center;
+
   }
 
   .block-7 {
@@ -650,6 +654,19 @@ body {
     align-items: center;
   }
 
+  /* Responsive for the main index html file */
+
+.contact-icons {
+  padding: 2px;
+}
+  
+  .modal-Onload {
+    width: 75%;
+    position: fixed;
+    left: 6.5rem;
+
+
+  }
 
 
 }
