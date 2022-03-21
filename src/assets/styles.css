@@ -622,6 +622,30 @@ body {
   }
 
 
+ /* responsive for the gameover html file */
+
+ .gameover-bg {
+  color: #fff;
+  background-image: url(./pixelartbg.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+
+}
+
+.col-1-gameover, .col-1-gameover span {
+  font-size: 4.5rem;
+  column-gap: 4rem;
+  
+}
+ .col-2-gameover span {
+  font-size: 1.5rem;
+
+}
+.col-2-gameover{
+  column-gap: 9rem;
+  align-items: center;
+}
 
 
 
