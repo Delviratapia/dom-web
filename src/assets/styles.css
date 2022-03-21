@@ -11,8 +11,8 @@
 
 html,
 body {
-    height: 100%;
-    font-family: 'Press Start 2P', cursive;
+  height: 100%;
+  font-family: 'Press Start 2P', cursive;
 
 }
 
@@ -24,7 +24,7 @@ body {
 
 
 .active {
-    @apply bg-green-400 bg-opacity-50;
+  @apply bg-green-400 bg-opacity-50;
 
 }
 
@@ -33,325 +33,343 @@ body {
 
 
 .css-typing p {
-    white-space: nowrap;
-    overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.css-typing p:nth-child(2) {
+  width: 60.5em;
+  opacity: 0;
+  -webkit-animation: type1 2s steps(40, end);
+  animation: type1 2s steps(40, end);
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 50.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes type1 {
+  0% {
+    width: 0;
   }
 
-  .css-typing p:nth-child(2) {
-    width: 60.5em;
-    opacity: 0;
-    -webkit-animation: type1 2s steps(40, end);
-    animation: type1 2s steps(40, end);
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  1% {
+    opacity: 1;
   }
-  .css-typing p:nth-child(3) {
-    width: 50.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
 
-  @keyframes type1 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
   }
-  
-  @-webkit-keyframes type1 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+}
+
+@-webkit-keyframes type1 {
+  0% {
+    width: 0;
   }
-  @keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+
+  1% {
+    opacity: 1;
   }
-  
-  @-webkit-keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
   }
-  
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
 /* Typewriter effect general*/
 
 
 .css-typing-general p {
-    white-space: nowrap;
-    overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.css-typing-general p:nth-child(2) {
+  width: 50.5em;
+  opacity: 0;
+  -webkit-animation: type1 2s steps(40, end);
+  animation: type1 2s steps(40, end);
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing-general p:nth-child(3) {
+  width: 50.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing-general p:nth-child(4) {
+  width: 50.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2.8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes type1 {
+  0% {
+    width: 0;
   }
 
-  .css-typing-general p:nth-child(2) {
-    width: 50.5em;
-    opacity: 0;
-    -webkit-animation: type1 2s steps(40, end);
-    animation: type1 2s steps(40, end);
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  1% {
+    opacity: 1;
   }
-  .css-typing-general p:nth-child(3) {
-    width: 50.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 2s;
-    animation-delay: 1.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .css-typing-general p:nth-child(4) {
-    width: 50.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 2s;
-    animation-delay: 2.8s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
 
-  @keyframes type1 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
   }
-  
-  @-webkit-keyframes type1 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+}
+
+@-webkit-keyframes type1 {
+  0% {
+    width: 0;
   }
-  @keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+
+  1% {
+    opacity: 1;
   }
-  
-  @-webkit-keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
   }
-  
-  @keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
   }
-  
-  @-webkit-keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+
+  1% {
+    opacity: 1;
   }
-  
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
 /* Typewriter effect email*/
 
 
 .css-typing-email p {
-    white-space: nowrap;
-    overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.css-typing-email p:nth-child(2) {
+  width: 50.5em;
+  opacity: 0;
+  -webkit-animation: type1 2s steps(40, end);
+  animation: type1 2s steps(40, end);
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing-email p:nth-child(3) {
+  width: 50.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes type1 {
+  0% {
+    width: 0;
   }
 
-  .css-typing-email p:nth-child(2) {
-    width: 50.5em;
-    opacity: 0;
-    -webkit-animation: type1 2s steps(40, end);
-    animation: type1 2s steps(40, end);
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .css-typing-email p:nth-child(3) {
-    width: 50.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  1% {
+    opacity: 1;
   }
 
+  99.9% {}
 
-  @keyframes type1 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+  100% {
+    opacity: 1;
+
   }
-  
-  @-webkit-keyframes type1 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+}
+
+@-webkit-keyframes type1 {
+  0% {
+    width: 0;
   }
-  @keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-   
-    }
+
+  1% {
+    opacity: 1;
   }
-  
-  @-webkit-keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      
-    }
-    100% {
-      opacity: 1;
-     
-    }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
   }
-  
-  
-  
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {}
+
+  100% {
+    opacity: 1;
+
+  }
+}
 
 
 /* typewritter effect intro modal */
@@ -378,15 +396,16 @@ body {
   0% {
     width: 0;
   }
+
   1% {
     opacity: 1;
   }
-  99.9% {
-    
-  }
+
+  99.9% {}
+
   100% {
     opacity: 1;
- 
+
   }
 }
 
@@ -394,99 +413,103 @@ body {
   0% {
     width: 0;
   }
+
   1% {
     opacity: 1;
   }
-  99.9% {
-    
-  }
+
+  99.9% {}
+
   100% {
     opacity: 1;
-   
+
   }
 }
-
-
-
-
 
 /* Laptop responsive */
 
 @media (min-width: 1280px) {
 
-    html,
-    body {
-        height: 100%;
-        font-family: 'Press Start 2P', cursive;
+  html,
+  body {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
 
 
-    }
+  }
 
-    .home-bg {
-      background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      /* height: auto; */
-  
+  .home-bg {
+    background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: auto; */
+
   }
 
 
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5px;
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
 
 
+  }
+
+  .block-1 {
+    grid-row: span 80 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .block-2 {
+    grid-row: span 30 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+  }
+
+  .block-3 {
+    grid-row: span 15 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+  }
 
 
-    }
+  .block-4 {
+    grid-row: span 15 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 
-    .block-1 {
-        grid-row: span 80 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-        margin-left: 10px;
-    }
+  .block-5 {
+    grid-row: span 90 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-left: 10px;
+  }
 
-    .block-2 {
-        grid-row: span 30 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-    }
+  .block-6 {
+    grid-column: span 2 / auto;
+    grid-row: span 70 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+  }
 
-    .block-3 {
-        grid-row: span 15 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-    }
+  .block-7 {
+    grid-column: span 2 / auto;
+    grid-row: span 70 / auto;
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+  }
 
+  /* GAMEOVER SCREEN */
 
-    .block-4 {
-        grid-row: span 15 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-
-    .block-5 {
-        grid-row: span 90 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-left: 10px;
-    }
-
-    .block-6 {
-        grid-column: span 2 / auto;
-        grid-row: span 70 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-    }
-
-    .block-7 {
-        grid-column: span 2 / auto;
-        grid-row: span 70 / auto;
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-    }
-
+  .gameover-bg {
+    color: #fff;
+    /* background: #000; */
+    background-image: url(./pixelartbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 }
 
@@ -496,107 +519,107 @@ body {
 
 @media screen and (max-width: 1279px) and (min-width: 800px) {
 
-    html,
-    body {
-        height: 100%;
-        font-family: 'Press Start 2P', cursive;
+  html,
+  body {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
 
 
-    }
+  }
 
-    body {
-        background-image: url(/src/assets/bgIpadPhone.PNG);
-        background-repeat: repeat;
-        background-size: 100%;
-        /* height: auto; */
+  body {
+    background-image: url(/src/assets/bgIpadPhone.PNG);
+    background-repeat: repeat;
+    background-size: 100%;
+    /* height: auto; */
 
-    }
+  }
 
-    .grid {
-        grid-gap: 6px;
+  .grid {
+    grid-gap: 6px;
 
 
-    }
+  }
 
-    .block-1 {
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 1 / 4;
-    }
+  .block-1 {
+    background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
 
-    .block-2 {
-        /* grid-row: span 10 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        grid-column: 2;
-        grid-row: 3 / 4;
-    }
+  .block-2 {
+    /* grid-row: span 10 / auto; */
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    grid-column: 2;
+    grid-row: 3 / 4;
+  }
 
-    .block-3 {
-        /* grid-row: span 10 / auto;
+  .block-3 {
+    /* grid-row: span 10 / auto;
         grid-column: span 90 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        grid-column: 2;
-        grid-row: 2;
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    grid-column: 2;
+    grid-row: 2;
 
-    }
+  }
 
-    .block-4 {
-        /* grid-row: span 10 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-        margin-right: 10px;
-        grid-column: 2;
-        grid-row: 1;
-    }
+  .block-4 {
+    /* grid-row: span 10 / auto; */
+    background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+    margin-right: 10px;
+    grid-column: 2;
+    grid-row: 1;
+  }
 
-    .block-5 {
-        /* grid-row: span 90 / auto;
+  .block-5 {
+    /* grid-row: span 90 / auto;
         grid-column: span 90 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 4;
-    }
+    background: rgba(0, 0, 0, 0.466);
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 4;
+  }
 
-    .block-6 {
-        /* grid-column: span 10 / auto;
+  .block-6 {
+    /* grid-column: span 10 / auto;
         grid-row: span 60 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        grid-column: 2;
-        grid-row: 4;
-    }
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    grid-column: 2;
+    grid-row: 4;
+  }
 
-    .block-7 {
-        /* grid-column: span 10 / auto;
+  .block-7 {
+    /* grid-column: span 10 / auto;
         grid-row: span 60 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        margin-left: 10px;
-        grid-column: 1/3;
-        grid-row: 5;
-    }
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-column: 1/3;
+    grid-row: 5;
+  }
 
- /* responsive for the intro html file */
+  /* responsive for the intro html file */
 
-    .modal-Initial {
-      width: 80%;
-      position: fixed;
-      left: 10%;
-      
-    }
-    
-    .css-typing-name p{
-      font-size: 1rem;
-    }
-    
-    .input-name{
-      width: 50%;
-    }
+  .modal-Initial {
+    width: 80%;
+    position: fixed;
+    left: 10%;
+
+  }
+
+  .css-typing-name p {
+    font-size: 1rem;
+  }
+
+  .input-name {
+    width: 50%;
+  }
 
 
 
@@ -609,183 +632,177 @@ body {
 
 @media (max-width: 800px) {
 
-    html,
-    body {
-        height: 100%;
-        font-family: 'Press Start 2P', cursive;
+  html,
+  body {
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
 
 
-    }
+  }
 
-    body {
-        background-image: url(/src/assets/bgIpadPhone.PNG);
-        background-repeat: repeat;
-        background-size: auto 100%;
-        background-position: center
-        /* height: auto; */
+  body {
+    background-image: url(/src/assets/bgIpadPhone.PNG);
+    background-repeat: repeat;
+    background-size: auto 100%;
+    background-position: center
+  }
 
-    }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 6px;
+  }
 
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 6px;
-    }
-
-    .block-1 {
-        /* grid-row: span 50 / auto;
+  .block-1 {
+    /* grid-row: span 50 / auto;
         grid-column: span 10 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        grid-column: 1;
-        grid-row: 1;
-    }
+    background: rgba(0, 0, 0, 0.466);
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-column: 1;
+    grid-row: 1;
+  }
 
-    .block-2 {
-        /* grid-row: span 10 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 3;
-    }
+  .block-2 {
+    /* grid-row: span 10 / auto; */
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 3;
+  }
 
-    .block-3 {
-        /* grid-row: span 10 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 2;
-    }
+  .block-3 {
+    /* grid-row: span 10 / auto; */
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 2;
+  }
 
 
-    .block-4 {
-        /* grid-row: span 10 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 7;
-    }
+  .block-4 {
+    /* grid-row: span 10 / auto; */
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 7;
+  }
 
-    .block-5 {
-        /* grid-row: span 60 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-left: 10px;
-        margin-right: 10px;
-        grid-column: 1;
-        grid-row: 6;
-    }
+  .block-5 {
+    /* grid-row: span 60 / auto; */
+    background: rgba(0, 0, 0, 0.466);
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-column: 1;
+    grid-row: 6;
+  }
 
-    .block-6 {
-        /* grid-column: span 10 / auto;
+  .block-6 {
+    /* grid-column: span 10 / auto;
         grid-row: span 60 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 4;
-    }
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 4;
+  }
 
 
-    .block-7 {
-        /* grid-column: span 10 / auto;
+  .block-7 {
+    /* grid-column: span 10 / auto;
         grid-row: span 60 / auto; */
-        background: rgba(0, 0, 0, 0.466);
-        margin-right: 10px;
-        margin-left: 10px;
-        grid-column: 1;
-        grid-row: 5;
-    }
+    background: rgba(0, 0, 0, 0.466);
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 5;
+  }
 
 
 
-    /* responsive for the intro html file */
-    
-    .modal-Initial {
-      width: 80%;
-      position: fixed;
-      left: 10%;
-      
-    }
-    
-    .css-typing-name p{
-      font-size: 1rem;
-    }
-    
-    .input-name{
-      width: 50%;
-    }
-    
+  /* responsive for the intro html file */
 
-}
+  .modal-Initial {
+    width: 80%;
+    position: fixed;
+    left: 10%;
 
+  }
 
+  .css-typing-name p {
+    font-size: 1rem;
+  }
 
+  .input-name {
+    width: 50%;
+  }
 
+  /* responsive for the gameover html file */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* GAMEOVER SCREEN */
-.gameover-bg {
+  .gameover-bg {
     color: #fff;
-    /* background: #000; */
     background-image: url(./pixelartbg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
+    background-position: center;
+
+  }
+
+  .col-1-gameover, .col-1-gameover span {
+    font-size: 2.5rem;
+    column-gap: 1rem;
+    
+  }
+   .col-2-gameover span {
+    font-size: 1.5rem;
+
+  }
+  .col-2-gameover{
+    flex-direction: column;
+    row-gap: 4rem;
+    align-items: center;
+  }
+
+
+
 }
 
+/* GAMEOVER SCREEN */
+
 .go-text-container {
-    transform: scale(0.94);
-    animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  transform: scale(0.94);
+  animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 
 .text-game {
-    opacity: 0;
-    filter: blur(4px);
+  opacity: 0;
+  filter: blur(4px);
 }
 
 .col-1-gameover span:nth-child(1) {
-    animation: fade-in 1.8s 1.1s forwards cubic-bezier(0.62, .24, .87, .44);
+  animation: fade-in 1.8s 1.1s forwards cubic-bezier(0.62, .24, .87, .44);
 }
 
 .col-1-gameover span:nth-child(2) {
-    animation: fade-in 1.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 1.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 
 .col-2-gameover span:nth-child(1) {
-    animation: fade-in 4.8s 4.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 4.8s 4.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .col-2-gameover span:nth-child(2) {
-    animation: fade-in 4.8s 4.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 4.8s 4.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @keyframes fade-in {
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
