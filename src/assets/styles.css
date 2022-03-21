@@ -622,30 +622,33 @@ body {
   }
 
 
- /* responsive for the gameover html file */
+  /* responsive for the gameover html file */
 
- .gameover-bg {
-  color: #fff;
-  background-image: url(./pixelartbg.jpg);
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
+  .gameover-bg {
+    color: #fff;
+    background-image: url(./pixelartbg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
 
-}
+  }
 
-.col-1-gameover, .col-1-gameover span {
-  font-size: 4.5rem;
-  column-gap: 4rem;
-  
-}
- .col-2-gameover span {
-  font-size: 1.5rem;
+  .col-1-gameover,
+  .col-1-gameover span {
+    font-size: 4.5rem;
+    column-gap: 4rem;
 
-}
-.col-2-gameover{
-  column-gap: 9rem;
-  align-items: center;
-}
+  }
+
+  .col-2-gameover span {
+    font-size: 1.5rem;
+
+  }
+
+  .col-2-gameover {
+    column-gap: 9rem;
+    align-items: center;
+  }
 
 
 
@@ -677,46 +680,37 @@ body {
   }
 
   .block-1 {
-    /* grid-row: span 50 / auto;
-        grid-column: span 10 / auto; */
     background: rgba(0, 0, 0, 0.466);
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+  
     grid-column: 1;
     grid-row: 1;
+    padding: 2px;
   }
 
   .block-2 {
-    /* grid-row: span 10 / auto; */
     background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-    margin-left: 10px;
+
     grid-column: 1;
     grid-row: 3;
   }
 
   .block-3 {
-    /* grid-row: span 10 / auto; */
     background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-    margin-left: 10px;
+    
     grid-column: 1;
     grid-row: 2;
   }
 
 
   .block-4 {
-    /* grid-row: span 10 / auto; */
     background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-    margin-left: 10px;
+   
     grid-column: 1;
     grid-row: 7;
   }
 
   .block-5 {
-    /* grid-row: span 60 / auto; */
     background: rgba(0, 0, 0, 0.466);
     margin-left: 10px;
     margin-right: 10px;
@@ -725,22 +719,15 @@ body {
   }
 
   .block-6 {
-    /* grid-column: span 10 / auto;
-        grid-row: span 60 / auto; */
     background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-    margin-left: 10px;
     grid-column: 1;
     grid-row: 4;
+    justify-content: center;
   }
 
 
   .block-7 {
-    /* grid-column: span 10 / auto;
-        grid-row: span 60 / auto; */
     background: rgba(0, 0, 0, 0.466);
-    margin-right: 10px;
-    margin-left: 10px;
     grid-column: 1;
     grid-row: 5;
   }
@@ -775,19 +762,37 @@ body {
 
   }
 
-  .col-1-gameover, .col-1-gameover span {
+  .col-1-gameover,
+  .col-1-gameover span {
     font-size: 2.5rem;
     column-gap: 1rem;
-    
+
   }
-   .col-2-gameover span {
+
+  .col-2-gameover span {
     font-size: 1.5rem;
 
   }
-  .col-2-gameover{
+
+  .col-2-gameover {
     flex-direction: column;
     row-gap: 4rem;
     align-items: center;
+  }
+
+  /* Responsive for the main index html file */
+
+.contact-icons {
+  padding: 2px;
+}
+  
+  .modal-Onload {
+
+    width: 75%;
+    position: fixed;
+    left: 10%;
+
+
   }
 
 
