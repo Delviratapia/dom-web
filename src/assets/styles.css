@@ -581,6 +581,27 @@ body {
         grid-row: 5;
     }
 
+ /* responsive for the intro html file */
+
+    .modal-Initial {
+      width: 80%;
+      position: fixed;
+      left: 10%;
+      
+    }
+    
+    .css-typing-name p{
+      font-size: 1rem;
+    }
+    
+    .input-name{
+      width: 50%;
+    }
+
+
+
+
+
 }
 
 
@@ -679,23 +700,29 @@ body {
         grid-row: 5;
     }
 
+
+
+    /* responsive for the intro html file */
+    
+    .modal-Initial {
+      width: 80%;
+      position: fixed;
+      left: 10%;
+      
+    }
+    
+    .css-typing-name p{
+      font-size: 1rem;
+    }
+    
+    .input-name{
+      width: 50%;
+    }
+    
+
 }
 
 
-.modal-Initial {
-  width: 80%;
-  position: fixed;
-  left: 10%;
-  
-}
-
-.css-typing-name p{
-  font-size: 1rem;
-}
-
-.input-name{
-  width: 50%;
-}
 
 
 
