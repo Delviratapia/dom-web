@@ -682,6 +682,38 @@ body {
 }
 
 
+.modal-Initial {
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  
+}
+
+.css-typing-name p{
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* GAMEOVER SCREEN */
 .gameover-bg {
