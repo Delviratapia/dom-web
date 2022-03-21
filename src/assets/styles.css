@@ -659,15 +659,18 @@ body {
 .contact-icons {
   padding: 2px;
 }
-  
-  .modal-Onload {
-    width: 75%;
+
+.hidden-modal{
+  width: 75%;
     position: fixed;
     left: 6.5rem;
-
-
-  }
-
+}
+  
+.language-container{
+  top:15rem;
+  width: 20rem;
+  left: 50%;
+}
 
 }
 
@@ -812,7 +815,17 @@ body {
 
   }
 
-
+  .hidden-modal{
+    width: 75%;
+      position: fixed;
+      left: 3rem;
+  }
+    
+  .language-container{
+    top:28rem;
+    width: 20rem;
+    left: 10%;
+  }
 
 }
 
