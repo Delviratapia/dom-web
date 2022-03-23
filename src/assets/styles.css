@@ -865,3 +865,29 @@ body {
     filter: blur(0);
   }
 }
+
+
+
+
+/* pruebas de texto */
+
+.type {
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#ffffff 5px,#0000 0) 10px 0,
+    linear-gradient(#ffffff 0 0) 0 0;
+    background-size:calc(var(--n)*2ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+   blinker .7s infinite steps(1),   
+   timeB calc(var(--n)*.1s) steps(var(--n)) forwards;
+}
+
+@keyframes timeB{
+  from {background-size:0 200%}
+}
+@keyframes blinker{
+  0% {background-position:0 -100%,0 0}
+}
