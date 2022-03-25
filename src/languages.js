@@ -14,8 +14,8 @@ let language = {
     // },
     
     es: {
-        hello1: '"Hola' + " " + localStorage.getItem("name") + " " + 'me alegro de conocerte, espero que te guste mi página web."',
-        hello2: '¡Y no olvides hacer clic en la barra de contacto!"',
+        // hello1: '"Hola' + " " + localStorage.getItem("name") + " " + 'me alegro de conocerte, espero que te guste mi página web."',
+        // hello2: '¡Y no olvides hacer clic en la barra de contacto!"',
         lang: 'Idioma',
         save: 'Guardar',
         gameOver: 'Fin del juego',
@@ -40,8 +40,8 @@ let language = {
 
 let qs = document.querySelector.bind(document)
 
-let helloId1 = qs("#hello1")
-let helloId2 = qs("#hello2")
+// let helloId1 = qs("#hello1")
+// let helloId2 = qs("#hello2")
 let langBtn = qs("#langbtn")
 let saveBtn = qs("#savebtn")
 let gameoverBtn = qs("#gameoverbtn")
@@ -67,8 +67,8 @@ let musicLang = qs("#musicLang")
 
 if (window.location.hash) {
     if (window.location.hash === "#es") {
-        helloId1.textContent = language.es.hello1;
-        helloId2.textContent = language.es.hello2;
+        // helloId1.textContent = language.es.hello1;
+        // helloId2.textContent = language.es.hello2;
         langBtn.textContent = language.es.lang;
         saveBtn.textContent = language.es.save;
         gameoverBtn.textContent = language.es.gameOver;
