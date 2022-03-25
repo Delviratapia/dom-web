@@ -1,7 +1,8 @@
 // Language translations
 
 let language = {
-    // eng: {
+     eng: {
+        enterName : '"Enter your name"',
     //     hello1: '"Hello,' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."',
     //     hello2: 'And don´t forget to click on the contact bar!"',
     //     lang: 'Language',
@@ -11,7 +12,7 @@ let language = {
     //     aboutMe: 'About me',
     //     aboutMeText: 'Im a creative person willing to gain more experience in the programming world, always commited to commit',
     //     locationTime: 'Location time',
-    // },
+     },
     
     es: {
         // hello1: '"Hola' + " " + localStorage.getItem("name") + " " + 'me alegro de conocerte, espero que te guste mi página web."',
@@ -69,6 +70,8 @@ let musicLang = qs("#musicLang")
 // Define language using window hash
 
 
+
+
 if (window.location.hash) {
     if (window.location.hash === "#es") {
         // helloId1.textContent = language.es.hello1;
@@ -95,7 +98,16 @@ if (window.location.hash) {
         laptopLang.textContent = language.es.laptopLang;
         musicLang.textContent = language.es.musicLang;
     }
+    if (window.location.hash === "#eng") {
+        enterName.textContent = language.eng.enterName;
+
+    }
 }
+
+
+
+
+
 
 // Define language reload anchors
 
