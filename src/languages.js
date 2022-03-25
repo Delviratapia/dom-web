@@ -16,6 +16,7 @@ let language = {
     es: {
         // hello1: '"Hola' + " " + localStorage.getItem("name") + " " + 'me alegro de conocerte, espero que te guste mi página web."',
         // hello2: '¡Y no olvides hacer clic en la barra de contacto!"',
+        enterName : '"Ingresa tu nombre"',
         email: '¡Claro!, mi correo es delviratapia@gmail.com, ¡gracias por contactarme!',
         lang: 'Idioma',
         save: 'Guardar',
@@ -43,6 +44,7 @@ let qs = document.querySelector.bind(document)
 
 // let helloId1 = qs("#hello1")
 // let helloId2 = qs("#hello2")
+let enterName = qs("#enterName")
 let email = qs("#email")
 let langBtn = qs("#langbtn")
 let saveBtn = qs("#savebtn")
@@ -71,6 +73,7 @@ if (window.location.hash) {
     if (window.location.hash === "#es") {
         // helloId1.textContent = language.es.hello1;
         // helloId2.textContent = language.es.hello2;
+        enterName.textContent = language.es.enterName;
         email.textContent = language.es.email;
         langBtn.textContent = language.es.lang;
         saveBtn.textContent = language.es.save;
