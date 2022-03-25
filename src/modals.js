@@ -1,7 +1,7 @@
 const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
-const myTimeout = setTimeout(onloadModalInitial, 2000);
+const myTimeout = setTimeout(onloadModalInitial, 0);
 
 
 let modalInitial = document.querySelector(".modal-Initial");
@@ -9,10 +9,11 @@ let modalInitial = document.querySelector(".modal-Initial");
 
 function onloadModalInitial() {
     window.onload = modalInitial.style.display = "block";
-    TYPING_AUDIO.play()
-   
+   TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.pause(), 1000);
 
 }
+
 
 // DISPLAY INPUT NAME ON TITLE
 

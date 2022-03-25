@@ -556,7 +556,7 @@ body {
     margin-right: 10px;
     grid-column: 2;
     grid-row: 3 / 4;
-  
+
 
   }
 
@@ -622,7 +622,7 @@ body {
   }
 
   .input-name {
-    width: 50%;
+    width: 30%;
   }
 
 
@@ -656,21 +656,21 @@ body {
 
   /* Responsive for the main index html file */
 
-.contact-icons {
-  padding: 2px;
-}
+  .contact-icons {
+    padding: 2px;
+  }
 
-.hidden-modal{
-  width: 75%;
+  .hidden-modal {
+    width: 75%;
     position: fixed;
     left: 6.5rem;
-}
-  
-.language-container{
-  top:15rem;
-  width: 20rem;
-  left: 50%;
-}
+  }
+
+  .language-container {
+    top: 15rem;
+    width: 20rem;
+    left: 50%;
+  }
 
 }
 
@@ -718,7 +718,7 @@ body {
 
   .block-3 {
     background: rgba(0, 0, 0, 0.466);
-    
+
     grid-column: 1;
     grid-row: 2;
   }
@@ -726,7 +726,7 @@ body {
 
   .block-4 {
     background: rgba(0, 0, 0, 0.466);
-   
+
     grid-column: 1;
     grid-row: 7;
   }
@@ -764,12 +764,12 @@ body {
     width: 80%;
     position: fixed;
     left: 10%;
+    text-align: center;
 
   }
-
-  .css-typing-name p {
+  /* .css-typing-name p {
     font-size: 1rem;
-  }
+  } */
 
   .input-name {
     width: 50%;
@@ -806,26 +806,26 @@ body {
 
   /* Responsive for the main index html file */
 
-.contact-icons {
-  padding: 2px;
-}
-  
+  .contact-icons {
+    padding: 2px;
+  }
+
   .modal-Onload {
     width: 75%;
     position: fixed;
     left: 10%;
   }
 
-  .hidden-modal{
+  .hidden-modal {
     width: 75%;
-      position: fixed;
-      left: 3rem;
-    
+    position: fixed;
+    left: 3rem;
+
 
   }
-    
-  .language-container{
-    top:28rem;
+
+  .language-container {
+    top: 28rem;
     width: 20rem;
     left: 10%;
   }
@@ -870,27 +870,30 @@ body {
 }
 
 
-
-
 /* pruebas de texto */
 
 .type {
-  color:#0000;
+  color: #0000;
   background:
-    linear-gradient(-90deg,#ffffff 5px,#0000 0) 10px 0,
+    linear-gradient(-90deg, #ffffff 5px, #0000 0) 10px 0,
     linear-gradient(#ffffff 0 0) 0 0;
-    background-size:calc(var(--n)*2ch) 200%;
-  -webkit-background-clip:padding-box,text;
-  background-clip:padding-box,text;
-  background-repeat:no-repeat;
-  animation: 
-   blinker .7s infinite steps(1),   
-   timeB calc(var(--n)*.1s) steps(var(--n)) forwards;
+  background-size: calc(var(--n)*2ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation:
+    blinker .7s infinite steps(6),
+    timeBlinker calc(var(--n)*.1s) steps(var(--n)) forwards;
 }
 
-@keyframes timeB{
-  from {background-size:0 200%}
+@keyframes timeBlinker {
+  from {
+    background-size: 0 200%
+  }
 }
-@keyframes blinker{
-  0% {background-position:0 -100%,0 0}
+
+@keyframes blinker {
+  0% {
+    background-position: 0 -100%, 0 0
+  }
 }
