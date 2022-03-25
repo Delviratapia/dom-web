@@ -697,15 +697,16 @@ body {
   .grid {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 6px;
+
   }
 
   .block-1 {
     background: rgba(0, 0, 0, 0.466);
     margin-top: 10px;
-  
     grid-column: 1;
     grid-row: 1;
-    padding: 2px;
+    padding: 0px;
+
   }
 
   .block-2 {
@@ -736,6 +737,7 @@ body {
     margin-right: 10px;
     grid-column: 1;
     grid-row: 6;
+
   }
 
   .block-6 {
@@ -743,6 +745,7 @@ body {
     grid-column: 1;
     grid-row: 4;
     justify-content: center;
+
   }
 
 
@@ -750,6 +753,7 @@ body {
     background: rgba(0, 0, 0, 0.466);
     grid-column: 1;
     grid-row: 5;
+
   }
 
 
@@ -807,18 +811,17 @@ body {
 }
   
   .modal-Onload {
-
     width: 75%;
     position: fixed;
     left: 10%;
-
-
   }
 
   .hidden-modal{
     width: 75%;
       position: fixed;
       left: 3rem;
+    
+
   }
     
   .language-container{
