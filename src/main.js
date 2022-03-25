@@ -14,12 +14,22 @@ window.addEventListener("load", function () {
 
 // FUNCTION THAT LOAD INITIAL MODAL
 
-let nameModal = document.querySelector("#hello1");
+let nameModalEN = document.querySelector("#helloEN");
+let nameModalES = document.querySelector("#helloES");
 
 function onloadModal() {
     window.onload = modalOnload.classList.remove("hidden")
-    nameModal.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."'
-    TYPING_AUDIO.play()
+    if (window.location.hash === "#es") {
+        console.log("hey es")
+        nameModalES.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
+        TYPING_AUDIO.play()
+    }
+    if (window.location.hash === "#eng") {
+        nameModalEN.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
+        TYPING_AUDIO.play()
+        }
+
+    
 
 }
 
