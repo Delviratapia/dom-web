@@ -1,3 +1,5 @@
+import { closeModalclickOutside, closeOpenModals, onloadModal } from "./utils";
+
 const myTimeout = setTimeout(onloadModal, 2000);
 
 // FUNCTION THAT STARTS TIMER 
@@ -17,21 +19,7 @@ window.addEventListener("load", function () {
 let nameModalEN = document.querySelector("#helloEN");
 let nameModalES = document.querySelector("#helloES");
 
-function onloadModal() {
-    window.onload = modalOnload.classList.remove("hidden")
-    if (window.location.hash === "#es") {
-        console.log("hey es")
-        nameModalES.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
-        TYPING_AUDIO.play()
-    }
-    if (window.location.hash === "#eng") {
-        nameModalEN.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
-        TYPING_AUDIO.play()
-        }
-
-    
-
-}
+onloadModal();
 
 
 let timeLocale = new Date();
@@ -242,7 +230,8 @@ let closeModal = document.querySelector(".close-modal");
 
 // When the user clicks the button, open the modal 
 openModal.addEventListener("click", (event) => {
-    event.stopPropagation()
+    event.stopPropagation();
+    closeOpenModals();
     emailModal.classList.remove("hidden")
     TYPING_AUDIO.play()
 })
@@ -269,12 +258,16 @@ let closeModalOnload = document.querySelector(".close-modal-Onload");
 
 // When the user clicks on <span> (x), close the modal
 closeModalOnload.addEventListener("click", (event) => {
-    event.stopPropagation()
+    event.stopPropagation();
+    closeOpenModals();
     modalOnload.classList.add("hidden")
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
 
+// General modal that closes when clicks outside modal
+
+closeModalclickOutside();
 
 
 // SAVE MODAL
@@ -286,7 +279,8 @@ let saveText = document.querySelector(".saveText");
 let closeSaveModal = document.querySelector(".close-modal-savegame");
 
 saveText.addEventListener("click", (event) => {
-    event.stopPropagation()
+    event.stopPropagation();
+    closeOpenModals();
     saveModal.classList.remove("hidden")
 
 })
@@ -296,19 +290,3 @@ closeSaveModal.addEventListener("click", () => {
     CONFIRM_AUDIO.play()
 })
 
-
-// GENERAL MODAL CLOSES WHEN CLICKS OUTSIDE MODAL
-
-let hiddenModal = document.querySelectorAll(".hidden-modal")
-window.addEventListener("click", function (event) {
-    for (let modal of hiddenModal) {
-        if (event.target != modal && event.target.parentNode != modal) {
-            if (!modal.classList.contains("hidden")) {
-                modal.classList.add("hidden")
-            }
-
-        }
-    }
-
-
-})

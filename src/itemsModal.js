@@ -1,8 +1,10 @@
+import { closeOpenModals } from "./utils";
+
+
 let unknownItem = document.querySelector(".unknown-item")
 let riceItem = document.querySelector(".rice-item")
 let juiceItem = document.querySelector(".juice-item")
 let avatarImg = document.querySelector(".avatar-img")
-
 let openBeerModal = document.querySelector(".beer-item");
 
 // function that changes image when hovering the items
@@ -69,6 +71,7 @@ let closeBeerModal = document.querySelector(".close-beer-modal");
 // When the user clicks the button, open the modal 
 openBeerModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     beerItem.classList.remove("hidden")
     beerItemText.innerHTML = "<p>" + '"' + randomBeerText[Math.floor(Math.random() * randomBeerText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/worry-brow-smile.gif"
@@ -117,6 +120,7 @@ let closeUnknownModal = document.querySelector(".close-unknown-modal");
 // When the user clicks the button, open the modal 
 openUnknownModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     unknownItemModal.classList.remove("hidden")
     unknownItemText.innerHTML = "<p>" + '"' + randomUnknownText[Math.floor(Math.random() * randomUnknownText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/worry-brow-smile.gif"
@@ -164,6 +168,7 @@ let closeJuiceModal = document.querySelector(".close-juice-modal");
 // When the user clicks the button, open the modal 
 openJuiceModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     juiceItemModal.classList.remove("hidden")
     juiceItemText.innerHTML = "<p>" + '"' + randomJuiceText[Math.floor(Math.random() * randomJuiceText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/happy-smile.gif"
@@ -210,8 +215,8 @@ let closeRiceModal = document.querySelector(".close-rice-modal");
 // When the user clicks the button, open the modal 
 openRiceModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     riceItemModal.classList.remove("hidden");
-
     riceItemText.innerHTML = "<p>" + '"' + randomRiceText[Math.floor(Math.random() * randomRiceText.length)] + '"' + "</p>";
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
@@ -247,6 +252,7 @@ let closeLaptopModal = document.querySelector(".close-laptop-modal");
 // When the user clicks the button, open the modal 
 openLaptopModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     laptopItemModal.classList.remove("hidden")
     laptopItemText1.innerHTML = "My good friend and companion"
     laptopItemText2.innerHTML = "for this programación journey"
@@ -294,6 +300,7 @@ let closeBagModal = document.querySelector(".close-bag-modal");
 // When the user clicks the button, open the modal 
 openBagModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     bagItemModal.classList.remove("hidden")
     bagItemText1.innerHTML = "Actually I prefer backpacks,"
     bagItemText2.innerHTML = "they are very practical"
@@ -338,6 +345,7 @@ let closeMusicModal = document.querySelector(".close-music-modal");
 // When the user clicks the button, open the modal 
 openMusicModal.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     musicItemModal.style.display = "block";
     musicItemText1.innerHTML = "I love 80's music, my favorite song"
     musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
@@ -371,5 +379,6 @@ let languageBtn = document.querySelector(".language-btn")
 let languageContainer = document.querySelector(".language-container")
 languageBtn.addEventListener("click", (event) => {
     event.stopPropagation()
+    closeOpenModals();
     languageContainer.classList.remove("hidden")
 })

@@ -1,25 +1,12 @@
 // Language translations
 
 let language = {
-     eng: {
-        enterName : '"Enter your name"',
-    //     hello1: '"Hello,' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site."',
-    //     hello2: 'And don´t forget to click on the contact bar!"',
-    //     lang: 'Language',
-    //     save: 'Save',
-    //     gameOver: 'Game End',
-    //     skills : 'Skills',
-    //     aboutMe: 'About me',
-    //     aboutMeText: 'Im a creative person willing to gain more experience in the programming world, always commited to commit',
-    //     locationTime: 'Location time',
+     en: {
      },
     
     es: {
-        // hello1: '"Hola' + " " + localStorage.getItem("name") + " " + 'me alegro de conocerte, espero que te guste mi página web."',
-        // hello2: '¡Y no olvides hacer clic en la barra de contacto!"',
-        enterName : '"Ingresa tu nombre"',
         email: '¡Claro!, mi correo es delviratapia@gmail.com, ¡gracias por contactarme!',
-        lang: 'Idioma',
+        language: 'Idioma',
         save: 'Guardar',
         gameOver: 'Terminar partida',
         skills : 'Skills',
@@ -43,9 +30,6 @@ let language = {
 
 let qs = document.querySelector.bind(document)
 
-// let helloId1 = qs("#hello1")
-// let helloId2 = qs("#hello2")
-let enterName = qs("#enterName")
 let email = qs("#email")
 let langBtn = qs("#langbtn")
 let saveBtn = qs("#savebtn")
@@ -69,16 +53,10 @@ let musicLang = qs("#musicLang")
 
 // Define language using window hash
 
-
-
-
 if (window.location.hash) {
     if (window.location.hash === "#es") {
-        // helloId1.textContent = language.es.hello1;
-        // helloId2.textContent = language.es.hello2;
-        enterName.textContent = language.es.enterName;
         email.textContent = language.es.email;
-        langBtn.textContent = language.es.lang;
+        langBtn.textContent = language.es.language;
         saveBtn.textContent = language.es.save;
         gameoverBtn.textContent = language.es.gameOver;
         skillsBtn.textContent = language.es.skills;
@@ -98,15 +76,7 @@ if (window.location.hash) {
         laptopLang.textContent = language.es.laptopLang;
         musicLang.textContent = language.es.musicLang;
     }
-    if (window.location.hash === "#eng") {
-        enterName.textContent = language.eng.enterName;
-
-    }
 }
-
-
-
-
 
 
 // Define language reload anchors
@@ -121,3 +91,14 @@ for(i = 0; i < dataReload.length; i++) {
         location.reload(true);
     })
 }
+
+
+// Set and get language selected from the intro
+
+localStorage.getItem("langSelected");
+
+if (document.documentElement.lang === "en") {
+    window.location.hash = "#en";
+  } else if (document.documentElement.lang === "es") {
+    window.location.hash = "#es";
+  }
