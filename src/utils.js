@@ -13,11 +13,30 @@ let hiddenModal = document.querySelectorAll(".hidden-modal")
 
 // General modal that closes when clicks outside modal
 
+function parentIsModal(event) {
+    // esta funcion la pondrias, donde dice en tu codigo --> event.target.parentNode != modal
+    // en su lugar, pones esto --> parentIsModal(event)
+    let minodo = event.target
+    console.log(event.target)
+    while(minodo.tagName != 'BODY') {
+        console.log(minodo.tagName)
+        if(minodo.classList.contains('hidden-modal')){
+            console.log("true")
+
+            return true
+        }
+            
+        minodo = minodo.parentNode
+    }
+    console.log("false")
+    return false
+}
+
 function closeModalclickOutside() {
 let hiddenModal = document.querySelectorAll(".hidden-modal")
     window.addEventListener("click", function (event) {
         for (let modal of hiddenModal) {
-            if (event.target != modal && event.target.parentNode != modal) {
+            if (event.target != modal && !parentIsModal(event)) {
                 if (!modal.classList.contains("hidden")) {
                     modal.classList.add("hidden")
                 }

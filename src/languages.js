@@ -96,7 +96,6 @@ for(i = 0; i < dataReload.length; i++) {
 // Set and get language selected from the intro
 
 localStorage.getItem("langSelected");
-
 if (document.documentElement.lang === "en") {
     window.location.hash = "#en";
   } else if (document.documentElement.lang === "es") {
