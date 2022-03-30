@@ -43,17 +43,17 @@ for(i = 0; i < dataReload.length; i++) {
 
 // Set and get language selected from the intro
 
-let spainFlag = document.querySelector(".spainFlag");
-let ukFlag = document.querySelector(".ukFlag");
+// let spainFlag = document.querySelector(".spainFlag");
+// let ukFlag = document.querySelector(".ukFlag");
 
-spainFlag.addEventListener("click", () => {
-    elementNodeReference.lang = es; // Set new value for lang)
-})
-ukFlag.addEventListener("click", () => {
-    elementNodeReference.lang = en; // Set new value for lang)
-})
+// spainFlag.addEventListener("click", () => {
+//     elementNodeReference.lang = es; // Set new value for lang
+// })
+// ukFlag.addEventListener("click", () => {
+//     elementNodeReference.lang = en; // Set new value for lang
+// })
 
-let languageSelected = elementNodeReference.lang; // Get the value of lang
+// let languageSelected = elementNodeReference.lang; // Get the value of lang
 
-localStorage.setItem("langSelected",languageSelected);
+// localStorage.setItem("langSelected",languageSelected);
 

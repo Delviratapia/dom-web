@@ -515,6 +515,8 @@ body {
 
 
 
+
+
 /* Ipad responsive */
 
 @media screen and (max-width: 1279px) and (min-width: 800px) {
@@ -675,6 +677,86 @@ body {
 }
 
 
+@keyframes grow {
+  0% {
+    max-height: var(--lineHeight);
+  }
+
+  100% {
+    max-height: calc(var(--lineHeight) * var(--lines));
+  }
+}
+
+@keyframes carriageReturn {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(var(--lineHeight) * var(--lines));
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+/* CSS typing effect for the text in modal */
+
+.typewriter {
+  --bgColor: #0f118a;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 4s;
+  --widthCh: 75;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  /* word-break: break-all; */
+}
+
+.typewriter::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriter.no-caret::before {
+  border-left-width: 0;
+}
+
+
+.typewriter::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
+
+
 /* Mobile responsive */
 
 @media (max-width: 800px) {
@@ -767,6 +849,7 @@ body {
     text-align: center;
 
   }
+
   /* .css-typing-name p {
     font-size: 1rem;
   } */
@@ -885,6 +968,7 @@ body {
     blinker .7s infinite steps(6),
     timeBlinker calc(var(--n)*.1s) steps(var(--n)) forwards;
 }
+
 
 @keyframes timeBlinker {
   from {

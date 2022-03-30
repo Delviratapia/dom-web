@@ -1,15 +1,14 @@
 // Language translations
 
 let language = {
-     en: {
-     },
-    
+    en: {},
+
     es: {
         email: '¡Claro!, mi correo es delviratapia@gmail.com, ¡gracias por contactarme!',
         language: 'Idioma',
         save: 'Guardar',
         gameOver: 'Terminar partida',
-        skills : 'Skills',
+        skills: 'Skills',
         aboutMe: 'Acerca de mi',
         aboutMeText: 'Soy una persona creativa con ganas de ganar más experiencia en el mundo de la programación, siempre comprometida al commit.',
         locationTime: 'Hora local',
@@ -38,8 +37,8 @@ let skillsBtn = qs("#skillsbtn")
 let abtMe = qs("#abtMe")
 let abtMeText = qs("#abtMeText")
 let locationTime = qs("#lcTime")
-let repoBtn= qs("#repoBtn")
-let AvWebBtn= qs("#AvWebBtn")
+let repoBtn = qs("#repoBtn")
+let AvWebBtn = qs("#AvWebBtn")
 let saveS1 = qs("#saveS1")
 let saveS2 = qs("#saveS2")
 let saveS3 = qs("#saveS3")
@@ -86,8 +85,8 @@ let dataReload = document.querySelectorAll("[data-reload]")
 // Define language reload onclick illiteration
 let i = 0;
 
-for(i = 0; i < dataReload.length; i++) {
-    dataReload[i].addEventListener("click", () =>{
+for (i = 0; i < dataReload.length; i++) {
+    dataReload[i].addEventListener("click", () => {
         location.reload(true);
     })
 }
@@ -95,9 +94,9 @@ for(i = 0; i < dataReload.length; i++) {
 
 // Set and get language selected from the intro
 
-localStorage.getItem("langSelected");
-if (document.documentElement.lang === "en") {
-    window.location.hash = "#en";
-  } else if (document.documentElement.lang === "es") {
-    window.location.hash = "#es";
-  }
+// localStorage.getItem("langSelected");
+// if (document.documentElement.lang === "en") 
+//     window.location.hash = "#en";
+
+// if (document.documentElement.lang === "es") 
+//     window.location.hash = "#es";

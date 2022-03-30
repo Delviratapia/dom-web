@@ -6,6 +6,7 @@ module.exports = {
        'primary-blue': '#0000ab', 
        'secondary-blue': '#000050',
        'terciary-blue': '#000030',
+       'principal-blue': '#0f118a',
 
      },
     },
