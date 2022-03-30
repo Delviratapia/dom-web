@@ -570,7 +570,7 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
   --lines: 900;
   --lineHeight: 1.5rem;
-  --timePerLine: 4s;
+  --timePerLine: 2s;
   --widthCh: 36;
   --width: calc(var(--widthCh) * 1ch);
   --time: calc(var(--lines) * var(--timePerLine));
@@ -582,7 +582,6 @@ body {
   overflow: hidden;
   position: relative;
   width: var(--width);
-  /* word-break: break-all; */
 }
 
 .typewriterItems::before {

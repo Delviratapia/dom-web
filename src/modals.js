@@ -8,7 +8,8 @@ let modalInitial = document.querySelector(".modal-Initial");
 
 
 function onloadModalInitial() {
-    window.onload = modalInitial.style.display = "block";
+    // window.onload = modalInitial.style.display = "block";
+    window.onload = modalInitial.classList.add("hidden")
    TYPING_AUDIO.play()
     // location.href = "#eng";
     setTimeout(() => TYPING_AUDIO.pause(), 1000);

@@ -236,7 +236,7 @@ closeRiceModal.addEventListener("click", () => {
 // MODAL BOX FOR LAPTOP ITEM
 
 let laptopItemText1 = document.querySelector(".laptop-item-text1")
-let laptopItemText2 = document.querySelector(".laptop-item-text2")
+// let laptopItemText2 = document.querySelector(".laptop-item-text2")
 let laptopItemText3 = document.querySelector(".laptop-item-text3")
 
 // Get the modal
@@ -270,7 +270,7 @@ openLaptopModal.addEventListener("click", (event) => {
         avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
     }, 3000);
     TYPING_AUDIO.play()
-    setTimeout(() => TYPING_AUDIO.pause(), 3000);
+    setTimeout(() => TYPING_AUDIO.pause(), 6000);
 })
 
 // When the user clicks on <span> (x), close the modal
@@ -285,7 +285,7 @@ closeLaptopModal.addEventListener("click", () => {
 // MODAL BOX FOR BAG ITEM
 
 let bagItemText1 = document.querySelector(".bag-item-text1")
-let bagItemText2 = document.querySelector(".bag-item-text2")
+// let bagItemText2 = document.querySelector(".bag-item-text2")
 
 // Get the modal
 let bagItemModal = document.querySelector(".bag-item-modal")
@@ -322,7 +322,6 @@ openBagModal.addEventListener("click", (event) => {
 // When the user clicks on <span> (x), close the modal
 closeBagModal.addEventListener("click", () => {
     bagItemModal.classList.add("hidden")
-
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
@@ -331,7 +330,7 @@ closeBagModal.addEventListener("click", () => {
 // MODAL BOX FOR MUSIC ITEM
 
 let musicItemText1 = document.querySelector(".music-item-text1")
-let musicItemText2 = document.querySelector(".music-item-text2")
+// let musicItemText2 = document.querySelector(".music-item-text2")
 // Get the modal
 let musicItemModal = document.querySelector(".music-item-modal")
 
@@ -346,7 +345,7 @@ let closeMusicModal = document.querySelector(".close-music-modal");
 openMusicModal.addEventListener("click", (event) => {
     event.stopPropagation()
     closeOpenModals();
-    musicItemModal.style.display = "block";
+    musicItemModal.classList.remove("hidden")
     musicItemText1.innerHTML = "I love 80's music, my favorite song is smooth criminal by Michael Jackson"
     // musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
     if (window.location.hash) {

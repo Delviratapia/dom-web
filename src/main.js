@@ -14,14 +14,6 @@ window.addEventListener("load", function () {
     intervalId = setInterval(incrementTime, 1000);
 });
 
-// FUNCTION THAT LOAD INITIAL MODAL
-
-let nameModalEN = document.querySelector("#helloEN");
-let nameModalES = document.querySelector("#helloES");
-
-onloadModal();
-
-
 let timeLocale = new Date();
 let dateLocale = new Date();
 let toLocaleTS = timeLocale.toLocaleTimeString();
