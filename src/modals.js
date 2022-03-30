@@ -41,7 +41,7 @@ enterBtn.addEventListener("click", () => {
 
 
 inputName.addEventListener("keydown", function (enter) {
-    if (enter.key === "Enter") { 
+    if (enter.key === "Enter") {
         enter.preventDefault();
         if (inputName.value === " " || inputName.value.length <= 0) {
             localStorage.setItem("name", "Anon")
@@ -52,14 +52,16 @@ inputName.addEventListener("keydown", function (enter) {
             inputName.value = ""
         }
         play("src/assets/audio/rpg_confirm.wav").then(() => {
-    console.log("7")
-
             modalIntro.style.display = "none";
             window.location.href = "./index.html"
         })
 
+        inputName.reset();
+
     }
 })
+
+
 
 
 
@@ -108,4 +110,3 @@ skipBtn.addEventListener("click", () => {
     })
 
 })
-

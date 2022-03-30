@@ -24,6 +24,7 @@ let language = {
         handbagLang: 'Bolso',
         laptopLang: 'Laptop',
         musicLang: 'Música',
+        endPhrase: 'Si al principio no lo consigues, llámalo versión 1.0',
     }
 };
 
@@ -49,6 +50,7 @@ let beerLang = qs("#beerLang")
 let handbagLang = qs("#handbagLang")
 let laptopLang = qs("#laptopLang")
 let musicLang = qs("#musicLang")
+let endPhrase =qs("#endPhrase")
 
 // Define language using window hash
 
@@ -74,6 +76,7 @@ if (window.location.hash) {
         handbagLang.textContent = language.es.handbagLang;
         laptopLang.textContent = language.es.laptopLang;
         musicLang.textContent = language.es.musicLang;
+        endPhrase.textContent = language.es.endPhrase;
 
     }
 }
