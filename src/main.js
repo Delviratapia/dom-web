@@ -4,39 +4,38 @@ const myTimeout = setTimeout(onloadModal, 2000);
 
 // FUNCTION THAT STARTS TIMER 
 
-let timeCounter = -1,
-    intervalId;
-window.addEventListener("load", function () {
-    function incrementTime() {
-        timeCounter++;
-    }
-    incrementTime();
-    intervalId = setInterval(incrementTime, 1000);
-});
+// let timeCounter = -1,
+//     intervalId;
+// window.addEventListener("load", function () {
+//     function incrementTime() {
+//         timeCounter++;
+//     }
+//     incrementTime();
+//     intervalId = setInterval(incrementTime, 1000);
+// });
 
-let timeLocale = new Date();
+
+
+
+// FUNCTION THAT DISPLAYS TIME & DATE, AND SAVE GAME REGISTER DATE
+
 let dateLocale = new Date();
-let toLocaleTS = timeLocale.toLocaleTimeString();
 let toLocaleD = dateLocale.toLocaleDateString();
 let time = document.querySelector(".time")
-
-function timeStr() {
-    time.innerHTML = toLocaleTS + " " + toLocaleD;
-}
-
-setInterval(timeStr, 1)
-
-
-// SAVE GAME REGISTER DATE
-
 let saveSlot = document.querySelectorAll(".save-slot");
-for (let slot of saveSlot) {
-    slot.addEventListener("click", () => {
-        slot.innerHTML = localStorage.getItem('name') + " " + ("0" + Math.trunc(time / 60)).slice(-2) +
-            ":" + ("0" + (time % 60)).slice(-2) + " " + String(toLocaleD) + " " + String(toLocaleTS)
-        localStorage.setItem("savegame", slot.innerHTML)
-    })
-}
+
+function timeStr(){    
+    let timeLocale=new Date();
+    let toLocaleTS=timeLocale.toLocaleTimeString();
+    time.innerHTML = toLocaleTS + " " + toLocaleD;
+    for (let slot of saveSlot) {
+        slot.addEventListener("click", () => {
+            slot.innerHTML = localStorage.getItem('name') + " " + String(toLocaleD) + " " + String(toLocaleTS)
+            localStorage.setItem("savegame", slot.innerHTML)
+        })
+    }
+      }
+   setInterval(timeStr,1)  
 
 
 let menuTexts = document.querySelectorAll(".menu-text")
@@ -205,10 +204,12 @@ skillsTitle.addEventListener("click", () => {
     }
 })
 
-// MODAL BOX
+
+
+
+// MODAL BOX EMAIL
 
 const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
-const DENIED_AUDIO = new Audio("src/assets/audio/rpg_denied.wav")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
 // Get the modal
@@ -224,20 +225,21 @@ let closeModal = document.querySelector(".close-modal");
 openModal.addEventListener("click", (event) => {
     event.stopPropagation();
     closeOpenModals();
-    emailModal.classList.remove("hidden")
     TYPING_AUDIO.play()
+    emailModal.classList.remove("hidden")
 })
 
 // When the user clicks on <span> (x), close the modal
 closeModal.addEventListener("click", (event) => {
     event.stopPropagation()
     emailModal.classList.add("hidden")
-
     TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
 
+// General function for modals that closes when clicks outside modal
 
+closeModalclickOutside();
 
 // WINDOW ONLOAD MODAL BOX
 
@@ -253,13 +255,10 @@ closeModalOnload.addEventListener("click", (event) => {
     event.stopPropagation();
     closeOpenModals();
     modalOnload.classList.add("hidden")
-    TYPING_AUDIO.pause()
     CONFIRM_AUDIO.play()
 })
 
-// General modal that closes when clicks outside modal
 
-closeModalclickOutside();
 
 
 // SAVE MODAL

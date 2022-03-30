@@ -211,7 +211,7 @@ body {
     --lines: 900;
     --lineHeight: 1.5rem;
     --timePerLine: 4s;
-    --widthCh: 75;
+    --widthCh: 56;
     --width: calc(var(--widthCh) * 1ch);
     /* do not touch the time property!!! */
     --time: calc(var(--lines) * var(--timePerLine));

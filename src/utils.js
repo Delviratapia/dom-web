@@ -1,3 +1,5 @@
+const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
+
 // Function that close the modals already open when clicking another one
 
 function closeOpenModals() {
@@ -5,6 +7,7 @@ function closeOpenModals() {
     for (let modal of hiddenModal) {
         if (!modal.classList.contains("hidden")) {
             modal.classList.add("hidden");
+            TYPING_AUDIO.pause()
         }
     }
 }
@@ -18,6 +21,7 @@ function parentIsModal(event) {
         if (node.classList.contains('hidden-modal')) {
 
             return true
+
         }
 
         node = node.parentNode
@@ -26,13 +30,18 @@ function parentIsModal(event) {
     return false
 }
 
+
+
+
 function closeModalclickOutside() {
     let hiddenModal = document.querySelectorAll(".hidden-modal")
     window.addEventListener("click", function (event) {
         for (let modal of hiddenModal) {
             if (event.target != modal && !parentIsModal(event)) {
                 if (!modal.classList.contains("hidden")) {
-                    modal.classList.add("hidden")
+                    TYPING_AUDIO.pause();
+
+                    modal.classList.add("hidden");
                 }
 
             }
@@ -45,16 +54,16 @@ function closeModalclickOutside() {
 function onloadModal() {
     let nameModalEs = document.querySelector(".helloEs");
     let nameModalEn = document.querySelector(".helloEn");
-    const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
     TYPING_AUDIO.play()
     let modalOnload = document.querySelector(".modal-Onload");
     window.onload = modalOnload.classList.remove("hidden")
     if (window.location.hash === "#es") {
-        nameModalEs.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
+        nameModalEs.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web. ¡Y no te olvides de revisar mis redes!"'
         TYPING_AUDIO.play()
+
     }
     if (window.location.hash === "#en" || window.location.hash === "") {
-        nameModalEn.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
+        nameModalEn.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site. And don´t forget to check my networks!"'
         TYPING_AUDIO.play()
     }
 
