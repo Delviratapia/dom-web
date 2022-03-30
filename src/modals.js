@@ -28,22 +28,46 @@ if (localStorage.getItem('name') !== null) {
 let inputName = document.querySelector("input");
 let enterBtn = document.querySelector(".intro-modal-enter")
 enterBtn.addEventListener("click", () => {
-    if (inputName.value === " " || inputName.value.length <= 0 ) {
-    localStorage.setItem("name", "Anon")
-    title.innerHTML = localStorage.getItem("name")
-    } else {
-        localStorage.setItem("name",inputName.value)
+    if (inputName.value === " " || inputName.value.length <= 0) {
+        localStorage.setItem("name", "Anon")
         title.innerHTML = localStorage.getItem("name")
-        inputName.value=""
+    } else {
+        localStorage.setItem("name", inputName.value)
+        title.innerHTML = localStorage.getItem("name")
+        inputName.value = ""
     }
-    
+
 })
+
+
+inputName.addEventListener("keydown", function (enter) {
+    if (enter.key === "Enter") { 
+        enter.preventDefault();
+        if (inputName.value === " " || inputName.value.length <= 0) {
+            localStorage.setItem("name", "Anon")
+            title.innerHTML = localStorage.getItem("name")
+        } else {
+            localStorage.setItem("name", inputName.value)
+            title.innerHTML = localStorage.getItem("name")
+            inputName.value = ""
+        }
+        play("src/assets/audio/rpg_confirm.wav").then(() => {
+    console.log("7")
+
+            modalIntro.style.display = "none";
+            window.location.href = "./index.html"
+        })
+
+    }
+})
+
+
 
 let skipBtn = document.querySelector(".intro-modal-skip")
 skipBtn.addEventListener("click", () => {
     localStorage.setItem("name", "Anon")
     title.innerHTML = localStorage.getItem("name")
-    inputName.value=""
+    inputName.value = ""
 
 })
 
@@ -55,29 +79,33 @@ skipBtn.addEventListener("click", () => {
 
 function play(url) {
     return new Promise(function (resolve, reject) { // return a promise
-            var audio = new Audio(url); // create audio wo/ src
-            audio.preload = "auto"; // intend to play through
-            audio.autoplay = true; // autoplay
-            audio.onerror = reject; // on error, reject
-            audio.onended = resolve; // when done, resolve
-        
+        var audio = new Audio(url); // create audio wo/ src
+        audio.preload = "auto"; // intend to play through
+        audio.autoplay = true; // autoplay
+        audio.onerror = reject; // on error, reject
+        audio.onended = resolve; // when done, resolve
+
     });
 }
 
 
 
 
-enterBtn.onclick = function () {
-    play("src/assets/audio/rpg_confirm.wav").then(()=>{
+
+enterBtn.addEventListener("click", () => {
+    play("src/assets/audio/rpg_confirm.wav").then(() => {
         modalIntro.style.display = "none";
         window.location.href = "./index.html"
     })
-   
-}
-skipBtn.onclick = function () {
-    play("src/assets/audio/rpg_confirm.wav").then(()=>{
+})
+
+
+skipBtn.addEventListener("click", () => {
+
+    play("src/assets/audio/rpg_confirm.wav").then(() => {
         modalIntro.style.display = "none";
         window.location.href = "./index.html"
     })
-   
-}
+
+})
+

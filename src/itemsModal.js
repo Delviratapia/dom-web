@@ -9,32 +9,33 @@ let openBeerModal = document.querySelector(".beer-item");
 
 // function that changes image when hovering the items
 
-openBeerModal.addEventListener("mouseover", mouseOverWorry);
-unknownItem.addEventListener("mouseover", mouseOverWorry);
-riceItem.addEventListener("mouseover", mouseOverHappy);
-juiceItem.addEventListener("mouseover", mouseOverHappy);
 
-function mouseOverWorry() {
-    avatarImg.src = "src/assets/images/midmouth-normal-eyesopen8.svg"
-}
 
-function mouseOverHappy() {
-    avatarImg.src = "src/assets/images/smile-teeth-eyesclosed7.svg"
-}
+// function mouseOverWorry() {
+//     avatarImg.src = "src/assets/images/midmouth-normal-eyesopen8.svg"
+// }
+
+// function mouseOverHappy() {
+//     avatarImg.src = "src/assets/images/smile-teeth-eyesclosed7.svg"
+// }
+// openBeerModal.addEventListener("mouseover", mouseOverWorry);
+// unknownItem.addEventListener("mouseover", mouseOverWorry);
+// riceItem.addEventListener("mouseover", mouseOverHappy);
+// juiceItem.addEventListener("mouseover", mouseOverHappy);
 
 // function that changes image when hovering outside the items
-openBeerModal.addEventListener("mouseout", mouseOutWorry);
-unknownItem.addEventListener("mouseout", mouseOutWorry);
-riceItem.addEventListener("mouseout", mouseOutHappy);
-juiceItem.addEventListener("mouseout", mouseOutHappy);
+// openBeerModal.addEventListener("mouseout", mouseOutWorry);
+// unknownItem.addEventListener("mouseout", mouseOutWorry);
+// riceItem.addEventListener("mouseout", mouseOutHappy);
+// juiceItem.addEventListener("mouseout", mouseOutHappy);
 
-function mouseOutWorry() {
-    avatarImg.src = "src/assets/images/smile-normal-eyesopen6.svg"
-}
+// function mouseOutWorry() {
+//     avatarImg.src = "src/assets/images/smile-normal-eyesopen6.svg"
+// }
 
-function mouseOutHappy() {
-    avatarImg.src = "src/assets/images/smile-normal-eyesopen6.svg"
-}
+// function mouseOutHappy() {
+//     avatarImg.src = "src/assets/images/smile-normal-eyesopen6.svg"
+// }
 
 
 // MODAL BOX FOR BEER ITEM
@@ -330,7 +331,6 @@ closeBagModal.addEventListener("click", () => {
 // MODAL BOX FOR MUSIC ITEM
 
 let musicItemText1 = document.querySelector(".music-item-text1")
-// let musicItemText2 = document.querySelector(".music-item-text2")
 // Get the modal
 let musicItemModal = document.querySelector(".music-item-modal")
 
@@ -347,11 +347,10 @@ openMusicModal.addEventListener("click", (event) => {
     closeOpenModals();
     musicItemModal.classList.remove("hidden")
     musicItemText1.innerHTML = "I love 80's music, my favorite song is smooth criminal by Michael Jackson"
-    // musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
+
     if (window.location.hash) {
         if (window.location.hash === "#es") {
             musicItemText1.innerHTML = "Amo la música de los 80, mi canción favorita es Smooth Criminal de Michael Jackson"
-            // musicItemText2.innerHTML = "es Smooth Criminal de Michael Jackson"
         }
     }
     avatarImg.src = "src/assets/images/happy-smile.gif"
@@ -381,3 +380,12 @@ languageBtn.addEventListener("click", (event) => {
     closeOpenModals();
     languageContainer.classList.remove("hidden")
 })
+
+
+
+
+
+
+
+
+
