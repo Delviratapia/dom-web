@@ -12,18 +12,15 @@ function closeOpenModals() {
 // General modal that closes when clicks outside modal
 
 function parentIsModal(event) {
-    // esta funcion la pondrias, donde dice en tu codigo --> event.target.parentNode != modal
-    // en su lugar, pones esto --> parentIsModal(event)
-    let minodo = event.target
+    let node = event.target
 
-    while (minodo.tagName != 'BODY') {
-
-        if (minodo.classList.contains('hidden-modal')) {
+    while (node.tagName != 'BODY') {
+        if (node.classList.contains('hidden-modal')) {
 
             return true
         }
 
-        minodo = minodo.parentNode
+        node = node.parentNode
     }
 
     return false
@@ -46,17 +43,20 @@ function closeModalclickOutside() {
 // Function that loads modal when the page loads
 
 function onloadModal() {
+    let nameModalEs = document.querySelector("#helloEs");
+    let nameModalEn = document.querySelector("#helloEn");
     const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
     TYPING_AUDIO.play()
     let modalOnload = document.querySelector(".modal-Onload");
     window.onload = modalOnload.classList.remove("hidden")
     if (window.location.hash === "#es") {
-        console.log()
-        nameModalES.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
+        console.log("esp")
+        nameModalEs.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
         TYPING_AUDIO.play()
     }
     if (window.location.hash === "#eng") {
-        nameModalEN.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
+        console.log("eng")
+        nameModalEn.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
         TYPING_AUDIO.play()
     }
 
