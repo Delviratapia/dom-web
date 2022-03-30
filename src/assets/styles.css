@@ -426,6 +426,40 @@ body {
   }
 } */
 
+
+
+@keyframes grow {
+  0% {
+    max-height: var(--lineHeight);
+  }
+
+  100% {
+    max-height: calc(var(--lineHeight) * var(--lines));
+  }
+}
+
+@keyframes carriageReturn {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: calc(var(--lineHeight) * var(--lines));
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+
+
 /* Laptop responsive */
 
 @media (min-width: 1280px) {
@@ -511,105 +545,108 @@ body {
     background-size: cover;
   }
 
+  /* CSS typing effect for the text in auto modal/email INDEX*/
+
+  .typewriter {
+    --bgColor: #0f118a;
+    --lines: 900;
+    --lineHeight: 1.5rem;
+    --timePerLine: 4s;
+    --widthCh: 75;
+    --width: calc(var(--widthCh) * 1ch);
+    /* do not touch the time property!!! */
+    --time: calc(var(--lines) * var(--timePerLine));
+    animation: grow var(--time) steps(var(--lines));
+    animation-fill-mode: forwards;
+    background: var(--bgColor);
+    line-height: var(--lineHeight);
+    max-height: var(--lineHeight);
+    overflow: hidden;
+    position: relative;
+    width: var(--width);
+  }
+
+  .typewriter::before {
+    content: "";
+    animation:
+      type var(--timePerLine) linear infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+    background: var(--bgColor);
+    border-left: 2px solid;
+    bottom: 0;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+
+  .typewriter.no-caret::before {
+    border-left-width: 0;
+  }
+
+
+  .typewriter::before {
+    animation:
+      type var(--timePerLine) steps(var(--widthCh)) infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+  }
+
+  /* CSS typing effect for the text in modal ITEMS*/
+
+  .typewriterItems {
+    --bgColor: #0f118a;
+    --lines: 900;
+    --lineHeight: 1.5rem;
+    --timePerLine: 2s;
+    --widthCh: 35;
+    --width: calc(var(--widthCh) * 1ch);
+    /* do not touch the time property!!! */
+    --time: calc(var(--lines) * var(--timePerLine));
+    animation: grow var(--time) steps(var(--lines));
+    animation-fill-mode: forwards;
+    background: var(--bgColor);
+    line-height: var(--lineHeight);
+    max-height: var(--lineHeight);
+    overflow: hidden;
+    position: relative;
+    width: var(--width);
+  }
+
+  .typewriterItems::before {
+    content: "";
+    animation:
+      type var(--timePerLine) linear infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+    background: var(--bgColor);
+    border-left: 2px solid;
+    bottom: 0;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+
+  .typewriterItems.no-caret-items::before {
+    border-left-width: 0;
+  }
+
+
+  .typewriterItems::before {
+    animation:
+      type var(--timePerLine) steps(var(--widthCh)) infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+  }
+
+
+
+
 }
 
-/* CSS typing effect for the text in modal INTRO*/
 
-.typewriter {
-  --bgColor: #0f118a;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
-  --lines: 900;
-  --lineHeight: 1.5rem;
-  --timePerLine: 4s;
-  --widthCh: 75;
-  --width: calc(var(--widthCh) * 1ch);
-  /* do not touch the time property!!! */
-  --time: calc(var(--lines) * var(--timePerLine));
-  animation: grow var(--time) steps(var(--lines));
-  animation-fill-mode: forwards;
-  background: var(--bgColor);
-  line-height: var(--lineHeight);
-  max-height: var(--lineHeight);
-  overflow: hidden;
-  position: relative;
-  width: var(--width);
-  /* word-break: break-all; */
-}
-
-.typewriter::before {
-  content: "";
-  animation:
-    type var(--timePerLine) linear infinite,
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-  background: var(--bgColor);
-  border-left: 2px solid;
-  bottom: 0;
-  height: 2rem;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
-
-.typewriter.no-caret::before {
-  border-left-width: 0;
-}
-
-
-.typewriter::before {
-  animation:
-    type var(--timePerLine) steps(var(--widthCh)) infinite,
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-}
-
-/* CSS typing effect for the text in modal ITEMS*/
-
-.typewriterItems {
-  --bgColor: #0f118a;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
-  --lines: 900;
-  --lineHeight: 1.5rem;
-  --timePerLine: 2s;
-  --widthCh: 36;
-  --width: calc(var(--widthCh) * 1ch);
-  --time: calc(var(--lines) * var(--timePerLine));
-  animation: grow var(--time) steps(var(--lines));
-  animation-fill-mode: forwards;
-  background: var(--bgColor);
-  line-height: var(--lineHeight);
-  max-height: var(--lineHeight);
-  overflow: hidden;
-  position: relative;
-  width: var(--width);
-}
-
-.typewriterItems::before {
-  content: "";
-  animation:
-    type var(--timePerLine) linear infinite,
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-  background: var(--bgColor);
-  border-left: 2px solid;
-  bottom: 0;
-  height: 2rem;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
-
-.typewriterItems.no-caret-items::before {
-  border-left-width: 0;
-}
-
-
-.typewriterItems::before {
-  animation:
-    type var(--timePerLine) steps(var(--widthCh)) infinite,
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-}
 
 
 
@@ -717,10 +754,6 @@ body {
 
   }
 
-  /* .css-typing-name p {
-    font-size: 1rem;
-  } */
-
   .input-name {
     width: 30%;
   }
@@ -772,37 +805,62 @@ body {
     left: 50%;
   }
 
-}
 
+  /* CSS typing effect for the text in auto modal/email INDEX*/
 
-@keyframes grow {
-  0% {
-    max-height: var(--lineHeight);
+  .typewriter {
+    --bgColorIpad: #0f118a;
+    --linesIpad: 900;
+    --lineHeightIpad: 1.5rem;
+    --timePerLineIpad: 4s;
+    --widthChIpad: 75;
+    --widthIpad: calc(var(--widthChIpad) * 1ch);
+    --timeIpad: calc(var(--linesIpad) * var(--timePerLineIpad));
+    animation: grow var(--timeIpad) steps(var(--linesIpad));
+    animation-fill-mode: forwards;
+    background: var(--bgColorIpad);
+    line-height: var(--lineHeightIpad);
+    max-height: var(--lineHeightIpad);
+    overflow: hidden;
+    position: relative;
+    width: var(--widthIpad);
   }
 
-  100% {
-    max-height: calc(var(--lineHeight) * var(--lines));
-  }
-}
-
-@keyframes carriageReturn {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: calc(var(--lineHeight) * var(--lines));
-  }
-}
-
-@keyframes type {
-  0% {
+  .typewriter::before {
+    content: "";
+    animation:
+      type var(--timePerLineIpad) linear infinite,
+      carriageReturn var(--timeIpad) steps(var(--linesIpad)) var(--linesIpad),
+      caret 0.5s steps(2) infinite;
+    background: var(--bgColorIpad);
+    border-left: 2px solid;
+    bottom: 0;
+    height: 2rem;
+    position: absolute;
+    right: 0;
     width: 100%;
   }
 
-  100% {
-    width: 0%;
+  .typewriter.no-caret::before {
+    border-left-width: 0;
   }
+
+
+  .typewriter::before {
+    animation:
+      type var(--timePerLineIpad) steps(var(--widthChIpad)) infinite,
+      carriageReturn var(--timeIpad) steps(var(--linesIpad)) var(--linesIpad),
+      caret 0.5s steps(2) infinite;
+  }
+
+  /* CSS typing effect for the text in modal ITEMS*/
+
+
+
+
 }
+
+
 
 
 
@@ -995,35 +1053,5 @@ body {
   100% {
     opacity: 1;
     filter: blur(0);
-  }
-}
-
-
-/* pruebas de texto */
-
-.type {
-  color: #0000;
-  background:
-    linear-gradient(-90deg, #ffffff 5px, #0000 0) 10px 0,
-    linear-gradient(#ffffff 0 0) 0 0;
-  background-size: calc(var(--n)*2ch) 200%;
-  -webkit-background-clip: padding-box, text;
-  background-clip: padding-box, text;
-  background-repeat: no-repeat;
-  animation:
-    blinker .7s infinite steps(6),
-    timeBlinker calc(var(--n)*.1s) steps(var(--n)) forwards;
-}
-
-
-@keyframes timeBlinker {
-  from {
-    background-size: 0 200%
-  }
-}
-
-@keyframes blinker {
-  0% {
-    background-position: 0 -100%, 0 0
   }
 }
