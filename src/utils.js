@@ -43,19 +43,17 @@ function closeModalclickOutside() {
 // Function that loads modal when the page loads
 
 function onloadModal() {
-    let nameModalEs = document.querySelector("#helloEs");
-    let nameModalEn = document.querySelector("#helloEn");
+    let nameModalEs = document.querySelector(".helloEs");
+    let nameModalEn = document.querySelector(".helloEn");
     const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
     TYPING_AUDIO.play()
     let modalOnload = document.querySelector(".modal-Onload");
     window.onload = modalOnload.classList.remove("hidden")
     if (window.location.hash === "#es") {
-        console.log("esp")
         nameModalEs.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
         TYPING_AUDIO.play()
     }
-    if (window.location.hash === "#eng") {
-        console.log("eng")
+    if (window.location.hash === "#en" || window.location.hash === "") {
         nameModalEn.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
         TYPING_AUDIO.play()
     }
@@ -64,7 +62,7 @@ function onloadModal() {
     avatarImg.src = "src/assets/images/happy-smile.gif"
     setTimeout(() => {
         avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
-    }, 1500);
+    }, 4000);
 }
 
 
