@@ -74,6 +74,7 @@ if (window.location.hash) {
         handbagLang.textContent = language.es.handbagLang;
         laptopLang.textContent = language.es.laptopLang;
         musicLang.textContent = language.es.musicLang;
+
     }
 }
 

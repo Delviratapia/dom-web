@@ -58,11 +58,13 @@ function onloadModal() {
     let modalOnload = document.querySelector(".modal-Onload");
     window.onload = modalOnload.classList.remove("hidden")
     if (window.location.hash === "#es") {
+        document.title = "Menú de pausa"
         nameModalEs.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web. ¡Y no te olvides de revisar mis redes!"'
         TYPING_AUDIO.play()
 
     }
     if (window.location.hash === "#en" || window.location.hash === "") {
+        document.title = "Pause Menu"
         nameModalEn.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site. And don´t forget to check my networks!"'
         TYPING_AUDIO.play()
     }
