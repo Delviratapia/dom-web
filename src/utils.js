@@ -51,12 +51,13 @@ function onloadModal() {
     let modalOnload = document.querySelector(".modal-Onload");
     window.onload = modalOnload.classList.remove("hidden")
     if (window.location.hash === "#es") {
+        console.log()
         nameModalES.innerHTML = '"Hola' + " " + localStorage.getItem("name") + " " + 'gusto en conocerte, espero que te guste mi pagina web"'
-        // TYPING_AUDIO.play()
+        TYPING_AUDIO.play()
     }
     if (window.location.hash === "#eng") {
         nameModalEN.innerHTML = '"Hello' + " " + localStorage.getItem("name") + " " + 'nice to meet you, hope you like my web site"'
-        // TYPING_AUDIO.play()
+        TYPING_AUDIO.play()
     }
 
     let avatarImg = document.querySelector(".avatar-img")

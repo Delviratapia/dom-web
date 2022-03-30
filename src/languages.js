@@ -4,7 +4,7 @@ let language = {
     en: {},
 
     es: {
-        email: '¡Claro!, mi correo es delviratapia@gmail.com, ¡gracias por contactarme!',
+        email: '¡Claro!, mi correo es delviratapia @gmail.com, ¡gracias por contactarme!',
         language: 'Idioma',
         save: 'Guardar',
         gameOver: 'Terminar partida',

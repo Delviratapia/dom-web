@@ -715,17 +715,18 @@ body {
     width: 75%;
     position: fixed;
     left: 3rem;
-
-
   }
+
+  /* .hidden-modal.email-modal{
+    font-size: smaller;
+
+  } */
 
   .language-container {
     top: 28rem;
     width: 20rem;
     left: 10%;
   }
-
-}
 
 /* GAMEOVER SCREEN */
 
@@ -763,3 +764,107 @@ body {
     filter: blur(0);
   }
 }
+
+  /* CSS typing effect for the text in auto modal/email INDEX*/
+
+  .typewriter {
+    --bgColor: #0f118a;
+    --lines: 900;
+    --lineHeight: 1.5rem;
+    --timePerLine: 1s;
+    --widthCh: 14;
+    --width: calc(var(--widthCh) * 1ch);
+    /* do not touch the time property!!! */
+    --time: calc(var(--lines) * var(--timePerLine));
+    animation: grow var(--time) steps(var(--lines));
+    animation-fill-mode: forwards;
+    background: var(--bgColor);
+    line-height: var(--lineHeight);
+    max-height: var(--lineHeight);
+    overflow: hidden;
+    position: relative;
+    width: var(--width);
+  }
+
+  .typewriter::before {
+    content: "";
+    animation:
+      type var(--timePerLine) linear infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+    background: var(--bgColor);
+    border-left: 2px solid;
+    bottom: 0;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+
+  .typewriter.no-caret::before {
+    border-left-width: 0;
+  }
+
+
+  .typewriter::before {
+    animation:
+      type var(--timePerLine) steps(var(--widthCh)) infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+  }
+
+  
+/* CSS typing effect for the text in modal ITEMS*/
+
+.typewriterItems {
+  --bgColor: #0f118a;
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 1s;
+  --widthCh: 14;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+}
+
+.typewriterItems::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriterItems.no-caret-items::before {
+  border-left-width: 0;
+}
+
+
+.typewriterItems::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
+
+
+
+
+
+}
+
