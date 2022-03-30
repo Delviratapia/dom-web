@@ -254,14 +254,14 @@ openLaptopModal.addEventListener("click", (event) => {
     event.stopPropagation()
     closeOpenModals();
     laptopItemModal.classList.remove("hidden")
-    laptopItemText1.innerHTML = "My good friend and companion"
-    laptopItemText2.innerHTML = "for this programación journey"
-    laptopItemText3.innerHTML = "is a 'Toshiba Satellite' laptop"
+    laptopItemText1.innerHTML = "My good friend and companion for this programming journey is a 'Toshiba Satellite' laptop"
+    // laptopItemText2.innerHTML = "for this programación journey"
+    // laptopItemText3.innerHTML = "is a 'Toshiba Satellite' laptop"
     if (window.location.hash) {
         if (window.location.hash === "#es") {
-            laptopItemText1.innerHTML = "Mi buen amigo y compañero"
-            laptopItemText2.innerHTML = "para este viaje de programación"
-            laptopItemText3.innerHTML = "es una laptop 'Toshiba Satellite'"
+            laptopItemText1.innerHTML = "Mi buen amigo y compañero para este viaje de programación es una laptop 'Toshiba Satellite"
+            // laptopItemText2.innerHTML = "para este viaje de programación"
+            // laptopItemText3.innerHTML = "es una laptop 'Toshiba Satellite'"
         }
     }
     
@@ -302,12 +302,12 @@ openBagModal.addEventListener("click", (event) => {
     event.stopPropagation()
     closeOpenModals();
     bagItemModal.classList.remove("hidden")
-    bagItemText1.innerHTML = "Actually I prefer backpacks,"
-    bagItemText2.innerHTML = "they are very practical"
+    bagItemText1.innerHTML = "Actually I prefer backpacks, they are very practical"
+    // bagItemText2.innerHTML = "they are very practical"
     if (window.location.hash) {
         if (window.location.hash === "#es") {
-            bagItemText1.innerHTML = "En realidad prefiero las mochilas,"
-            bagItemText2.innerHTML = "son muy prácticas"
+            bagItemText1.innerHTML = "En realidad prefiero las mochilas, son muy prácticas"
+            // bagItemText2.innerHTML = "son muy prácticas"
             }
         }
 
@@ -347,12 +347,12 @@ openMusicModal.addEventListener("click", (event) => {
     event.stopPropagation()
     closeOpenModals();
     musicItemModal.style.display = "block";
-    musicItemText1.innerHTML = "I love 80's music, my favorite song"
-    musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
+    musicItemText1.innerHTML = "I love 80's music, my favorite song is smooth criminal by Michael Jackson"
+    // musicItemText2.innerHTML = "is smooth criminal by Michael Jackson"
     if (window.location.hash) {
         if (window.location.hash === "#es") {
-            musicItemText1.innerHTML = "Amo la música de los 80, mi favorita"
-            musicItemText2.innerHTML = "es Smooth Criminal de Michael Jackson"
+            musicItemText1.innerHTML = "Amo la música de los 80, mi canción favorita es Smooth Criminal de Michael Jackson"
+            // musicItemText2.innerHTML = "es Smooth Criminal de Michael Jackson"
         }
     }
     avatarImg.src = "src/assets/images/happy-smile.gif"

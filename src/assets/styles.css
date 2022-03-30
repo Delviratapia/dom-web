@@ -563,6 +563,55 @@ body {
     caret 0.5s steps(2) infinite;
 }
 
+/* CSS typing effect for the text in modal ITEMS*/
+
+.typewriterItems {
+  --bgColor: #0f118a;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 4s;
+  --widthCh: 36;
+  --width: calc(var(--widthCh) * 1ch);
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  /* word-break: break-all; */
+}
+
+.typewriterItems::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriterItems.no-caret-items::before {
+  border-left-width: 0;
+}
+
+
+.typewriterItems::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
+
 
 
 
