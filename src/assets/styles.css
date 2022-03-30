@@ -31,7 +31,7 @@ body {
 
 /* Typewriter effect for the modal when the page loads*/
 
-
+/* 
 .css-typing p {
   white-space: nowrap;
   overflow: hidden;
@@ -126,12 +126,12 @@ body {
     opacity: 1;
 
   }
-}
+} */
 
 /* Typewriter effect general*/
 
 
-.css-typing-general p {
+/* .css-typing-general p {
   white-space: nowrap;
   overflow: hidden;
 }
@@ -270,12 +270,12 @@ body {
     opacity: 1;
 
   }
-}
+} */
 
 /* Typewriter effect email*/
 
 
-.css-typing-email p {
+/* .css-typing-email p {
   white-space: nowrap;
   overflow: hidden;
 }
@@ -369,13 +369,13 @@ body {
     opacity: 1;
 
   }
-}
+} */
 
 
 /* typewritter effect intro modal */
 
 
-.css-typing-name p {
+/* .css-typing-name p {
   white-space: nowrap;
   overflow: hidden;
 }
@@ -424,7 +424,7 @@ body {
     opacity: 1;
 
   }
-}
+} */
 
 /* Laptop responsive */
 
@@ -511,6 +511,56 @@ body {
     background-size: cover;
   }
 
+}
+
+/* CSS typing effect for the text in modal INTRO*/
+
+.typewriter {
+  --bgColor: #0f118a;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 4s;
+  --widthCh: 75;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  /* word-break: break-all; */
+}
+
+.typewriter::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriter.no-caret::before {
+  border-left-width: 0;
+}
+
+
+.typewriter::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
 }
 
 
@@ -619,9 +669,9 @@ body {
 
   }
 
-  .css-typing-name p {
+  /* .css-typing-name p {
     font-size: 1rem;
-  }
+  } */
 
   .input-name {
     width: 30%;
@@ -706,55 +756,6 @@ body {
   }
 }
 
-/* CSS typing effect for the text in modal */
-
-.typewriter {
-  --bgColor: #0f118a;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 171 / 0));
-  --lines: 900;
-  --lineHeight: 1.5rem;
-  --timePerLine: 4s;
-  --widthCh: 75;
-  --width: calc(var(--widthCh) * 1ch);
-  /* do not touch the time property!!! */
-  --time: calc(var(--lines) * var(--timePerLine));
-  animation: grow var(--time) steps(var(--lines));
-  animation-fill-mode: forwards;
-  background: var(--bgColor);
-  line-height: var(--lineHeight);
-  max-height: var(--lineHeight);
-  overflow: hidden;
-  position: relative;
-  width: var(--width);
-  /* word-break: break-all; */
-}
-
-.typewriter::before {
-  content: "";
-  animation:
-    type var(--timePerLine) linear infinite,
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-  background: var(--bgColor);
-  border-left: 2px solid;
-  bottom: 0;
-  height: 2rem;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
-
-.typewriter.no-caret::before {
-  border-left-width: 0;
-}
-
-
-.typewriter::before {
-  animation:
-    type var(--timePerLine) steps(var(--widthCh)) infinite,
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-}
 
 
 /* Mobile responsive */
@@ -850,9 +851,6 @@ body {
 
   }
 
-  /* .css-typing-name p {
-    font-size: 1rem;
-  } */
 
   .input-name {
     width: 50%;
