@@ -29,348 +29,6 @@ body {
 }
 
 
-/* Typewriter effect for the modal when the page loads*/
-
-/* 
-.css-typing p {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.css-typing p:nth-child(2) {
-  width: 60.5em;
-  opacity: 0;
-  -webkit-animation: type1 2s steps(40, end);
-  animation: type1 2s steps(40, end);
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(3) {
-  width: 50.5em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-
-@keyframes type1 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type1 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-} */
-
-/* Typewriter effect general*/
-
-
-/* .css-typing-general p {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.css-typing-general p:nth-child(2) {
-  width: 50.5em;
-  opacity: 0;
-  -webkit-animation: type1 2s steps(40, end);
-  animation: type1 2s steps(40, end);
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing-general p:nth-child(3) {
-  width: 50.5em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing-general p:nth-child(4) {
-  width: 50.5em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2.8s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-
-@keyframes type1 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type1 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@keyframes type3 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type3 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-} */
-
-/* Typewriter effect email*/
-
-
-/* .css-typing-email p {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.css-typing-email p:nth-child(2) {
-  width: 50.5em;
-  opacity: 0;
-  -webkit-animation: type1 2s steps(40, end);
-  animation: type1 2s steps(40, end);
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing-email p:nth-child(3) {
-  width: 50.5em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-
-@keyframes type1 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type1 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-
-  1% {
-    opacity: 1;
-  }
-
-  99.9% {}
-
-  100% {
-    opacity: 1;
-
-  }
-} */
-
 
 /* typewritter effect intro modal */
 
@@ -457,6 +115,7 @@ body {
     width: 0%;
   }
 }
+
 
 
 
@@ -809,30 +468,31 @@ body {
   /* CSS typing effect for the text in auto modal/email INDEX*/
 
   .typewriter {
-    --bgColorIpad: #0f118a;
-    --linesIpad: 900;
-    --lineHeightIpad: 1.5rem;
-    --timePerLineIpad: 4s;
-    --widthChIpad: 75;
-    --widthIpad: calc(var(--widthChIpad) * 1ch);
-    --timeIpad: calc(var(--linesIpad) * var(--timePerLineIpad));
-    animation: grow var(--timeIpad) steps(var(--linesIpad));
+    --bgColor: #0f118a;
+    --lines: 900;
+    --lineHeight: 1.5rem;
+    --timePerLine: 2s;
+    --widthCh: 30;
+    --width: calc(var(--widthCh) * 1ch);
+    /* do not touch the time property!!! */
+    --time: calc(var(--lines) * var(--timePerLine));
+    animation: grow var(--time) steps(var(--lines));
     animation-fill-mode: forwards;
-    background: var(--bgColorIpad);
-    line-height: var(--lineHeightIpad);
-    max-height: var(--lineHeightIpad);
+    background: var(--bgColor);
+    line-height: var(--lineHeight);
+    max-height: var(--lineHeight);
     overflow: hidden;
     position: relative;
-    width: var(--widthIpad);
+    width: var(--width);
   }
 
   .typewriter::before {
     content: "";
     animation:
-      type var(--timePerLineIpad) linear infinite,
-      carriageReturn var(--timeIpad) steps(var(--linesIpad)) var(--linesIpad),
+      type var(--timePerLine) linear infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
       caret 0.5s steps(2) infinite;
-    background: var(--bgColorIpad);
+    background: var(--bgColor);
     border-left: 2px solid;
     bottom: 0;
     height: 2rem;
@@ -848,20 +508,68 @@ body {
 
   .typewriter::before {
     animation:
-      type var(--timePerLineIpad) steps(var(--widthChIpad)) infinite,
-      carriageReturn var(--timeIpad) steps(var(--linesIpad)) var(--linesIpad),
+      type var(--timePerLine) steps(var(--widthCh)) infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
       caret 0.5s steps(2) infinite;
   }
 
-  /* CSS typing effect for the text in modal ITEMS*/
+  
+/* CSS typing effect for the text in modal ITEMS*/
+
+.typewriterItems {
+  --bgColor: #0f118a;
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 2s;
+  --widthCh: 35;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+}
+
+.typewriterItems::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriterItems.no-caret-items::before {
+  border-left-width: 0;
+}
+
+
+.typewriterItems::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
+
+
+
+
 
 
 
 
 }
-
-
-
 
 
 /* Mobile responsive */
