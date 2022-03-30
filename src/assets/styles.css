@@ -302,6 +302,56 @@ body {
 
 
 
+/* CSS typing effect for the text in auto modal INTRO*/
+
+.typewriterIntro {
+  --bgColor: #000;
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 3s;
+  --widthCh: 20;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+}
+
+.typewriterIntro::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 0px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriterIntro.no-caret-intro::before {
+  border-left-width: 0;
+}
+
+
+.typewriterIntro::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
+
+
+
 
 }
 
@@ -406,7 +456,7 @@ body {
 
   /* responsive for the intro html file */
 
-  .modal-Initial {
+  .modal-Intro {
     width: 80%;
     position: fixed;
     left: 10%;
@@ -562,7 +612,53 @@ body {
     caret 0.5s steps(2) infinite;
 }
 
+/* CSS typing effect for the text in auto modal INTRO*/
 
+.typewriterIntro {
+  --bgColor: #000;
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 1s;
+  --widthCh: 10;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+}
+
+.typewriterIntro::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 0px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriterIntro.no-caret-intro::before {
+  border-left-width: 0;
+}
+
+
+.typewriterIntro::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
 
 
 
@@ -657,14 +753,13 @@ body {
 
   /* responsive for the intro html file */
 
-  .modal-Initial {
+  .modal-Intro {
     width: 80%;
     position: fixed;
     left: 10%;
     text-align: center;
 
   }
-
 
   .input-name {
     width: 50%;
@@ -717,10 +812,7 @@ body {
     left: 3rem;
   }
 
-  /* .hidden-modal.email-modal{
-    font-size: smaller;
 
-  } */
 
   .language-container {
     top: 28rem;
@@ -863,7 +955,52 @@ body {
 }
 
 
+/* CSS typing effect for the text in auto modal INTRO*/
 
+.typewriterIntro {
+  --bgColor: #000;
+  --lines: 900;
+  --lineHeight: 1.5rem;
+  --timePerLine: 1s;
+  --widthCh: 10;
+  --width: calc(var(--widthCh) * 1ch);
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+}
+
+.typewriterIntro::before {
+  content: "";
+  animation:
+    type var(--timePerLine) linear infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 0px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriterIntro.no-caret-intro::before {
+  border-left-width: 0;
+}
+
+
+.typewriterIntro::before {
+  animation:
+    type var(--timePerLine) steps(var(--widthCh)) infinite,
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
 
 
 }

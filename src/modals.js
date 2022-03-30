@@ -9,9 +9,9 @@ let modalIntro = document.querySelector(".modal-Intro");
 
 function onloadModalIntro() {
     window.onload = modalIntro.classList.remove("hidden")
-   TYPING_AUDIO.play()
+    setTimeout(() => TYPING_AUDIO.play(), 800);
     // location.href = "#eng";
-    setTimeout(() => TYPING_AUDIO.pause(), 1000);
+    setTimeout(() => TYPING_AUDIO.pause(), 3000);
 
 }
 
