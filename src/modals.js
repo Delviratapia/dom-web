@@ -69,14 +69,14 @@ function play(url) {
 
 enterBtn.onclick = function () {
     play("src/assets/audio/rpg_confirm.wav").then(()=>{
-        modalInitial.style.display = "none";
+        modalIntro.style.display = "none";
         window.location.href = "./index.html"
     })
    
 }
 skipBtn.onclick = function () {
     play("src/assets/audio/rpg_confirm.wav").then(()=>{
-        modalInitial.style.display = "none";
+        modalIntro.style.display = "none";
         window.location.href = "./index.html"
     })
    
