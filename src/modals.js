@@ -1,15 +1,14 @@
 const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
 const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
 
-const myTimeout = setTimeout(onloadModalInitial, 0);
+const myTimeout = setTimeout(onloadModalIntro, 0);
 
 
-let modalInitial = document.querySelector(".modal-Initial");
+let modalIntro = document.querySelector(".modal-Intro");
 
 
-function onloadModalInitial() {
-    // window.onload = modalInitial.style.display = "block";
-    window.onload = modalInitial.classList.add("hidden")
+function onloadModalIntro() {
+    window.onload = modalIntro.classList.remove("hidden")
    TYPING_AUDIO.play()
     // location.href = "#eng";
     setTimeout(() => TYPING_AUDIO.pause(), 1000);
