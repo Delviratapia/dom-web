@@ -53,7 +53,7 @@ inputName.addEventListener("keydown", function (enter) {
         }
         play("src/assets/audio/rpg_confirm.wav").then(() => {
             modalIntro.style.display = "none";
-            window.location.href = "./index.html"
+            window.location.href = "./mainIndex.html"
         })
 
         inputName.reset();
