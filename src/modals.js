@@ -53,7 +53,7 @@ inputName.addEventListener("keydown", function (enter) {
         }
         play("src/assets/audio/rpg_confirm.wav").then(() => {
             modalIntro.style.display = "none";
-            window.location.href = "./mainIndex.html"
+            window.location.href = "./index.html"
         })
 
         inputName.reset();
@@ -97,7 +97,7 @@ function play(url) {
 enterBtn.addEventListener("click", () => {
     play("src/assets/audio/rpg_confirm.wav").then(() => {
         modalIntro.style.display = "none";
-        window.location.href = "./mainIndex.html"
+        window.location.href = "./index.html"
     })
 })
 
@@ -106,7 +106,7 @@ skipBtn.addEventListener("click", () => {
 
     play("src/assets/audio/rpg_confirm.wav").then(() => {
         modalIntro.style.display = "none";
-        window.location.href = "./mainIndex.html"
+        window.location.href = "./index.html"
     })
 
 })

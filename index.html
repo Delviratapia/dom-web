@@ -2,68 +2,719 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/x-icon" href="/chestIcon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/assets/styles.css">
-    <title>New Game</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/chestIcon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/assets/styles.css">
+  <title></title>
 </head>
 
-<body class="intro-bg">
+<body class="home-bg">
 
 
-    <!-- MODAL -->
+  <div class="grid">
 
+    <div class="block-1 p-5 border-solid border-white border-4 rounded-lg">
 
-    <div class="modal-Intro w-1/3 absolute  top-1/3 left-1/3 border-4 rounded-xl" aria-modal="true" role="dialog">
-        <div class="w-auto pointer-events-none">
-
-            <div class="flex flex-col w-full pointer-events-auto bg-black bg-clip-padding rounded-md items-center">
-                <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
-
-                </div>
-                <!-- <div class="p-4 text-white typewriter flex">
-                    <p class="tw-1 text-center">"Enter you name"</p>
-                    <p class="tw-2"></p>
-                </div> -->
-
-
-                <div class="p-4 text-white ">
-                    <p id="enterName"  class="text-xl font-medium text-white mb-4 type tw-1 text-center typewriterIntro no-caret-Intro">"Enter your name"</p>
-                </div>
-
-
-                <input type="text" class="flex w-1/3 input-name">
-                <div class="flex p-4 border-gray-200 rounded-b-md gap-6">
-                    <a class=" inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-black hover:text-white hover:shadow-lg  hover:outline-dashed focus:ring-0 active:shadow-lg transition duration-150 ease-in-out intro-modal-enter cursor-pointer"
-                        data-bs-dismiss="modal">Enter</a>
-                    <a class="inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-black hover:text-white hover:shadow-lg  hover:outline-dashed focus:ring-0 active:shadow-lg transition duration-150 ease-in-out intro-modal-skip cursor-pointer"
-                        data-bs-dismiss="modal">Skip</a>
-
-                </div>
-
-                <!-- <div class="flex gap-10">
-
-                    <a class="button spainFlag" href="#es" data-reload> <img src="src/assets/images/spanish.png" alt="Spanish Language"></a>
-                    <a class="button ukFlag" href="#en" data-reload> <img src="src/assets/images/english.png" alt="English language"></a>
-
-                </div> -->
-
-
-            </div>
+      <div class="flex flex-row justify-around gap-2 text-xs">
+        <div class="text-white">Dominique</div>
+        <div class="text-white">Front-End developer
+          <div class="text-white">LV Junior</div>
         </div>
+
+
+
+
+      </div>
+
+
+      <!-- <div class="status-container flex gap-12 text-xl">
+        <div class="text-white translate-x-0">LV</div>
+        <div class="text-white translate-x-[30%]">Junior</div>
+      </div> -->
+
+
+
+      <!--  Codes that affect the status/bar/numbers -->
+
+      <div class="flex justify-around items-center">
+
+        <img class="w-15 h-40 order-1 avatar-img" src="src/assets/images/smile-normal-eyesopen6.svg" alt="">
+        <div class="order-2">
+
+          <div
+            class="w-36 h-3 hp-life bg-red-600 bg-gradient-to-l from-red-900 rounded-md absolute max-w-sm translate-y-[90%]">
+          </div>
+          <div class="status-container flex gap-12 text-xs">
+            <div class="text-white translate-x-0">HP</div>
+            <div class="text-white translate-x-0">316/316</div>
+          </div>
+
+          <div
+            class="w-36 h-3 mp-life bg-blue-500 bg-gradient-to-l from-blue-900 rounded-md absolute max-w-sm translate-y-[90%]">
+          </div>
+
+          <!-- <div class="bg-red w-105 h-130"></div> -->
+          <div class="status-container flex gap-12 text-xs">
+            <div class="text-white translate-x-0">MP</div>
+            <div class="text-white translate-x-0 mp-number">110/110</div>
+          </div>
+
+
+          <div
+            class="w-36 h-3 stamina-life bg-green-600 bg-gradient-to-l from-green-900 rounded-md absolute max-w-sm translate-y-[90%]">
+          </div>
+
+          <!-- <div class="bg-red w-105 h-130"></div> -->
+          <div class="status-container flex gap-12 text-xs">
+            <div class="text-white translate-x-0 ">ST</div>
+            <div class="text-white translate-x-0 st-number">250/250</div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <!-- <div class="status-container flex flex-col justify-center text-xl">
+        </div> -->
+
+      <div class="flex text-white text-center flex-col">
+        <div id="abtMe" class="text-white">About me</div>
+        <div id="abtMeText" class="text-white mb-2 text-xs">Im a creative person willing to gain more experience in the
+          programming
+          world, always commited to commit</div>
+        <div class="flex flex-row justify-around items-center ">
+
+          <a href="https://github.com/Delviratapia" Target="_blank">
+            <div
+              class="contact-icons text-white p-4  hover:bg-green-400 hover:bg-opacity-50 cursor-pointer menu-text rounded-md flex flex-col items-center">
+              <img class="w-11 mb-2" src="/src/assets/GITHUBLOGO.png" alt="Github">Github</div>
+          </a>
+
+
+          <a href="https://www.linkedin.com/in/delviratapia/" Target="_blank">
+            <div
+              class="contact-icons text-white p-4  hover:bg-green-400 hover:bg-opacity-50 cursor-pointer menu-text rounded-md flex flex-col items-center">
+              <img class="w-10 mb-2" src="/src/assets/likedinpixel.png" alt="linkedin">Linkedin</div>
+          </a>
+
+
+          <div
+            class="contact-icons text-white p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer menu-text rounded-md flex flex-col items-center email-open-modal mBtn">
+            <img class="w-10 mb-5" src="/src/assets/emailpixel.png" alt="email">Email</div>
+
+
+        </div>
+      </div>
     </div>
 
 
-    <script type="module" defer src="/src/languageIntro.js"></script>
-    <script type="module" defer src="/src/modals.js"></script>
 
 
 
+
+    <div class="block-2 border-solid border-white border-4 rounded-lg text-white">
+      <div class="flex justify-around items-center h-full text-sm">
+        <div
+          class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md cv-title menu-text menu-select">CV
+        </div>
+        <div
+          class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md portfolio-title menu-text menu-select">
+          Portfolio
+        </div>
+        <div id="skillsbtn"
+          class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md skills-title menu-text">Skills
+        </div>
+        <div class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md items-title menu-text">Items
+        </div>
+      </div>
+    </div>
+
+    <div class="location-container block-4 border-solid border-white border-4 rounded-lg text-center text-white"><span
+        id="lcTime">Location Time</span>
+      <div class="time"></div>
+    </div>
+
+    <div class="block-3  border-solid bg-gradient-to-tr from-slate-300 to-slate-500 border-4 rounded-lg text-white  ">
+      <div class="flex justify-around items-center text-sm h-full">
+
+        <div id="langbtn"
+          class="language-btn p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md menu-text mBtn">
+          Language
+        </div>
+        <div id="savebtn"
+          class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md menu-text saveText mBtn">Save
+        </div>
+        <div id="gameoverbtn"
+          class="p-2 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md menu-text game-end-btn"><a
+            href="/gameover.html">Game End</a></div>
+      </div>
+
+
+    </div>
+
+    <div class="block-6 flex-wrap border-solid border-white border-4 rounded-lg text-white flex items-start my-items">
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md  sm:w-36 sm:text-sm h-32 items-center flex flex-col hidden cv-item ">
+        <div class="p-2 cursor-pointer rounded-md">Curriculum</div><img class="h-16" src="./src/assets/PDFLOGO.png"
+          alt="CV Español">
+      </div>
+
+      <!-- PORTFOLIO MENU -->
+
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex hidden portfolio-item avistaloo ">
+        <div class="p-2 cursor-pointer rounded-md">Avistaloo</div><img class="h-16 w-12"
+          src="./src/assets/AvistalooLogoPixel.png" alt="Avistaloo">
+      </div>
+
+
+<!-- 
+      <div
+        class="p-4  hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md  sm:w-36 sm:text-sm h-32 items-center flex flex-col hidden portfolio-item ">
+        <div class="p-2 cursor-pointer rounded-md">Switchkey</div><img class="h-16" src="./src/assets/PDFLOGO.png"
+          alt="CV Español">
+      </div>
+ -->
+
+
+
+      <!-- ITEMS MENU -->
+
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden juice-item mBtn">
+        <div id="juiceLang" class="p-2 cursor-pointer rounded-md">Juice</div><img class="h-16 w-28"
+          src="./src/assets/juice.svg" alt="Juice">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden rice-item mBtn">
+        <div id="riceLang" class="p-2 cursor-pointer rounded-md">Rice</div><img class="h-16 w-28"
+          src="./src/assets/rice.svg" alt="Rice">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden beer-item mBtn">
+        <div id="beerLang" class="p-2 cursor-pointer rounded-md">Beer</div><img class="h-16 w-28"
+          src="./src/assets/beer.svg" alt="Beer">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden bag-item mBtn">
+        <div id="handbagLang" class="p-2 cursor-pointer rounded-md">Handbag</div><img class="h-16 w-28"
+          src="./src/assets/bag.svg" alt="Bag">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden unknown-item mBtn">
+        <div class="p-2 cursor-pointer rounded-md">???</div><img class="h-16 w-28" src="./src/assets/unknown.svg"
+          alt="???">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden laptop-item mBtn">
+        <div id="laptopLang" class="p-2 cursor-pointer rounded-md">Laptop</div><img class="h-16 w-28"
+          src="./src/assets/laptop.svg" alt="Laptop">
+      </div>
+
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex menu-item hidden music-item mBtn">
+        <div id="musicLang" class="p-2 cursor-pointer rounded-md">Music</div><img class="h-16 w-28"
+          src="./src/assets/music.svg" alt="Music">
+      </div>
+
+
+      <!-- SKILLS MENU -->
+
+
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Tailwind</div><img class="h-16 w-28" src="./src/assets/tailwind.svg"
+          alt="Tailwind">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Bulma</div><img class="h-16 w-28"
+          src="./src/assets/bulma-seeklogo.com.svg" alt="Bulma">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Boostrap</div><img class="h-16 w-28" src="./src/assets/boostrap.svg"
+          alt="Boostrap">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Sass</div><img class="h-16 w-28" src="./src/assets/sass.svg"
+          alt="Sass">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Svelte</div><img class="h-16 w-28" src="./src/assets/svelte.svg"
+          alt="Svelte">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Storybook</div><img class="h-16 w-28"
+          src="./src/assets/storybook.svg" alt="Storybook">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Vue</div><img class="h-16 w-28" src="./src/assets/vue.svg" alt="Vue">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">React</div><img class="h-16 w-28" src="./src/assets/react.svg"
+          alt="React">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Postman</div><img class="h-16 w-20"
+          src="./src/assets/postman_macos_bigsur_icon_189815.png" alt="Postman">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Jest</div><img class="h-16 w-28" src="./src/assets/jest.svg"
+          alt="Jest">
+      </div>
+
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Git</div><img class="h-16 w-28" src="./src/assets/git.svg" alt="Git">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Debian</div><img class="h-16 w-28" src="./src/assets/debian.svg"
+          alt="Debian">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Photoshop</div><img class="h-16 w-20"
+          src="./src/assets/adobe_photoshop_macos_bigsur_icon_190436.png" alt="Photoshop">
+      </div>
+      <div
+        class="p-4 hover:bg-green-400 hover:bg-opacity-50 cursor-pointer rounded-md sm:w-36 sm:text-sm h-32 items-center flex-col flex skill-item">
+        <div class="p-2 cursor-pointer rounded-md">Ilustrator</div><img class="h-16 w-20"
+          src="./src/assets/adobe_illustrator_macos_bigsur_icon_190447.png" alt="Ilustrator">
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <div
+      class="block-5 border-solid border-white border-4 rounded-lg text-white flex justify-around preview-container my-items-preview">
+
+      <div class="flex flex-col text-center hidden preview-links portfolio-preview">
+        <img class="h-96 w-56 p-4  preview-links" src="./src/assets/avistalooPREVIEW.png" alt="Avistaloo">
+        <a id="repoBtn" class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links"
+          href="https://github.com/Delviratapia/lucid-lynx-Avistaloo" Target="_blank">Repository</a>
+        <a id="AvWebBtn" class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links"
+          href="http://avistaloo.com" Target="_blank">Go to Website</a>
+
+      </div>
+
+      <div class="flex flex-col text-center hidden preview-links cv-preview">
+        <img class="h-96 w-56 p-4  preview-links " src="./src/assets/CVESPAÑOLSCREEN.png" alt="CV Español">
+
+        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links"
+          href="/src/assets/documents/CV_Dominique_Elvira_Tapia_Español.pdf" download Target="_blank">Español</a>
+
+        <a class="p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md preview-links"
+          href="src/assets/documents/CV_Dominique_Elvira_Tapia_English.pdf" download Target="_blank">English</a>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div
+      class="block-7 border-solid border-white border-4 rounded-lg text-white items-start inline-block text-center p-10">
+      <p class="bg-green-400 bg-opacity-50 rounded-md m-2"> Credits:</p>
+      <p>RPG Icons: <a href="https://vectorpixelstar.itch.io/mega-pixel-art-32x32-px-icons-sprite-sheet"
+          class="cursor-pointer menu-text" Target="_blank">VectorPixelStar</a></p>
+      <p>GameOver picture: <a href="https://www.deviantart.com/marvyra/art/Landscape-Dark-Cave-of-Light-711107468"
+          class="cursor-pointer menu-text" Target="_blank">Marvyra</a></p>
+      <p>Sounds: <a href="https://opengameart.org/content/10-retro-rpg-menu-sounds" class="cursor-pointer menu-text"
+          Target="_blank">leohpaz</a></p>
+      <p>Icons: <a href="https://icon-icons.com/" class="cursor-pointer menu-text" Target="_blank">From icon-icons</a>
+      </p>
+      <p>Avatar picture: <a href="https://charat.me/rouge/create/" class="cursor-pointer menu-text" Target="_blank">
+          Created with charat.me</a></p>
+      <p>Background: Myself using RPG Maker</p>
+    </div>
+
+
+
+  </div>
+
+  <!-- EMAIL MODAL -->
+
+  <div class="hidden-modal email-modal w-2/3 fade absolute items-center top-1/3 left-80 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class="p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p id="email" class="typewriter no-caret">
+              "Sure!, my email is delviratapia @gmail.com, Thank you for contacting me!"
+            </p>
+
+          </div>
+
+
+
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONLOAD MODAL -->
+
+  <!-- MODAL -->
+
+  <div class="hidden-modal modal-Onload  fade absolute items-center w-2/3  top-1/3 left-80 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+
+          <div class="p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+
+            <p class="typewriter no-caret helloEs helloEn"></p>
+
+
+          </div>
+
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-modal-Onload"
+            data-bs-dismiss="modal">
+            x
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- MODAL SAVEGAME -->
+
+  <div
+    class="hidden-modal modal-savegame  fade absolute items-center w-1/3 h-2/4 bottom-1/3 right-80  hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class=" pointer-events-none h-full w-full">
+      <div class="flex flex-col h-full pointer-events-auto text-center bg-principal-blue bg-clip-padding rounded-md">
+
+
+        <div id="saveS1"
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          File 1
+        </div>
+
+        <div id="saveS2"
+          class="w-full h-1/4 text-white p-2  justify-center align-middle items-center self-center hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          File 2</div>
+        <div id="saveS3"
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          File 3</div>
+        <div id="saveS4"
+          class="w-full h-1/4 text-white p-2 hover:bg-green-400 hover:bg-opacity-50 rounded-md cursor-pointer menu-item save-slot">
+          File 4</div>
+
+      </div>
+    </div>
+    <div class="flex items-center justify-end p-4 border-gray-200 rounded-b-md">
+      <button type="button"
+        class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black  transition duration-150 ease-in-out close-modal-savegame"
+        data-bs-dismiss="modal">
+        x
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ITEM BEER MODAL -->
+
+  <div class="hidden-modal beer-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="beer-item-text typewriterItems no-caret-items"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-beer-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITEM JUICE MODAL -->
+
+  <div class="hidden-modal juice-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="juice-item-text typewriterItems no-caret-items"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-juice-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITEM RICE MODAL -->
+
+  <div class="hidden-modal rice-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4 ">
+              Dominique:
+            </p>
+            <p class="rice-item-text typewriterItems no-caret-items"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-rice-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ITEM UNKNOWN MODAL -->
+
+  <div
+    class="hidden-modal unknown-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="unknown-item-text typewriterItems no-caret-items"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-unknown-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ITEM LAPTOP MODAL -->
+
+  <div
+    class="hidden-modal laptop-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="laptop-item-text1 typewriterItems no-caret-items"></p>
+            <!-- <p class="laptop-item-text2 typewriterItems no-caret-items"></p> -->
+            <!-- <p class="laptop-item-text3 typewriterItems no-caret-items"></p> -->
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-laptop-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ITEM BAG MODAL -->
+
+  <div class="hidden-modal bag-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="bag-item-text1 typewriterItems no-caret-items"></p>
+            <!-- <p class="bag-item-text2 typewriterItems no-caret-items"></p> -->
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-bag-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ITEM MUSIC MODAL -->
+
+  <div class="hidden-modal music-item-modal w-1/3 fade absolute items-center top-1/3 left-36 hidden border-4 rounded-xl"
+    aria-modal="true" role="dialog">
+    <div class="w-auto pointer-events-none">
+
+      <div class="flex flex-col w-full pointer-events-auto bg-principal-blue bg-clip-padding rounded-md">
+        <div class="flex flex-shrink-0 items-center justify-between p-4 rounded-t-md">
+
+          <div class=" p-4 text-white ">
+            <p class="text-xl font-medium text-white mb-4">
+              Dominique:
+            </p>
+            <p class="music-item-text1 typewriterItems no-caret-items"></p>
+          </div>
+        </div>
+        <div class="flex  items-center justify-end p-4 border-gray-200 rounded-b-md">
+          <button type="button"
+            class="inline-block px-6 py-2.5 bg-zinc-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:text-black hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out close-music-modal"
+            data-bs-dismiss="modal">
+            x
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Language options buttons -->
+
+  <div
+    class="hidden-modal language-container flex justify-between w-80 fade absolute text-center top-40 right-[18%] hidden">
+    <!-- Spanish button -->
+    <div class="p-2 spa-btn bg-principal-blue hover:bg-black  menu-text text-white border-4 rounded-xl">
+      <a href="#es" data-reload>Spanish</a></div>
+    <!-- English button -->
+    <div class="p-2 eng-btn bg-principal-blue hover:bg-black  menu-text text-white border-4 rounded-xl ">
+      <a href="#en" data-reload>English</a></div>
+  </div>
+
+
+  <script type="module" defer src="/src/languages.js"></script>
+  <script type="module" defer src="/src/main.js"></script>
+  <script type="module" defer src="/src/statusBar.js"></script>
+  <script type="module" defer src="/src/itemsModal.js"></script>
+  <!-- <script type="module" defer src="/src/modals.js"></script> -->
 </body>
 
 </html>
