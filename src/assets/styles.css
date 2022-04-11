@@ -17,7 +17,7 @@ body {
 }
 
 .intro-bg {
-  background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
+  background-image: url(/src/assets/rpgMakerBg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -130,7 +130,7 @@ body {
   }
 
   .home-bg {
-    background-image: url(/src/assets/RPG\ MAKER\ WEB\ BACKGROUND\ 4.png);
+    background-image: url(/src/assets/rpgMakerBg.png);
     background-repeat: no-repeat;
     background-size: cover;
     /* height: auto; */

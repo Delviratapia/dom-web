@@ -1,5 +1,8 @@
-const TYPING_AUDIO = new Audio("src/assets/audio/textTypingIntro.mp3")
-const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
+import textTypingIntro from "/src/assets/audio/textTypingIntro.mp3"
+import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
+
+const TYPING_AUDIO = new Audio(textTypingIntro)
+const CONFIRM_AUDIO = new Audio(rpg_confirm)
 
 const myTimeout = setTimeout(onloadModalIntro, 0);
 
@@ -51,9 +54,9 @@ inputName.addEventListener("keydown", function (enter) {
             title.innerHTML = localStorage.getItem("name")
             inputName.value = ""
         }
-        play("src/assets/audio/rpg_confirm.wav").then(() => {
+        play(rpg_confirm).then(() => {
             modalIntro.style.display = "none";
-            window.location.href = "./main.html"
+            window.location.href = "./index.html"
         })
 
         inputName.reset();
@@ -95,18 +98,18 @@ function play(url) {
 
 
 enterBtn.addEventListener("click", () => {
-    play("src/assets/audio/rpg_confirm.wav").then(() => {
+    play(rpg_confirm).then(() => {
         modalIntro.style.display = "none";
-        window.location.href = "./main.html"
+        window.location.href = "./index.html"
     })
 })
 
 
 skipBtn.addEventListener("click", () => {
 
-    play("src/assets/audio/rpg_confirm.wav").then(() => {
+    play(rpg_confirm).then(() => {
         modalIntro.style.display = "none";
-        window.location.href = "./main.html"
+        window.location.href = "./index.html"
     })
 
 })

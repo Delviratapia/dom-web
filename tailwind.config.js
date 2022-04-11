@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./main.html","./index.html","./gameover.html","./src/**/*.{html}","./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: ["./index.html","./intro.html","./gameover.html","./src/**/*.html","./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {

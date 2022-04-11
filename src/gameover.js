@@ -1,4 +1,8 @@
-const GAMEOVER_AUDIO = new Audio("src/assets/audio/corpse_party_gameover.mp3")
+import corpse_party_gameover from "src/assets/audio/corpse_party_gameover.mp3"
+import rpg_hover_2 from "/src/assets/audio/rpg_hover-2.wav"
+import rpg_denied from "/src/assets/audio/rpg_denied.wav"
+
+const GAMEOVER_AUDIO = new Audio(corpse_party_gameover)
 let modalOnload = document.querySelector("body");
 const myTimeout = setTimeout(onloadModal, 1000);
 
@@ -9,7 +13,7 @@ function onloadModal() {
 }
 
 
-const HOVER_AUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
+const HOVER_AUDIO = new Audio(rpg_hover_2)
 let gameContinueBtn = document.querySelectorAll(".gamecontinue-btn")
 
 
@@ -20,7 +24,7 @@ for (let btn of gameContinueBtn) {
 
 }
 
-const DENIED_AUDIO = new Audio("src/assets/audio/rpg_denied.wav")
+const DENIED_AUDIO = new Audio(rpg_denied)
 let endBtn = document.querySelector(".end-game-btn");
 
 endBtn.addEventListener("click", () => {

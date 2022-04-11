@@ -35,7 +35,7 @@ stNumber.innerHTML="0/250"
 
         // poner aqui una promesa de imagen svg triste
         // setTimeout(() => modifyStBar('w-0'),6000)
-        window.location.href = "./gameover.html"
+        window.location.href = "/gameover.html"
     }
 
 

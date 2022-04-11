@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite'
 
-module.exports = {     
-    root: './',     
-    build: {       
-       outDir: 'dist',
-            },     
-    publicDir: 'assets'   
- } 
+export default defineConfig({
+    //publicDir: 'src/assets',
+    //build: {
+        //assetsDir: 'src/assets',
+    //},
+    //assetsInclude: ['**/*.{png,svg,wav,mp3,pdf,gif,jpg}'],
+  //  build: {
+        //assetsDir: 'src/assets',
+        //rollupOptions: {
+            //external: true
+        //}
+//    }
+     
+   
+  })
 

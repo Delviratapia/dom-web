@@ -1,4 +1,10 @@
 import { closeModalclickOutside, closeOpenModals, onloadModal } from "./utils";
+import textTypingCut from "/src/assets/audio/TEXTtypingcut.mp3"
+import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
+import rpg_useItem from "/src/assets/audio/rpg_useItem.wav"
+import rpg_hover_2 from "/src/assets/audio/rpg_hover-2.wav"
+
+
 
 const myTimeout = setTimeout(onloadModal, 2000);
 
@@ -54,8 +60,8 @@ for (let menuText of menuTexts) {
 
 
 
-const HOVER_AUDIO = new Audio("src/assets/audio/rpg_hover-2.wav")
-const USE_ITEM_AUDIO = new Audio("src/assets/audio/rpg_useItem.wav")
+const HOVER_AUDIO = new Audio(rpg_hover_2)
+const USE_ITEM_AUDIO = new Audio(rpg_useItem)
 let menuText = document.querySelectorAll(".cursor-pointer.menu-text")
 let menuItems = document.querySelectorAll(".cursor-pointer.menu-item")
 let menuPreview = document.querySelectorAll(".preview-links")
@@ -209,8 +215,8 @@ skillsTitle.addEventListener("click", () => {
 
 // MODAL BOX EMAIL
 
-const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
-const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
+const TYPING_AUDIO = new Audio(textTypingCut)
+const CONFIRM_AUDIO = new Audio(rpg_confirm)
 
 // Get the modal
 let emailModal = document.querySelector(".email-modal");

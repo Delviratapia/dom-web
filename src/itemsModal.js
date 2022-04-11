@@ -1,5 +1,10 @@
 import { closeOpenModals } from "./utils";
-
+import textTypingCut from "/src/assets/audio/TEXTtypingcut.mp3"
+import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
+import meSmile from  "/src/assets/images/smile-brows-eyesopen1.svg"
+import meWorry from "/src/assets/images/worry-brow-smile.gif"
+import meClosed from "/src/assets/images/smile-eyesclosed4.svg"
+import meHappy from "/src/assets/images/happy-smile.gif"
 
 let unknownItem = document.querySelector(".unknown-item")
 let riceItem = document.querySelector(".rice-item")
@@ -58,8 +63,8 @@ if (window.location.hash) {
 }
 
 
-const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
-const CONFIRM_AUDIO = new Audio("src/assets/audio/rpg_confirm.wav")
+const TYPING_AUDIO = new Audio(textTypingCut)
+const CONFIRM_AUDIO = new Audio(rpg_confirm)
 
 
 // Get the modal
@@ -75,9 +80,9 @@ openBeerModal.addEventListener("click", (event) => {
     closeOpenModals();
     beerItem.classList.remove("hidden")
     beerItemText.innerHTML = "<p>" + '"' + randomBeerText[Math.floor(Math.random() * randomBeerText.length)] + '"' + "</p>";
-    avatarImg.src = "src/assets/images/worry-brow-smile.gif"
+    avatarImg.src = meWorry
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-brows-eyesopen1.svg"
+        avatarImg.src = meSmile
     }, 1200);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1000);
@@ -124,9 +129,9 @@ openUnknownModal.addEventListener("click", (event) => {
     closeOpenModals();
     unknownItemModal.classList.remove("hidden")
     unknownItemText.innerHTML = "<p>" + '"' + randomUnknownText[Math.floor(Math.random() * randomUnknownText.length)] + '"' + "</p>";
-    avatarImg.src = "src/assets/images/worry-brow-smile.gif"
+    avatarImg.src = meWorry
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-brows-eyesopen1.svg"
+        avatarImg.src = meSmile
     }, 1200);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1000);
@@ -172,9 +177,9 @@ openJuiceModal.addEventListener("click", (event) => {
     closeOpenModals();
     juiceItemModal.classList.remove("hidden")
     juiceItemText.innerHTML = "<p>" + '"' + randomJuiceText[Math.floor(Math.random() * randomJuiceText.length)] + '"' + "</p>";
-    avatarImg.src = "src/assets/images/happy-smile.gif"
+    avatarImg.src = meHappy
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+        avatarImg.src = meClosed
     }, 1500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1300);
@@ -219,9 +224,9 @@ openRiceModal.addEventListener("click", (event) => {
     closeOpenModals();
     riceItemModal.classList.remove("hidden");
     riceItemText.innerHTML = "<p>" + '"' + randomRiceText[Math.floor(Math.random() * randomRiceText.length)] + '"' + "</p>";
-    avatarImg.src = "src/assets/images/happy-smile.gif"
+    avatarImg.src = meHappy
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+        avatarImg.src = meClosed
     }, 1500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 1300);
@@ -266,9 +271,9 @@ openLaptopModal.addEventListener("click", (event) => {
         }
     }
     
-    avatarImg.src = "src/assets/images/happy-smile.gif"
+    avatarImg.src = meHappy
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+        avatarImg.src = meClosed
     }, 3000);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 6000);
@@ -312,9 +317,9 @@ openBagModal.addEventListener("click", (event) => {
             }
         }
 
-    avatarImg.src = "src/assets/images/happy-smile.gif"
+    avatarImg.src = meHappy
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+        avatarImg.src = meClosed
     }, 2500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 2800);
@@ -353,9 +358,9 @@ openMusicModal.addEventListener("click", (event) => {
             musicItemText1.innerHTML = "Amo la música de los 80, mi canción favorita es Smooth Criminal de Michael Jackson"
         }
     }
-    avatarImg.src = "src/assets/images/happy-smile.gif"
+    avatarImg.src = meHappy
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+        avatarImg.src = meClosed
     }, 2500);
     TYPING_AUDIO.play()
     setTimeout(() => TYPING_AUDIO.pause(), 2800);

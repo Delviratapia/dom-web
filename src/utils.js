@@ -1,4 +1,8 @@
-const TYPING_AUDIO = new Audio("src/assets/audio/TEXTtypingcut.mp3")
+import textTypingCut from "/src/assets/audio/TEXTtypingcut.mp3"
+import meHappy from "/src/assets/images/happy-smile.gif"
+import meClosed from "/src/assets/images/smile-eyesclosed4.svg"
+
+const TYPING_AUDIO = new Audio(textTypingCut)
 
 // Function that close the modals already open when clicking another one
 
@@ -70,9 +74,9 @@ function onloadModal() {
     }
 
     let avatarImg = document.querySelector(".avatar-img")
-    avatarImg.src = "src/assets/images/happy-smile.gif"
+    avatarImg.src = meHappy
     setTimeout(() => {
-        avatarImg.src = "src/assets/images/smile-eyesclosed4.svg"
+        avatarImg.src = meClosed
     }, 4000);
 }
 
