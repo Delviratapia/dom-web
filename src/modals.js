@@ -4,11 +4,11 @@ import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
 const TYPING_AUDIO = new Audio(textTypingIntro)
 const CONFIRM_AUDIO = new Audio(rpg_confirm)
 
-const myTimeout = setTimeout(onloadModalIntro, 0);
-
-
 let modalIntro = document.querySelector(".modal-Intro");
+if (modalIntro != null) {
+    const myTimeout = setTimeout(onloadModalIntro, 0);
 
+}
 
 function onloadModalIntro() {
     window.onload = modalIntro.classList.remove("hidden")
@@ -30,22 +30,8 @@ if (localStorage.getItem('name') !== null) {
 
 let inputName = document.querySelector("input");
 let enterBtn = document.querySelector(".intro-modal-enter")
-enterBtn.addEventListener("click", () => {
-    if (inputName.value === " " || inputName.value.length <= 0) {
-        localStorage.setItem("name", "Anon")
-        title.innerHTML = localStorage.getItem("name")
-    } else {
-        localStorage.setItem("name", inputName.value)
-        title.innerHTML = localStorage.getItem("name")
-        inputName.value = ""
-    }
-
-})
-
-
-inputName.addEventListener("keydown", function (enter) {
-    if (enter.key === "Enter") {
-        enter.preventDefault();
+if (enterBtn != null) {
+    enterBtn.addEventListener("click", () => {
         if (inputName.value === " " || inputName.value.length <= 0) {
             localStorage.setItem("name", "Anon")
             title.innerHTML = localStorage.getItem("name")
@@ -54,27 +40,48 @@ inputName.addEventListener("keydown", function (enter) {
             title.innerHTML = localStorage.getItem("name")
             inputName.value = ""
         }
-        play(rpg_confirm).then(() => {
-            modalIntro.style.display = "none";
-            window.location.href = "./index.html"
-        })
 
-        inputName.reset();
+    })
+}
 
-    }
-})
+if (inputName != null) {
+    inputName.addEventListener("keydown", function (enter) {
+        if (enter.key === "Enter") {
+            enter.preventDefault();
+            if (inputName.value === " " || inputName.value.length <= 0) {
+                localStorage.setItem("name", "Anon")
+                title.innerHTML = localStorage.getItem("name")
+            } else {
+                localStorage.setItem("name", inputName.value)
+                title.innerHTML = localStorage.getItem("name")
+                inputName.value = ""
+            }
+            play(rpg_confirm).then(() => {
+                modalIntro.style.display = "none";
+                if (window.location.hash == "")
+                    window.location.href = window.location.origin + "/home.html"
+                else
+                    window.location.href = window.location.origin + "/home.html" +  window.location.hash
 
+            })
 
+            inputName.reset();
 
-
+        }
+    })
+}
 
 let skipBtn = document.querySelector(".intro-modal-skip")
-skipBtn.addEventListener("click", () => {
-    localStorage.setItem("name", "Anon")
-    title.innerHTML = localStorage.getItem("name")
-    inputName.value = ""
+if (skipBtn != null) {
 
-})
+    skipBtn.addEventListener("click", () => {
+        localStorage.setItem("name", "Anon")
+        title.innerHTML = localStorage.getItem("name")
+        inputName.value = ""
+
+    })
+}
+
 
 
 
@@ -96,20 +103,37 @@ function play(url) {
 
 
 
-
-enterBtn.addEventListener("click", () => {
-    play(rpg_confirm).then(() => {
-        modalIntro.style.display = "none";
-        window.location.href = "./index.html"
+if (enterBtn != null) {
+    enterBtn.addEventListener("click", () => {
+        play(rpg_confirm).then(() => {
+            modalIntro.style.display = "none";
+            if (window.location.hash == "")
+                window.location.href = window.location.origin + "/home.html"
+            else 
+                window.location.href = window.location.origin + "/home.html" + window.location.hash
+ 
+        })
     })
-})
+}
 
+if (skipBtn != null) {
+    skipBtn.addEventListener("click", () => {
 
-skipBtn.addEventListener("click", () => {
+        play(rpg_confirm).then(() => {
+            modalIntro.style.display = "none";
+            if (window.location.hash == "")
+                window.location.href = window.location.origin + "/home.html"
+            else 
+                window.location.href = window.location.origin + "/home.html" + window.location.hash
+        })
 
-    play(rpg_confirm).then(() => {
-        modalIntro.style.display = "none";
-        window.location.href = "./index.html"
     })
+}
 
+let gameoverbtn = document.querySelector("#gameoverbtn")
+gameoverbtn.addEventListener("click", ()=> {
+    if (window.location.hash == "")
+        window.location.href = window.location.origin + "/gameover.html"
+    else
+        window.location.href = window.location.origin + "/gameover.html" + window.location.hash
 })

@@ -24,38 +24,36 @@ let language = {
         handbagLang: 'Bolso',
         laptopLang: 'Laptop',
         musicLang: 'Música',
-        endPhrase: 'Si al principio no lo consigues, llámalo versión 1.0',
     }
 };
 
 let qs = document.querySelector.bind(document)
 
-let email = qs("#email")
-let langBtn = qs("#langbtn")
-let saveBtn = qs("#savebtn")
-let gameoverBtn = qs("#gameoverbtn")
-let skillsBtn = qs("#skillsbtn")
-let abtMe = qs("#abtMe")
-let abtMeText = qs("#abtMeText")
-let locationTime = qs("#lcTime")
-let repoBtn = qs("#repoBtn")
-let AvWebBtn = qs("#AvWebBtn")
-let saveS1 = qs("#saveS1")
-let saveS2 = qs("#saveS2")
-let saveS3 = qs("#saveS3")
-let saveS4 = qs("#saveS4")
-let juiceLang = qs("#juiceLang")
-let riceLang = qs("#riceLang")
-let beerLang = qs("#beerLang")
-let handbagLang = qs("#handbagLang")
-let laptopLang = qs("#laptopLang")
-let musicLang = qs("#musicLang")
-let endPhrase =qs("#endPhrase")
-
 // Define language using window hash
 
 if (window.location.hash) {
     if (window.location.hash === "#es") {
+        let email = qs("#email")
+        let langBtn = qs("#langbtn")
+        let saveBtn = qs("#savebtn")
+        let gameoverBtn = qs("#gameoverbtn")
+        let skillsBtn = qs("#skillsbtn")
+        let abtMe = qs("#abtMe")
+        let abtMeText = qs("#abtMeText")
+        let locationTime = qs("#lcTime")
+        let repoBtn = qs("#repoBtn")
+        let AvWebBtn = qs("#AvWebBtn")
+        let saveS1 = qs("#saveS1")
+        let saveS2 = qs("#saveS2")
+        let saveS3 = qs("#saveS3")
+        let saveS4 = qs("#saveS4")
+        let juiceLang = qs("#juiceLang")
+        let riceLang = qs("#riceLang")
+        let beerLang = qs("#beerLang")
+        let handbagLang = qs("#handbagLang")
+        let laptopLang = qs("#laptopLang")
+        let musicLang = qs("#musicLang")
+
         email.textContent = language.es.email;
         langBtn.textContent = language.es.language;
         saveBtn.textContent = language.es.save;
@@ -76,8 +74,6 @@ if (window.location.hash) {
         handbagLang.textContent = language.es.handbagLang;
         laptopLang.textContent = language.es.laptopLang;
         musicLang.textContent = language.es.musicLang;
-        endPhrase.textContent = language.es.endPhrase;
-
     }
 }
 
@@ -87,11 +83,19 @@ if (window.location.hash) {
 let dataReload = document.querySelectorAll("[data-reload]")
 
 // Define language reload onclick illiteration
-let i = 0;
+for (let data of dataReload) {
+    data.addEventListener("click", () => {
+        let languages = ["#en", "#es"]
+        if (languages.includes(window.location.hash)) 
+            window.location.hash = "" //  if already contains an anchor, remove it
+        
+        if (data.classList.contains("es")) 
+            window.location.hash = "es"
+        if (data.classList.contains("en")) 
+            window.location.hash = "en"
 
-for (i = 0; i < dataReload.length; i++) {
-    dataReload[i].addEventListener("click", () => {
-        location.reload(true);
+        window.location.reload()
+
     })
 }
 
