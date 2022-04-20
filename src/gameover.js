@@ -22,6 +22,10 @@ for (let btn of gameContinueEndBtn) {
     })
 }
 
+
+
+
+
 // Language translations
 
 let language = {
@@ -38,6 +42,18 @@ let qs = document.querySelector.bind(document)
 let continueText = qs("#continueText")
 let endText = qs("#endText")
 let endPhrase = qs("#endPhrase")
+
+
+continueText.addEventListener("click", () => {
+    window.location.href = window.location.origin + "/home.html"
+})
+
+endText.addEventListener("click", () => {
+    window.location.href = window.location.origin + "/index.html"
+})
+
+
+
 
 
 // Define language using window hash
