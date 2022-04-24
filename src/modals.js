@@ -2,14 +2,16 @@ import textTypingIntro from "/src/assets/audio/textTypingIntro.mp3"
 import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
 
 
+
 const TYPING_AUDIO = new Audio(textTypingIntro)
-const CONFIRM_AUDIO = new Audio(rpg_confirm)
+// const CONFIRM_AUDIO = new Audio(rpg_confirm)
 
 let modalIntro = document.querySelector(".modal-Intro");
 if (modalIntro != null) {
-    const myTimeout = setTimeout(onloadModalIntro, 0);
+    // const myTimeout = setTimeout(onloadModalIntro, 0);
 
 }
+
 
 function onloadModalIntro() {
     window.onload = modalIntro.classList.remove("hidden")
@@ -18,6 +20,7 @@ function onloadModalIntro() {
     setTimeout(() => TYPING_AUDIO.pause(), 3000);
 
 }
+
 
 
 // DISPLAY INPUT NAME ON TITLE
@@ -44,6 +47,7 @@ if (enterBtn != null) {
 
     })
 }
+
 
 if (inputName != null) {
     inputName.addEventListener("keydown", function (enter) {
@@ -85,9 +89,6 @@ if (skipBtn != null) {
 
 
 
-
-
-
 // AUDIO WAITING TIME
 
 function play(url) {
@@ -117,6 +118,8 @@ if (enterBtn != null) {
     })
 }
 
+
+
 if (skipBtn != null) {
     skipBtn.addEventListener("click", () => {
 
@@ -130,6 +133,8 @@ if (skipBtn != null) {
 
     })
 }
+
+
 
 let gameoverbtn = document.querySelector("#gameoverbtn")
 gameoverbtn.addEventListener("click", ()=> {
