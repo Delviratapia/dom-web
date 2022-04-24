@@ -3,6 +3,9 @@ import textTypingCut from "/src/assets/audio/TEXTtypingcut.mp3"
 import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
 import rpg_useItem from "/src/assets/audio/rpg_useItem.wav"
 import rpg_hover_2 from "/src/assets/audio/rpg_hover-2.wav"
+import CVeng from "/src/assets/documents/CV_Dominique_Elvira_Tapia_English.pdf"
+import CVes from "/src/assets/documents/CV_Dominique_Elvira_Tapia_Español.pdf"
+import chestIcon from "/src/chestIcon.ico"
 
 
 
