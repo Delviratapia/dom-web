@@ -6,6 +6,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "files": [
+    "src/assets/documents/CV_Dominique_Elvira_Tapia_English.pdf", "src/assets/documents/CV_Dominique_Elvira_Tapia_Español.pdf"
+],
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.5",
