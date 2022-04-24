@@ -2,8 +2,10 @@ import textTypingIntro from "/src/assets/audio/textTypingIntro.mp3"
 import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
 import meta_preview from "/src/assets/chestImage.png"
 
-meta_image = document.querySelector('meta[property="og:image"]')
-meta_image.content = meta_preview
+//let meta_image = document.querySelector('meta[property="og:image"]')
+//console.log(meta_image)
+//meta_image.content = meta_preview
+//console.log(meta_image)
 
 
 
@@ -70,7 +72,7 @@ if (inputName != null) {
                 if (window.location.hash == "")
                     window.location.href = window.location.origin + "/home.html"
                 else
-                    window.location.href = window.location.origin + "/home.html" +  window.location.hash
+                    window.location.href = window.location.origin + "/home.html" + window.location.hash
 
             })
 
@@ -115,9 +117,9 @@ if (enterBtn != null) {
             modalIntro.style.display = "none";
             if (window.location.hash == "")
                 window.location.href = window.location.origin + "/home.html"
-            else 
+            else
                 window.location.href = window.location.origin + "/home.html" + window.location.hash
- 
+
         })
     })
 }
@@ -131,7 +133,7 @@ if (skipBtn != null) {
             modalIntro.style.display = "none";
             if (window.location.hash == "")
                 window.location.href = window.location.origin + "/home.html"
-            else 
+            else
                 window.location.href = window.location.origin + "/home.html" + window.location.hash
         })
 
@@ -141,9 +143,13 @@ if (skipBtn != null) {
 
 
 let gameoverbtn = document.querySelector("#gameoverbtn")
-gameoverbtn.addEventListener("click", ()=> {
-    if (window.location.hash == "")
-        window.location.href = window.location.origin + "/gameover.html"
-    else
-        window.location.href = window.location.origin + "/gameover.html" + window.location.hash
-})
+if (gameoverbtn) {
+
+    gameoverbtn.addEventListener("click", () => {
+        if (window.location.hash == "")
+            window.location.href = window.location.origin + "/gameover.html"
+        else
+            window.location.href = window.location.origin + "/gameover.html" + window.location.hash
+    })
+
+}
