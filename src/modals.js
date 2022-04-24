@@ -1,11 +1,16 @@
 import textTypingIntro from "/src/assets/audio/textTypingIntro.mp3"
 import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
-import meta_preview from "/src/assets/chestImage.png"
+//import preview_2 from "/chest_change_name.png"
+//import preview_2 from "/src/assets/chest_change_name.png"
+
+
+//const preview = new URL("chest_change_name.png", import.meta.url).href
+
 
 //let meta_image = document.querySelector('meta[property="og:image"]')
-//console.log(meta_image)
-//meta_image.content = meta_preview
-//console.log(meta_image)
+//meta_image.content = preview
+//console.log(preview)
+
 
 
 
