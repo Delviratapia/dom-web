@@ -1,6 +1,7 @@
 import textTypingIntro from "/src/assets/audio/textTypingIntro.mp3"
 import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
 
+
 const TYPING_AUDIO = new Audio(textTypingIntro)
 const CONFIRM_AUDIO = new Audio(rpg_confirm)
 

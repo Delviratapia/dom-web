@@ -2,6 +2,7 @@ import corpse_party_gameover from "/src/assets/audio/corpse_party_gameover.mp3"
 import rpg_hover_2 from "/src/assets/audio/rpg_hover-2.wav"
 import rpg_denied from "/src/assets/audio/rpg_denied.wav"
 
+
 const GAMEOVER_AUDIO = new Audio(corpse_party_gameover)
 let modalOnload = document.querySelector("body");
 const myTimeout = setTimeout(onloadModal, 1000);
