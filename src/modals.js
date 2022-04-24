@@ -1,5 +1,9 @@
 import textTypingIntro from "/src/assets/audio/textTypingIntro.mp3"
 import rpg_confirm from "/src/assets/audio/rpg_confirm.wav"
+import meta_preview from "/src/assets/chestImage.png"
+
+meta_image = document.querySelector('meta[property="og:image"]')
+meta_image.content = meta_preview
 
 
 
