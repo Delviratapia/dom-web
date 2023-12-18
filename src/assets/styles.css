@@ -805,8 +805,8 @@ body {
 
   .block-5 {
     background: rgba(0, 0, 0, 0.466);
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     grid-column: 1;
     grid-row: 6;
 
