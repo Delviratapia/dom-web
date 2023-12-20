@@ -126,11 +126,25 @@ portfTitle.addEventListener("click", () => {
 // Portfolio PREVIEW
 
 let myItemsPreview = document.querySelector(".my-items-preview")
-let avistaloo = document.querySelector(".avistaloo")
+let project1 = document.querySelector(".project1")
+let project2 = document.querySelector(".project2")
 
-avistaloo.addEventListener("click", () => {
+project1.addEventListener("click", () => {
     for (let item of myItemsPreview.children) {
-        if (item.classList.contains("preview-links") && item.classList.contains("portfolio-preview")) {
+        if (item.classList.contains("spaceChild") ) {
+            item.classList.remove("hidden");
+        } else {
+            if (!item.classList.contains("hidden")) {
+                item.classList.add("hidden");
+            }
+
+        }
+    }
+})
+
+project2.addEventListener("click", () => {
+    for (let item of myItemsPreview.children) {
+        if (item.classList.contains("flagsChild")) {
             item.classList.remove("hidden");
         } else {
             if (!item.classList.contains("hidden")) {
